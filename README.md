@@ -24,7 +24,7 @@
 - 자바스크립트 작성하기
 - 남들이 모르는 숨은 기능 사용하기- **네이버블로거들이 올린 바탕화면 이미지 다운받기**
 
-------
+---
 
 ## 웹페이지를 제작해 봅시다.<br>(크롬을 사용하세요.)
 
@@ -36,7 +36,7 @@
    [](https://www.canva.com)
    [](http://deluxe-menu.com/)
 
-------
+---
 
 ### 코드 작성하기
 
@@ -47,14 +47,14 @@
 - 이미지 불러오기(이미지 경로 파악하기)
 - [선행학습 - 칸아카데이 HTML 배우러가기](https://ko.khanacademy.org/computing/computer-programming)
 
-------
+---
 
 ## 우리가 배울 내용의 기초
 
 - 그래픽 기초
 - 확장자(html, css, js, psd, ai, md)
 
-------
+---
 
 ## 웹용 문서프로그램설치<br>(웹전용 문서프로그램도 존재한다?)
 
@@ -63,7 +63,7 @@
 - [markdown 프로그램2](https://typora.io/)
 - [markdown 사용하기(기준:github)](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
-------
+---
 
 사전학습에 참여하신 여러분들 고생하셨습니다.
 
