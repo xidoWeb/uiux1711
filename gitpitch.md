@@ -25,16 +25,33 @@
 ##### 학습내용:
  - 웹환경 구축하기
    - 웹, 모바일 이해
-   - 브라우저설치([IE11](https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads), [크롬](http://google.com/chrome),[파이어폭스](http://mozilla.com),[오페라](http://opera.com),[웨일](http://whale.naver.com/
-) )
+   - 브라우저설치(
+       [IE11](https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads),
+       [크롬](http://google.com/chrome),
+       [파이어폭스](http://mozilla.com),
+       [오페라](http://opera.com),
+       [웨일](http://whale.naver.com/) )
    - [nodejs 설치하기](https://nodejs.org/ko/)
    - [cli 설치하기](https://git-scm.com/)
    - [마인드맵 설치하기](http://www.xmind.net/)
    - [에디터 설치하기](http://brackets.io/)
+ - 경로이해(절대경로, 상대경로)
+ - 에디터 설치하기( [brackets](http://brackets.io) )
+ 
+---
+`day_002 - 2017.11.08`
+##### 학습내용:
+- 선연습(대각선)
+- 웹기초이론
+    - 그래픽 기초
+    - 색상의이해
+    - 해상도의이해
+- cli 내용이해
+
 
 ---
 - 앱 개발 방법론 선정하기
-  - 경로이해(절대경로, 상대경로)
+  
   - 웹 기초 이론
   - 그래픽 기초 이론 색상이해 
   - 
