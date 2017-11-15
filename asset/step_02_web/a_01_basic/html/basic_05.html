@@ -6,7 +6,7 @@
   <title>Document</title> 
   <style>
     #margin {width:auto; height:auto; min-height:20px; background-color:#dfe358; float: left;}
-    #margin div{width:200px; height:200px;}
+    #margin div{width:200px; height:200px; float: left;}
     #margin .first {background-color:#1ff; margin:20px;}
     #margin .second {background-color:#5f9; margin:50px 10px;}
     #margin .third {background-color:#9fa; margin:20px 50px 100px;}
@@ -18,13 +18,22 @@
  
     #padding{width:auto; height:auto; background-color: #faa; 
       float: left; margin-left: 10px;}
-    #padding div{width:200px; height:200px;}
-    #padding div>.box{width:200px; height:200px; background-color: #777; color:#fff}
-    #padding .first {background-color:#1ff;}
-    #padding .second {background-color:#5f9;}
-    #padding .third {background-color:#9fa;}
-    #padding .fourth {background-color:#fa4;}
-
+    #padding div{width:200px; height:200px; float: left;}
+/*    #padding div>.box{width:100%; height:100%; background-color: #777; color:#fff }*/
+    #padding .first {background-color:#1ff; padding:20px;}
+    #padding .second {background-color:#5f9;
+    padding:20px 100px;}
+    #padding .third {background-color:#9fa;
+    padding:10px 50px 100px;}
+    #padding .fourth {background-color:#fa4;
+    padding:20px 50px 5px 100px;}
+    #padding .more{background-color: #fff; padding:50px; 
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+           -o-box-sizing: border-box;
+              box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
