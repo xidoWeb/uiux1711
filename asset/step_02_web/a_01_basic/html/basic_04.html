@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>web basic4</title>
+  <style>
+/* clearfix, margin, padding, float, border, outline, id=#, class=. */
+/* selector */
+
+/* * 벤더 프리픽스(prefix)  
+   * 현재 공식적인 버전으로 승인되지않은 기능들을 실험적으로 사용할때 쓰는 기능으로
+   * 각 브라우저마다 사용이 되기도하고 배제하기도하는 기능
+   * 해당하는 제조회사나, 기본엔진등의 방식을 기점으로 앞,뒤에 '-'를 붙인후에 실험기능을 사용할때 쓰는 기법
+    
+    벤더기입X   : 공식적으로 승인이나서 권고상태이면 사용할 수 있는 기능
+    -webkit-  : safari, chrome
+    -moz-     : mozilla(fire fox)
+    -ms-      : microsoft
+    -o-       : opera
+    
+  
+  * css를 표기할때에는 우선순위 법칙이 있다.
+    tag < . < # < 부모에서부터 < !important
+*/
+    body {margin:0;}
+    #test {background-color: #f0a;}
+    div {width:auto; height:auto; background-color: #acc; float: left;}
+    .first {background: #fac;}
+    .second {background-color: #77a;}
+    h1 {margin: 0;}
+/*    ul {}*/
+  
+  </style>
+</head>
+<body>
+   <div class="first" id="test">
+     <h1><a href="#">제목을 뜻하는 표기</a></h1>
+     <h2>제목을 뜻하는 표기</h2>
+     <h3>제목을 뜻하는 표기</h3>
+     <h4>제목을 뜻하는 표기</h4>
+     <h5>제목을 뜻하는 표기</h5>
+     <h6>제목을 뜻하는 표기</h6>
+     <p><span>Lorem ipsum dolor sit</span> </p>
+   </div>
+   <div class="second">
+     <ul>
+       <li>list </li>
+       <li>list </li>
+       <li>list </li>
+       <li>list </li>
+       <li>list </li>
+     </ul>
+     <ol>
+       <li>list_01</li>
+       <li>list_02</li>
+       <li>list_03</li>
+       <li>list_04</li>
+       <li>list_05</li>
+       <li>list_06</li>
+       <li>list_07
+         <ul>
+           <li>child_01</li>
+           <li>child_02</li>
+           <li>child_03</li>
+           <li>child_04</li>
+           <li>child_05</li>
+         </ul>
+       </li>
+     </ol>
+   </div>
+   <dl>
+     <dt>내용제목</dt>
+     <dd>내용~~~~~</dd>
+     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eos, nesciunt aperiam suscipit aut perferendis ipsa ut! Maxime eos, quaerat hic eveniet officiis, maiores autem ipsa fugiat vero eligendi, quod.</dd>
+   </dl>
+   
+   
+<!--  script -->
+<script></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge" />
+  <title>Document</title> 
+  <style>
+    #margin {width:auto; height:auto; min-height:20px; background-color:#dfe358; float: left;}
+    #margin div{width:200px; height:200px;}
+    #margin .first {background-color:#1ff; margin:20px;}
+    #margin .second {background-color:#5f9; margin:50px 10px;}
+    #margin .third {background-color:#9fa; margin:20px 50px 100px;}
+    #margin .fourth {background-color:#fa4;
+    margin: 10px 20px 30px 40px;
+   /* margin-top: 10px; margin-right: 20px; margin-bottom: 30px;    margin-left: 40px;*/
+    }
+    #margin .more{margin: 10px; margin-right: 20px;}
+ 
+    #padding{width:auto; height:auto; background-color: #faa; 
+      float: left; margin-left: 10px;}
+    #padding div{width:200px; height:200px;}
+    #padding div>.box{width:200px; height:200px; background-color: #777; color:#fff}
+    #padding .first {background-color:#1ff;}
+    #padding .second {background-color:#5f9;}
+    #padding .third {background-color:#9fa;}
+    #padding .fourth {background-color:#fa4;}
+
+  </style>
+</head>
+<body>
+  <div id="margin">
+    <div class="first">first : margin one </div>
+    <div class="second">second : margin two </div>
+    <div class="third">third : margin three </div>
+    <div class="fourth">fourth : margin four </div>
+    <div class="more">more box</div>
+  </div>
+
+  <div id="padding">
+    <div class="first"><div class="box">first : padding one </div></div>
+    <div class="second"><div class="box">second : padding two </div></div>
+    <div class="third"><div class="box">third : padding three </div></div>
+    <div class="fourth"><div class="box">fourth : padding four </div></div>
+    <div class="more"><div class="box">more box</div></div>
+  </div>
+  
+<!--  script -->
+  <script></script>
+</body>
+</html>
