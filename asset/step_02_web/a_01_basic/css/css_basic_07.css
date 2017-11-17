@@ -1,0 +1,74 @@
+/* css_basic_07.css */
+@charset "utf-8";
+/* reset 찾아오기(과제)! */
+html, body{margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6,
+p,div,
+ul,li,ol,dl,dt,dd{
+ margin: 0; padding: 0; 
+}
+ul,ol,li{list-style:none;}
+
+/* common or normalize 어떤걸 주로 다룰까?(과제)*/
+
+
+/* design */
+/* #first ====================== */
+#first{
+  width: 800px; height:auto;
+  background-color: #ccc;
+  margin: 0 auto; padding:10px;}
+
+#first > div{
+  width: 200px; height: 200px;
+
+  text-align: center; line-height: 200px;}
+
+#first > div.end{
+  width: 100%; height: 150px; 
+  background-color: #333;
+  clear: both;}
+
+.box_01{background-color:#fa0;  float:left;}
+.box_02{background-color:#0af;  float:left;}
+.box_03{background-color:#aaf;  float:left;}
+.box_04{background-color:#f9a;  float:left;}
+
+/* #second ====================== */
+#second{width: 800px; height: 300px;
+  background-color: #acc; margin: 0 auto;
+  padding: 10px;}
+#second > p{width: 100%; height: auto;
+  background-color: #fff; 
+  margin-bottom:10px;}
+
+/* #third ====================== */
+#third{
+  width: 800px; height: 500px;
+  background-color: #dda; margin: 0 auto;
+  padding: 10px; box-sizing:border-box;}
+
+#third > ul{
+  width: 100%; height: 100%;
+  background-color: #99a;}
+#third li{
+  width: 150px; height: 150px; margin:15px; 
+  background-color: #fff; float: left;
+}
+.th_01{font-size:25px;}
+.th_02{font-size:30px;}
+.th_03{font-size:17px; color:#360;}
+.th_04{font-weight:bold;}
+.th_05{font-style:italic;}
+.th_06{font-size: 20px; 
+  font-weight:bold; 
+  font-style:italic;}
+
+/* .more */
+.more{width: 100%; height: 40px; background-color: #259; text-align: center; color:#fff;}
+
+
+
+
+
+

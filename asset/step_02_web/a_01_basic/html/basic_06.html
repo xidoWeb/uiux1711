@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>border</title>
+  <style>
+    #borderBox{width: 960px; height: auto; margin: 0 auto; background-color: #ccc;}
+    #borderBox > div{width: 200px; height: 200px; margin: 30px; float: left;}
+      .box_01{ background-color:#a1f;
+        border-width:20px; border-style:solid; border-color:#333;} 
+      .box_02{ background-color:#6aa;
+        border-top-width:5px; border-top-style:dashed; border-top-color:#fa0;
+        border-bottom-width:10px; border-bottom-style:dotted; border-bottom-color:#fff;}
+      .box_03{ background-color:#9f9;
+        border:15px double #fff;}
+      .box_04{ background-color:#a26;
+        border:30px ridge #af9; border-right-color:transparent; transition:all 800ms ease;}
+      .box_04:hover{border-right-color:#af0;}
+      .box_04:active{border-left-color:#fff;}
+      .box_05{ background-color:#ff1;
+        border:50px solid #fff; border-radius:100%; box-sizing: border-box;}
+    
+      .out_box{outline: 50px solid #555;}
+    br{clear: both;}
+  </style>
+</head>
+<body>
+  <div id="borderBox">
+    <div class="box_01">border_box_01</div>
+    <div class="box_02">border_box_02</div>
+    <div class="box_03">border_box_03</div>
+    <div class="box_04">border_box_04</div>
+    <div class="box_05 out_box">border_box_05</div>
+    <br />
+  </div><!-- // #borderBox -->
+  
+  
+<!--  script -->
+  <script></script>
+</body>
+</html>
