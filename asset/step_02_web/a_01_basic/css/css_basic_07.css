@@ -16,18 +16,14 @@ ul,ol,li{list-style:none;}
 /* #first ====================== */
 #first{
   width: 800px; height:auto;
-  background-color: #ccc;
+  background-color: #333;
   margin: 0 auto; padding:10px;}
 
 #first > div{
   width: 200px; height: 200px;
-
   text-align: center; line-height: 200px;}
 
-#first > div.end{
-  width: 100%; height: 150px; 
-  background-color: #333;
-  clear: both;}
+#first br{ clear: both;}
 
 .box_01{background-color:#fa0;  float:left;}
 .box_02{background-color:#0af;  float:left;}
@@ -35,7 +31,7 @@ ul,ol,li{list-style:none;}
 .box_04{background-color:#f9a;  float:left;}
 
 /* #second ====================== */
-#second{width: 800px; height: 300px;
+#second{width: 800px; height: auto;
   background-color: #acc; margin: 0 auto;
   padding: 10px;}
 #second > p{width: 100%; height: auto;
@@ -44,17 +40,20 @@ ul,ol,li{list-style:none;}
 
 /* #third ====================== */
 #third{
-  width: 800px; height: 500px;
+  width: 800px; height:auto;
   background-color: #dda; margin: 0 auto;
   padding: 10px; box-sizing:border-box;}
 
 #third > ul{
-  width: 100%; height: 100%;
+  width: 100%; height:auto;
   background-color: #99a;}
 #third li{
   width: 150px; height: 150px; margin:15px; 
-  background-color: #fff; float: left;
+  background-color: #306; float: left;
+  color:#fff;
 }
+#third br{clear: both;}
+
 .th_01{font-size:25px;}
 .th_02{font-size:30px;}
 .th_03{font-size:17px; color:#360;}
@@ -66,6 +65,38 @@ ul,ol,li{list-style:none;}
 
 /* .more */
 .more{width: 100%; height: 40px; background-color: #259; text-align: center; color:#fff;}
+
+/* .before_after */
+.before_after {
+  width: 100px; height: 100px; 
+  background-color: #afafaf; 
+  margin:50px auto;}
+
+/** before, after 란?
+  * html문서상에는 존재하지 않고, 
+  * 가상으로 존재를 만들어서 사용하는 기능
+  * before는 이전에 위치, 
+  * after는 이후에 위치 하는 의미
+  * 반드시 속성으로 content를 사용하여야 한다.
+  * 기본 형태는 inline
+*/
+.before_after::before{content:"해당 요소의 앞에 존재하는 아이";}
+.before_after::after{content:"요소 뒤에 만들기!";
+  color:#fa0; font-size:50px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
