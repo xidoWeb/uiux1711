@@ -10,7 +10,8 @@ ul,li,ol,dl,dt,dd{
 ul,ol,li{list-style:none;}
 
 /* common or normalize 어떤걸 주로 다룰까?(과제)*/
-
+.clearfix::after{
+  content:" "; display: block; clear: both;}
 
 /* design */
 /* #first ====================== */
@@ -23,7 +24,7 @@ ul,ol,li{list-style:none;}
   width: 200px; height: 200px;
   text-align: center; line-height: 200px;}
 
-#first br{ clear: both;}
+/*#first br{ clear: both;}*/
 
 .box_01{background-color:#fa0;  float:left;}
 .box_02{background-color:#0af;  float:left;}
@@ -47,7 +48,7 @@ ul,ol,li{list-style:none;}
 #third > ul{
   width: 100%; height:auto;
   background-color: #99a;}
-#third > ul::after{content:" "; display: block; clear: both;}
+/*#third > ul::after{content:" "; display: block; clear: both;}*/
 
 #third li{
   width: 150px; height: 150px; margin:15px; 
