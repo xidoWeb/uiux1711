@@ -1,0 +1,38 @@
+/* layout_01.css */
+@charset "utf-8";
+/* reset */
+html,body{margin:0; padding:0; color:#333;}
+h1,h2,h3,h4,h5,h6,
+p,pre,div{margin:0; padding: 0;}
+ul,ol,li,dl,dt,dd{margin:0; padding:0; list-style:none;}
+a{text-decoration:none; color:#f2a;}
+a:hover{text-decoration:underline; font-weight:bold;} 
+img{border:0;}
+
+
+header,section,footer{display: block;}
+
+
+/* common */
+.clearfix::after{content:" "; display: block;clear: both;}
+
+/* design */
+body{background-color:#05a;}
+
+#box{width: 600px; height: 500px;
+    background-color: #afa;
+    margin:50px auto;}
+#headBox{width:600px; height:100px;
+  background-color:#faa;}
+#contentBox{width:600px; height:300px;
+  background-color:#fa0;}
+#footBox{width:600px; height:100px;
+  background-color:#0af;}
+
+
+
+
+
+
+
+
