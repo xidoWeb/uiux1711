@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>algorithm_01</title>
+  <script>
+    function first(){
+      var can = 14, day = 2, cat = 0;
+      console.log(can, day, cat);
+      // day 날짜 하루씩 추가
+      for( ; day >= 2; day++){
+        // 7일마다 판단
+        if(day % 7 == 0){
+          cat++; // 고양이가 먹은 캔의수
+          can--; // 사라지는 캔의 수
+          console.log('고양이가 먹은 캔의 수:' + cat, ' 남은 캔의수:' + can);
+        }// if
+        // can이 완전히 사라졌을때!
+        if(can == 0){
+          console.log('고양이가 캔을 다 먹었어요!');
+          break; //반복동작하는 for문을 멈추게 하는 기능!
+        }// if
+      } // for ---------------------------
+      console.log('고양이가 캔을 다 먹은 날짜!'+ day);
+    }// function
+//    first();
+    
+//    console.log('문자'+12345+'0001');
+//    console.log(12345+10001);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
