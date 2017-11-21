@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function First(){
+      var fish = 24, day = 3, cat = 0;
+
+      for(; day>=0; day++ ){
+        if(day % 10 == 0){
+          fish--, cat++;
+          // 검증
+          console.log(
+            '고양이가 먹은 고등어:' + cat,  
+            '남은 고등어:' + fish,
+            '고등어먹은날:'+day);
+        }
+
+        if(fish == 0){ break; }
+      }
+
+      console.log('총 소요된 날짜:' + day);
+      // 최초날짜가 3일부터였으니 해당하는 날짜부터
+
+      day -= 2;
+
+      console.log('해당일부터:' + day + '소요');
+    }
+    // First();
+    
+    function FirstTest(j,i,k){
+      var fish = i, day = j, cat = 0, before = j-1;
+
+      for(; day>=0; day++ ){
+        if(day % k == 0){
+          fish--, cat++;
+          // 검증
+          console.log(
+            '고양이가 먹은 고등어:' + cat,  
+            '남은 고등어:' + fish,
+            '고등어먹은날:'+day);
+        }
+
+        if(fish == 0){ break; }
+      }
+
+      console.log('총 소요된 날짜:' + day);
+      // 최초날짜가 3일부터였으니 해당하는 날짜부터
+      
+      day -= before;
+
+      console.log('해당일부터:' + day + '소요');
+    }
+//     FirstTest(오늘날짜, 물고기수, 간격, 주려는 물고기양);
+//    FirstTest(3, 32, 5, 0.5);
+    
+    function Second(){
+      var fish = 32, day = 3, turm = 5, cat = 0;
+      
+      day = 1; 
+      
+      for(; day >= 0; day++){
+        if(day % turm == 0){
+            fish -= 0.5;
+            cat += 0.5;
+            console.log('고양이가 먹은 물고기수:'+cat,
+                        '남은 물고기수:'+fish,
+                        '소요된 날짜:'+day);
+          }
+        if(fish == 0){
+          break;
+        }
+      }//for
+      
+      day += 2;
+      
+      console.log('총 소요된 날짜'+day);
+      
+    }// Second();
+    Second();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
