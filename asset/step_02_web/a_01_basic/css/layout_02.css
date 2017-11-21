@@ -1,0 +1,71 @@
+/* layout_02.css */
+@charset "utf-8";
+/* == reset ========================================= */
+html,body{margin:0; padding:0; color:#333;}
+h1,h2,h3,h4,h5,h6,
+p,pre,div{margin:0; padding: 0;}
+ul,ol,li,dl,dt,dd{margin:0; padding:0; list-style:none;}
+a{text-decoration:none; color:#f2a;}
+a:hover{text-decoration:underline; font-weight:bold;} 
+img{border:0;}
+
+header,section,footer,aside,article,nav,main,
+figure{display: block;}
+
+/* == common ========================================= */
+.clearfix:after{content:" "; display: block;clear: both;}
+.clearfix::after{content:" "; display: block;clear: both;}
+
+/* == design ========================================= */
+body{background-color: #035;}
+#box{width: 600px; height:auto; 
+  margin:50px auto;
+  margin:3.125rem auto;}
+
+/* #headBox --------------------*/
+#headBox{width: 100%; height: 100px; 
+  background-color:#1af}
+
+/* #contentBox --------------------*/
+#contentBox{width: 100%; height: auto;}
+  #sideArea{width:33.333333%; /*width:calc(100% / 3); */height:300px; float:left; background-color:#fa0;}
+  #contentArea{width:33.333333%; /*width:calc(100% / 3); */height:300px; float:left; background-color:#aac;}
+  #viewArea{width: 33.333333%; /*width:calc(100% / 3); */height: 300px; float: left;
+  background-color: #faf;}
+
+/* #footBox --------------------*/
+#footBox{width: 100%; height: 100px; 
+  background-color:#af1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
