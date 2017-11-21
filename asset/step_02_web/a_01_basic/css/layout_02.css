@@ -16,6 +16,8 @@ figure{display: block;}
 .clearfix:after{content:" "; display: block;clear: both;}
 .clearfix::after{content:" "; display: block;clear: both;}
 
+.hidden{width: 0; height: 0; overflow: hidden;}
+
 /* == design ========================================= */
 body{background-color: #035;}
 #box{width: 600px; height:auto; 
