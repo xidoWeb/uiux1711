@@ -23,11 +23,15 @@ body{background-color: #035;}
   margin:3.125rem auto;}
 
 /* #headBox --------------------*/
-#headBox{width: 100%; height: 100px; background-color:#1af}
+#headBox{width: 100%; height: 100px; background-color:#1af;
+  padding: 10px; box-sizing: border-box;}
   h1{width: 80px; height: 80px; background-color: #fff; float: left;
-    margin-top:10px; margin-left: 10px;}
+    /*margin-top:10px; margin-left: 10px;*/}
   #globalNavArea{width:300px; height: 40px; background-color: #dfdfdf; float: right;
-    margin-top:50px; margin-right:10px;}
+    margin-top: 40px; /*margin-top:50px; margin-right:10px;*/}
+  #globalNavArea>ul{width: 100%; height: 100%;}
+  #globalNavArea>ul>li{width:10%; height:100%; background-color:#555; color:#fff; float: left; margin-right: 8%;}
+  #globalNavArea>ul>li.last{margin-right:0;}
 
 /*
 * h1: h1은 사이트에 제목을 뜻하는의미를 가지고있고, 가장중요의 의미를 지니고있다.
