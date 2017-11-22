@@ -19,25 +19,28 @@ figure{display: block;}
 .hidden{width: 0; height: 0; overflow: hidden;}
 
 /* == design ========================================= */
-#wrap{width: 700px; height: auto; margin:0 auto;}
+#wrap{width:700px; height: auto; margin:0 auto;}
 
 /* #headBox ---------------------- */
-#headBox{width: 100%; height:80px; background-color:#afc;}
-
+#headBox{width:100%; height:80px; background-color:#4aa;
+  padding:15px 50px; box-sizing: border-box;}
+  h1{width: 100px; height: 50px; background-color:#fff; float: left;}
+  #gnb{width: 450px; height: 30px; margin-top: 20px; background-color:#fff; float: right;}
 /* #bannerBox ---------------------- */
-#bannerBox{width: 100%; height:250px; background-color:#fa0;}
+#bannerBox{width:100%; height:250px; background-color:#fa0;}
 
 /* #sideBox ---------------------- */
-#sideBox{width: 100%; height:35px; background-color:#06f;}
+#sideBox{width:100%; height:35px; background-color:#06f;}
 
 /* #contentBox ---------------------- */
-#contentBox{width: 100%; height:300px; background-color:#fcc;}
-
+#contentBox{width:100%; height:auto;}
+  #news{width:50%; height:300px; background-color:#f77; float:left;}
+  #info{width:50%; height:300px; background-color:#77f; float:left;}
 /* #footBox ---------------------- */
-#footBox{width: 100%; height:80px; background-color:#f60;}
+#footBox{width:100%; height:80px; background-color:#fa0;}
 
 
-
+ 
 
 
 
