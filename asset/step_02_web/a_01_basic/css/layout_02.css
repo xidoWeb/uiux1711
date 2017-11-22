@@ -1,4 +1,4 @@
-/* layout_02.css */
+/* layout_01-2.css */
 @charset "utf-8";
 /* == reset ========================================= */
 html,body{margin:0; padding:0; color:#333;}
@@ -19,49 +19,22 @@ figure{display: block;}
 .hidden{width: 0; height: 0; overflow: hidden;}
 
 /* == design ========================================= */
-body{background-color: #035;}
-#box{width: 600px; height:auto; 
-  margin:50px auto;
-  margin:3.125rem auto;}
+#wrap{width: 700px; height: auto; margin:0 auto;}
 
-/* #headBox --------------------*/
-#headBox{width: 100%; height: 100px; background-color:#1af;
-  padding: 10px; box-sizing: border-box;}
-  h1{width: 80px; height: 80px; background-color: #fff; float: left;
-    /*margin-top:10px; margin-left: 10px;*/}
-  #globalNavArea{width:300px; height: 40px; background-color: #dfdfdf; float: right;
-    margin-top: 40px; /*margin-top:50px; margin-right:10px;*/}
-  #globalNavArea>ul{width: 100%; height: 100%;}
-  #globalNavArea>ul>li{width:10%; height:100%; background-color:#555; color:#fff; float: left; margin-right: 8%;}
-  #globalNavArea>ul>li.last{margin-right:0;}
+/* #headBox ---------------------- */
+#headBox{width: 100%; height:80px; background-color:#afc;}
 
-/*
-* h1: h1은 사이트에 제목을 뜻하는의미를 가지고있고, 가장중요의 의미를 지니고있다.
-* html5 초기버전에서는 h1을 여러번 사용이 가능(section태그내의 새로운 작은 웹형식을 갖추면) 
-* html5.1 버전인 현재(2017.10)는 h1을 다시 한번만 사용하기로 변형
-*/
+/* #bannerBox ---------------------- */
+#bannerBox{width: 100%; height:250px; background-color:#fa0;}
 
-/* #contentBox --------------------*/
-#contentBox{width: 100%; height: auto;}
-  #contentArea{width:70%; /*width:calc(100% / 3); */height:150px; float:left; background-color:#aac;}
-  #viewArea{width: 70%; /*width:calc(100% / 3); */height: 150px; float: left;
-  background-color: #faf;}
-  #sideArea{width:30%; /*width:calc(100% / 3); */height:300px; float:right; background-color:#fa0;
-  margin-top:-150px;}
+/* #sideBox ---------------------- */
+#sideBox{width: 100%; height:35px; background-color:#06f;}
 
-/* #footBox --------------------*/
-#footBox{width: 100%; height: 100px; 
-  background-color:#af1}
+/* #contentBox ---------------------- */
+#contentBox{width: 100%; height:300px; background-color:#fcc;}
 
-
-
-
-
-
-
-
-
-
+/* #footBox ---------------------- */
+#footBox{width: 100%; height:80px; background-color:#f60;}
 
 
 
