@@ -26,16 +26,49 @@ figure{display: block;}
   padding:15px 50px; box-sizing: border-box;}
   h1{width: 100px; height: 50px; background-color:#fff; float: left;}
   #gnb{width: 450px; height: 30px; margin-top: 20px; background-color:#fff; float: right;}
+    #gnb>ul{width: 100%; height: 100%; }
+    #gnb>ul>li{width: 100px; height: 30px; float: left; background-color: #ccc;
+        margin-right:16px;}
+    #gnb>ul>li.last{margin-right: 0;}
 /* #bannerBox ---------------------- */
-#bannerBox{width:100%; height:250px; background-color:#fa0;}
+#bannerBox{width:100%; height:250px; background-color:#dc9;}
 
 /* #sideBox ---------------------- */
-#sideBox{width:100%; height:35px; background-color:#06f;}
+#sideBox{width:100%; height:35px; background-color:#069;}
 
 /* #contentBox ---------------------- */
 #contentBox{width:100%; height:auto;}
-  #news{width:50%; height:300px; background-color:#f77; float:left;}
-  #info{width:50%; height:300px; background-color:#77f; float:left;}
+  #news{width:50%; height:300px; background-color:#f77; float:left;
+    padding:15px; box-sizing: border-box;}
+    #news>ul{width: 100%; height: 100%; background-color: #faa;}
+
+/* type_01; */
+
+    #news>ul>li{width: 50%; height: 50%; float: left;
+      background-color: #fa6;
+      padding:5px; box-sizing: border-box;}
+    #news>ul>li>a{display: block; width: 100%; height: 100%;
+      background-color: #ccc;}
+
+
+/* type_02: */
+/*
+#news>ul>li{width: calc(50% - 10px); height: 50%; float: left;
+      background-color: #3a6;
+       margin:5px;}
+#news li.news_01{margin-top:0; margin-left: 0;}
+#news li.news_02{margin-top:0; margin-right: 0;}
+#news li.news_03{margin-bottom:0; margin-left: 0;}
+#news li.news_04{margin-bottom: 0; margin-right: 0;}
+*/
+  
+
+  #info{width:50%; height:300px; background-color:#77f; float:left;
+    padding:15px; box-sizing: border-box;}
+    #info>ul{width: 100%; height: 100%;}
+    #info>ul>li{width: 100%; height:80px; margin-bottom:10px;
+        background-color: #fff;}
+    #info>ul>li.last{margin-bottom: 0;}
 /* #footBox ---------------------- */
 #footBox{width:100%; height:80px; background-color:#fa0;}
 
