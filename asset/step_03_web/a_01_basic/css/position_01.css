@@ -1,0 +1,36 @@
+/* position_01.css */
+
+/* reset.css */
+html,body{margin:0; padding: 0;}
+h1,h2,h3,h4,h5,h6,
+p,div,pre,ul,ol,li,dl,dt,dd,
+table,thead,tbody,tfoot,tr,td,th,
+form,fieldset,label,legend,
+input,textarea,select,button,
+img{margin: 0; padding: 0; border:0; outline:0;}
+
+ul,ol,li{list-style: none;}
+a{text-decoration: none;}
+a:hover{text-decoration:underline;}
+
+a:focus{outline:3px solid #fa0; outline-offset:5px;}
+
+/* design.css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
