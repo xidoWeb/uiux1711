@@ -1,5 +1,6 @@
 /* position_01.css */
-
+@charset "utf-8";
+  
 /* reset.css */
 html,body{margin:0; padding: 0;}
 h1,h2,h3,h4,h5,h6,
@@ -16,10 +17,33 @@ a:hover{text-decoration:underline;}
 a:focus{outline:3px solid #fa0; outline-offset:5px;}
 
 /* design.css */
+body{height: 200rem;}
+
+h1{padding: 1rem; background-color: #0af; color:#fff; text-align: center;
+  text-transform:uppercase; font-family:'myriad pro',nanumGothic,dotum,sans-serif;
+  box-shadow:0 0.2em 0.2em rgba(0,0,0,0.3); margin-bottom: 2.5rem;}
 
 
+#wrap>div{width: 200px; height: 200px; float: left; border:2px solid #07f;
+  text-align: center; line-height: 200px; font-weight: bold; font-size: 2rem; 
+  box-sizing: border-box;}
+#wrap:after{content: " "; display: block; clear: both; }
+#wrap>div:hover{background-color: #f06; transition:all 0.8s; color:#fff;}
 
+#wrap{width: 1200px; height: auto; background-color:#ccc; margin: 0 auto;
+  border:3px solid #333;} 
+  .not{background-color:#fa0;}
+  .static{background-color:#af8; position:static; top:0; left:0; z-index:-9999; }/* static은 보잘것 없다. */
+  .fixed{background-color:#9ac; position:fixed; top:0; right:50px; z-index:-100;}
+  .absolute{background-color:#cca;}
+  .relative{background-color:#ac1;}
 
+/* position
+* position: static | fixed | absolute | relative;
+* static을 제외한 나머지는 : top, left, right, bottom, z-index
+* z-index는 1의 숫자로 판단할 수도 있지만, 100단위로 처리하는 경우가 많다.
+* z-index는 단위가 존재하지 않는다. 마이너스(-)값도 사용할 수 있다.
+*/
 
 
 
