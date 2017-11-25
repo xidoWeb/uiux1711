@@ -43,7 +43,6 @@ body{background-color:#05a;}
 
 /* #contentBox ------------------------ */
   #contentBox{width:100%; height:auto;}
-/*#contentBox::after{content:" "; display: block; clear: both;}*/
     #sideArea{width:40%; height:300px; float:left; background-color:#cfa;}
     #contentArea{width:60%; height:300px; float:left; background-color:#ccc;}
 
