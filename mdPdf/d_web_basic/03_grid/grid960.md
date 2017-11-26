@@ -13,7 +13,7 @@
 그리드의 사전적 뜻은 격자, 바둑판의 눈금을 의미합니다. 
 그리드는 판면을 구성할 때 쓰이는 가상의 격자의 안내선이라고 합니다. 
 
-![grid exam](./img/grid_01.jpg)
+![grid exam](./img/grid_01.jpg)			
 
 위 그림을 보면 어떠한 격자형태를 기준으로 정리해놓은 형태입니다. 
 그리드는 위그림처럼 정리를 좀 더 잘 하기위한 방법이라고 볼 수 있습니다.
@@ -42,7 +42,6 @@
 - 하지만 이는 보편화된 수치일뿐이지, 절대숫자는 아닙니다.
 
 - 현재에도 **desktop** 모니터의 가장 작은 수치의 기준은 **1024**입니다. 
-
 
 
 ---
@@ -184,16 +183,14 @@
 
 ## 이제 그리드에 대해 알았다면 더 공부해야하는 분야
 
-#### 우리가 더 알아야 하는 그리드이야기 : [8pt grid](https://spec.fm/specifics/8-pt-grid)
+- 우리가 더 알아야 하는 그리드이야기 : [8pt grid](https://spec.fm/specifics/8-pt-grid)
 
-#### 우리가 더 알아야하는 밀도 이야기: [픽셀밀도(Pixel Density)](https://brunch.co.kr/@blackindigo-red/18)
 
-#### 우리가 더 알아야하는 반응형 웹이야기: [반응형웹 슬라이드](https://www.slideshare.net/saltluxzinyus/ux-pd-16169213?qid=c1a242fb-2e17-448e-874d-7568f85dbdf5&v=&b=&from_search=3)
+- 우리가 더 알아야하는 밀도 이야기: [픽셀밀도(Pixel Density)](https://brunch.co.kr/@blackindigo-red/18)
+- 우리가 더 알아야하는 반응형 웹이야기: [반응형웹 슬라이드](https://www.slideshare.net/saltluxzinyus/ux-pd-16169213?qid=c1a242fb-2e17-448e-874d-7568f85dbdf5&v=&b=&from_search=3)
 
 ---
 
-##### 출처:
-
-[캠핑&보트 타는 웹디자이너 블로그](http://inmoon99.tistory.com/34), [아임웹](https://imweb.me/faq?mode=view&page=6&category=29&category2=0&idx=189)
+##### 출처:[캠핑&보트 타는 웹디자이너 블로그](http://inmoon99.tistory.com/34), [아임웹](https://imweb.me/faq?mode=view&page=6&category=29&category2=0&idx=189)
 
 ## 
