@@ -1,3 +1,6 @@
 **/not_ignore
 
 **/*.mp4
+
+**.*.zip
+**.*.psd
