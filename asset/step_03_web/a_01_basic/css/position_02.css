@@ -1,0 +1,54 @@
+/* position_02.css  */
+@charset "utf-8";
+
+/* reset.css */
+html, body{margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6,p,pre,div,ul,ol,li,dl,dt,dd{margin:0; padding:0;border:0;outline:0;}
+ul,ol,li{list-style:none;}
+a{text-decoration:none; color:#555;}
+a:hover{text-decoration:underline; color:#f27;}
+
+/* common.css */
+.clearfix:after{content:" "; display:block; clear:both;}
+.clearfix::after{content:" "; display:block; clear:both;}
+
+#wrap .last{margin-right:0; border-right:0;}
+#wrap .first{margin-left:0; border-left:0;}
+
+.hidden{width:0; height:0; overflow:hidden;}
+
+
+/* accessibility.css */
+a:focus{outline: 3px solid #fa0; outline-offset:3px;}
+
+/* design.css */
+#wrap{width:auto; min-width:960px; height:auto; margin:0 auto; }
+#headBox{width:100%; height:300px; background-color:#aaa; padding:1rem; box-sizing: border-box;}
+  #headBox > h1{width:100px; height:150px; float:left; background-color:#f27;}
+  #gnb{width:600px; height:100px; float:right; margin-top:50px;}
+  #gnb ul{width:100%; height:100%;}
+  #gnb ul>li{width:100px; height:100%; float:left; margin-left:20px; background-color:#637;}
+  #gnb ul>li>a{display:block; width:100%; height:100%; }
+  #gnb ul>li>a:focus{background-color:#fafafa;}
+#adBanner{width:100%; height:500px; background-color:#637;}
+  
+#contentBox{width:60rem; height:1500px; background-color:#dadada; margin:0 auto;}
+#footBox{width:100%; height:200px; background-color:#555; }
+
+/* 1. position */
+/* #popupBox 생성하기 */
+
+#popupBox{
+  width:600px; height:250px;
+  background-color:#cacaca; 
+  border:2px solid #777; 
+  padding:2rem; box-sizing:border-box;
+  position:fixed;  top:50%;  left:50%;   z-index:500;
+  margin-left:-300px; margin-top: -125px;
+}
+#popupBox>button{padding:0.4rem; background-color:#f77;
+  position:absolute; right:-20px; top:-20px; border:0;}
+
+#popupBox>button:focus,
+#popupBox>button:hover{background-color:#fa0;}
+#popupBox>p{font-size:1.2rem; color:#333; font-family:"myriad pro";}

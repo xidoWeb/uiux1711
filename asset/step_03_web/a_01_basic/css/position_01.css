@@ -30,13 +30,13 @@ h1{padding: 1rem; background-color: #0af; color:#fff; text-align: center;
 #wrap:after{content: " "; display: block; clear: both; }
 #wrap>div:hover{background-color: #f06; transition:all 0.8s; color:#fff;}
 
-#wrap{width: 1200px; height: auto; background-color:#ccc; margin: 0 auto;
-  border:3px solid #333;} 
+#wrap{width: 1200px; height: auto; background-color:#ccc; margin:150px auto; border:3px solid #333; position:relative;} 
   .not{background-color:#fa0;}
   .static{background-color:#af8; position:static; top:0; left:0; z-index:-9999; }/* static은 보잘것 없다. */
-  .fixed{background-color:#9ac; position:fixed; top:0; right:50px; z-index:-100;}
-  .absolute{background-color:#cca;}
-  .relative{background-color:#ac1;}
+  .fixed{background-color:#9ac; position:fixed; top:0; left:0; z-index:100;}
+  .absolute{background-color:#cca; position:absolute; top:0;  left:150px; z-index:200;}
+  .relative{background-color:#ac1; position:relative;
+    top:100px; left:50px; z-index:300;} 
 
 /* position
 * position: static | fixed | absolute | relative;
