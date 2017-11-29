@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // 1부터 100까지의 합에서
+  // 홀수는 더하고 짝수는 빼라
+  function First(){
+    var num = 0;
+    var sum = 0;
+    var before , result;
+    for(; num <= 100; num++){
+      before = sum;
+      if(num % 2 == 0){ 
+        result = sum -= num;
+        console.log('이전값: ' + before +
+              '계산값: '+ sum + '-=' + num + '=' + result );
+      } else {
+        result = sum += num;
+        console.log('이전값: ' + before +
+                        '계산값: '+ sum + '+=' + num + '=' + result );
+        }
+    }
+    console.log('최종값: '+ sum);
+  } // First();
+  // First();
+
+/* * 계승 기능을가진 n-1 의 곱을 구하시오 */
+  function Second(){
+    // 01 예시 5! 값을 구해라!
+    // 02 던져진 숫자의 값을 구해라!
+    // var fi = 5; // 01내용
+    var fi = prompt('정수형의 숫자값을 입력하시오.');
+    var multiple = 1;
+    var result ,before;
+    for(; fi > 0; fi--){
+      // console.log(fi);
+      // multiple *= fi;
+      // console.log(multiple) ;
+
+      // 자신의값, 숫자, 결과
+      before = multiple;
+      result = multiple *= fi;
+      console.log('자신의값: '+ before + ', 숫자: ' + fi + ', 곱의 결과: '+ result);
+    } //for
+  }// Second();
+
+  Second();
+
+
+  </script>
+</body>
+</html>
