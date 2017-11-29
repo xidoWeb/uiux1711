@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +11,8 @@
   <!-- position : top 버튼만들기, 고정값 -->
   <!-- position : sidebar 메뉴 만들기 -->
   <div id="popupBox">
-      <button type="button">닫기</button>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet qui, quo eius minus incidunt quibusdam deserunt voluptate veritatis pariatur, atque iure, porro culpa eligendi error nulla placeat laudantium nostrum expedita?</p>
+    <button type="button">닫기</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet qui, quo eius minus incidunt quibusdam deserunt voluptate veritatis pariatur, atque iure, porro culpa eligendi error nulla placeat laudantium nostrum expedita?</p>
   </div>
 
 
@@ -40,6 +39,10 @@
 
     <article id="contentBox">
       <h2 class="hidden">content</h2>
+      <div class="side_box">side_box</div>
+      <div class="top_btn">
+        <a href="http://daum.net#photoClipTitle" target="_blank">상단으로 이동</a>
+      </div>
     </article>
     <!-- #contentBox -->
 
@@ -47,7 +50,12 @@
       <h2 class="hidden">footer</h2>
     </footer>
     <!-- #footBox -->
-  </div>
+  </div> 
 
+
+  <!-- jQuery script -->
+  <script src="../js/base/jquery-3.2.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/position_02.js"></script>
 </body>
-</html>`
+</html>
