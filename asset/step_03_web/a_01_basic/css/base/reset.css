@@ -73,6 +73,9 @@ h6{font-size: 20px; font-size: 1.25rem;}
 ul,ol,li{list-style:none;}
 a{text-decoration:none; color:#777;}
 a:hover, a:active{text-decoration:underline; color:#D07;}
+
+button{cursor:pointer;}
+
 /*  ============================================  */
 header, nav, article, section, footer, aside, main, figure, figcaption{
   display:block; color:inherit;

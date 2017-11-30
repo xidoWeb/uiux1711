@@ -2,20 +2,69 @@
 <!-- slideBanner_01.html -->
 <html lang="ko-KR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <!--[if lte IE9]>
     <script src="../js/base/html5shiv-printshiv.js"></script>
     <script src="../js/base/html5shiv.js"></script>
   <![endif]-->
-  <link rel="stylesheet" href="../css/slideBanner_01.css">
-  <link rel="apple-touch-icon" href="../favicon.png">
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <link rel="stylesheet" href="../css/slideBanner_01.css" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
   <title>slideBanner_01</title>
 </head>
 <body>
+  <div id="wrap">
+    <h1>css basic</h1>
+    <h2>display 이해</h2>
+    <div class="box_1">
+      <ul class="clearfix hidden_wrap">
+        <li><a href="#"> <span>display:block</span> </a></li>
+        <li><a href="#"> <span>display:none</span> </a></li>
+        <li><a href="#"> <span>화면에 보이는 기능 두번째</span> </a></li>
+        <li><a href="#"> <span>visibility:hidden</span> </a></li>
+        <li><a href="#"> <span>visibility:visible</span> </a></li>
+        <li><a href="#"> <span>display:inline</span> </a></li>
+        <li><a href="#"> <span>display:inline-block</span> </a></li>
+        <li><a href="#"> <span>여기까지 인듯</span> </a></li>
+      </ul>
+    </div>
+<!-- .box_1  -->
 
+    <h2>overflow 이해</h2>
+    <div class="box_2">
+      <ul>
+        <li>글자 전체 보이기 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laudantium veritatis in totam animi officia quidem facere natus quisquam. Eligendi minima similique aperiam fuga dicta dignissimos animi totam iusto ab! ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! ipsum dolor sit amet consectetur adipisicing elit. Fugiat itaque nobis, corrupti ipsam architecto amet in expedita quas iure est reprehenderit aut commodi similique necessitatibus quam sed vero molestias illum.</li>
+        <li>가로 스크롤 처리해서 보이게만들기 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ducimus eveniet ipsa nisi amet distinctio corrupti cupiditate et. Dicta exercitationem quas saepe repellat facilis, nobis cumque perferendis id ducimus voluptas? ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! ipsum dolor sit amet consectetur adipisicing elit. Modi mollitia maxime quaerat, optio debitis obcaecati facilis ullam impedit aliquam eaque atque accusamus aspernatur, repellendus dicta perspiciatis odit saepe laborum? Voluptas!</li>
+        <li>세로 스크롤 처리해서 보이게 만들기 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore quibusdam dolLorem ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! voluptate. Officiis sit provident quae ipsam fugit, nisi commodi saepe illum sapiente laboriosam possimus perferendis. Nobis, fugit in.</li>
+        <li>가로 세로 모두 보이지 않게 처리하기 LLorem ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! ipsum dolor sit amet consectetur adipisicing elit. Eos, necessitatibus. Quidem fugiat eos dolor obcaecati unde accusantium provident corrupti aperiam et illum dignissimos distinctio, officiis asperiores magni in corporis blanditiis.</li>
+        <li>자동으로 처리되게 만들기 </li>
+        <li><span>넘침시 스크롤은 되는데 스크롤 모양이 안보이게 만들기 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! ipsum dolor sit amet consectetur, adipisicing elit. Itaque, dolore? Ab vitae nam obcaecati, eveniet deleniti deserunt vel, animi tempora eligendi dignissimos veniam tenetur dolLorem ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis!que vero sint ipsa quis voluptate!</span></li>
+        <li>글자 말줄임 처리 1단계 자동 줄바꿈처리안되게 하기 LLorem ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! ipsum dolor sit amet consectetur adipisicing elit. Quidem consequuntur provident eveniet amet necessitatibus sunt doloLorem ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! accusamus itaque tempora? Vitae quae dolorum saepe molestias laudantium non molestiae cum. Expedita, dolor.</li>
+        <li>말줄임 글자처리  2단계 말줄임 만들기 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi autem inventore enim consectetur. Dolores, fuga quidem expedita veritatis id asperiores delectus, reprehenderit eum quaerat sint consequatur, mollitia atque cupiditate eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum quia voluptas? Tempora ex animi veritatis non! Saepe aut corrupti assumenda veritatis eius? Nostrum deserunt quibusdam atque! Dolorum, ab facilis! ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quaerat maiores esse est. Autem aspernatur at hic eum aliquam, magnam praesentium tempore. Minus odio a laudantium veritatis cumque, reiciendis in?</li>
+      </ul>
+    </div>
+
+    <h2>slide banner 이해</h2>
+    <div class="box_3">
+      <div class="btn">
+        <button type="button">leftBtn</button>
+        <button type="button">rightBtn</button>
+      </div><!-- .btn -->
+      <div class="banner">
+        <ul>
+          <li>slide_banner_01</li>
+          <li>slide_banner_02</li>
+          <li>slide_banner_03</li>
+          <li>slide_banner_04</li>
+          <li>slide_banner_05</li>
+        </ul>
+      </div><!-- .banner -->
+    </div><!-- .box_3 -->
+  </div>
   
   <!-- script -->
   <script src="../js/base/jquery-3.2.1.js"></script>

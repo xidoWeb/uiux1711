@@ -1,2 +1,79 @@
 /* slideBanner_01.css */
 
+#wrap{width:100%; height:auto; padding:3rem; box-sizing:border-box;}
+h1{padding:1rem; background-color:#a87; color:#fff; margin-bottom:0.7rem;}
+h2{border-top:2px solid #777; background-color:#aaa; 
+  color:#fff; text-align:center; padding:1rem;}
+h2 + div{padding:0.7rem; background-color:#fcc; width:900px; height:auto; margin:0 auto;
+  margin-bottom:2rem;}
+
+.box_1>ul{width:100%; height:auto;}
+.box_1>ul>li{width:100px; height:150px; float:left; margin-right:10px; background-color:#0af;
+    color:#fff;}
+.box_1>ul>li>a{color:inherit; display:block; width:100%; height:100%;}    
+
+.box_1>ul>li:nth-child(2n-1){background-color:#fa0;}
+
+.box_1>ul>li:nth-child(1){display:block}
+.box_1>ul>li:nth-child(2){display:none}
+/* .box_1>ul>li:nth-child(3){} */
+.box_1>ul>li:nth-child(4){visibility:hidden}
+.box_1>ul>li:nth-child(5){visibility:visible}
+.box_1>ul>li:nth-child(6){display:inline}
+.box_1>ul>li:nth-child(7){display:inline-block}
+/* .box_1>ul>li:nth-child(8){} */
+
+/* overflow 처리하기 --------------------------------------------------- */
+.box_2>ul{width:50%; height:auto; border:2px solid #d07;}
+.box_2>ul>li{width:100%; height:100px; background-color:#ccc; 
+    margin-bottom:3rem; overflow:hidden;} 
+/* 실제로 사용할때에는 대체로 세로는 auto가 많고, 이외에는 hidden 처리가 많다. */
+.box_2>ul>li:nth-child(1){overflow:visible;}
+.box_2>ul>li:nth-child(2){overflow-x:scroll; overflow-y:hidden; white-space:nowrap; }
+.box_2>ul>li:nth-child(3){overflow-y:scroll; overflow-x:hidden;}
+.box_2>ul>li:nth-child(4){overflow-x:hidden; overflow-y:hidden;}
+.box_2>ul>li:nth-child(5){overflow-x:auto; overflow-y:auto;}
+.box_2>ul>li:nth-child(6){background-color:#0cc; padding:0.5rem; 
+      box-sizing: border-box;}
+.box_2>ul>li:nth-child(6)>span{display:block; width:100%; height:100%; 
+                          background-color:inherit; 
+                          overflow-y:scroll; overflow-x:hidden;
+                          padding-right:5rem;}       
+.box_2>ul>li:nth-child(7){white-space:nowrap; word-wrap:break-word;}
+/*  white-space:요소내부의 공백처리
+    : normal; 기본,공백을 1개로처리
+    : nowrap; 공백을 어려개넣어도 하나로(줄바꿈처리 안됨) v
+    : pre; 공백을 있는 그대로 처리 
+    : pre-wrap; 공백을 코드에 있는 그대로 (줄바꿈이 없어도 자동으로 줄바꿈처리) 
+    : pre-line; 공백을 여러개 넣어도 하나로처리, 줄바꿈 자동처리, br코드도 처리
+
+    word-wrap: 긴텍스트를 강제로 줄바꿈처리
+    : normal; 기본값 글자가 길어도 한줄로
+    : break-word;   강제로 끊어서 줄바꿈 v
+
+    text-overflow: 글자가 지정한 너비를 넘어갈 경우 처리방법
+    : clip; 기본
+    : ellipsis; 말줄임표처리 v
+      (부모태그의 넓이가 auto일경우 처리안됨, overflow:hidden; 같이 사용)
+*/
+.box_2>ul>li:nth-child(8){white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+
+/* slide_banner 기초 작업하기 1 */
+.box_3{height:500px; border:2px solid #5aa; margin-top:1rem;
+  position:relative;}
+.btn{width:140%; height:0; position: absolute; top:50%; left:-20%; margin-top:-70px;}
+.btn>button{width:100px; height:140px; background-color:#0af;}
+.btn>button:first-child{float:left;}
+.btn>button:last-child{float:right;}
+
+.banner{width:100%; height:100%; background-color:#fff;}
+.banner>ul{width:500%; height:100%; background-color:#aaa}
+.banner>ul>li{width:20%; height:100%; float:left; text-align:center; line-height:500px;
+  font-size:3rem;}
+  /* 광고배너의 경우는 nth-child를 사용해서는 안된다!  */
+  .banner>ul>li:nth-child(1){background-color:#0af;}
+  .banner>ul>li:nth-child(2){background-color:#5aa;}
+  .banner>ul>li:nth-child(3){background-color:#a87;}
+  .banner>ul>li:nth-child(4){background-color:#c3c;}
+  .banner>ul>li:nth-child(5){background-color:#fcc;}
