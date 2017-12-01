@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    var num = function(a,b){    
+    var i = a, j = b, k = 0; 
+    
+    for(; k <= j; k++){
+      if(i%k==0 && j%k==0){
+        console.log(k);
+      }
+    }
+  }; //num
+  // num(10,30);
+
+  var myNumber = function(a,b){
+    var i = a, j = b, k = 0, l;
+    var arr = [];
+
+    // l의 변수를 통해서 큰숫자를 판단!
+    if(i > j){ l = i; }else{ l = j; }
+    // console.log('입력숫자중 큰숫자는: '+l);
+    for(; k <= l; k++){
+      if(i%k==0 && j%k==0){
+        arr.push(k);
+      }// if
+    }// for
+    console.log(arr);
+  }// myNumber
+  myNumber(100,100);
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
