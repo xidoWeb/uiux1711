@@ -7,6 +7,10 @@
   <title>공약수 3자리 구하기</title>
 </head>
 <body>
+  <input type="text" id="input1" placeholder="숫자를 입력하세요.">
+  <input type="text" id="input2" placeholder="숫자를 입력하세요.">
+  <input type="text" id="input3" placeholder="숫자를 입력하세요.">
+  <button type="button">확인</button>
   <script>
     function NumberTest(a, b, c){
 
@@ -27,27 +31,46 @@
     }
     // NumberTest(1,2,'a');
 // ---------------------------------------------------
-    // function Num2(){
-    //   var a = prompt('숫자 1');
-    //   // var b = prompt('숫자 2');
-    //   // var c = prompt('숫자 3');
+function Num2(){
+  var a = prompt('숫자를 입력하세요.');
+  var b = prompt('숫자를 입력하세요.');
+  var c = prompt('숫자를 입력하세요.');
+  var n1 = parseInt(a);
+  var n2 = parseInt(b);
+  var n3 = parseInt(c);
+  // console.log(a,b,c);
+  // console.log(n1,n2,n3);
+  // console.log(typeof(n1));
+  // console.log(isNaN(n1));
+  if( isNaN(n1) || isNaN(n2) ||  isNaN(n3) ){
+    console.log('일부 숫자가 아닌것이 있습니다.');
+  }else{
+    console.log('모두 숫자입니다.');
+  }
+} 
+// Num2();
+function Num3(){
+  var a = parseInt(document.getElementById('input1').value);
+  var b = parseInt(document.getElementById('input2').value);
+  var c = parseInt(document.querySelector('#input3').value);
 
-    //   var n1 = parseInt(a) ;
-    //   // var n2 = parseInt(b) ;
-    //   // var n3 = parseInt(c) ;
-    //   // console.log(a,b,c);
-    //   // console.log(n1,n2,n3);
-    //   if( typeof(n1) == NaN){
-    //     // console.log('모두 숫자입니다.');
-    //     console.log(n1);
-    //   }else{
-    //     console.log(n1, '+');
-    //     // console.log('일부 숫자가 아닌것이 있습니다.');
-    //   }
-    // }
-    // Num2();
+  var n1,n2,n3;
+  // console.log(a,b,c);
+  document.write(a,b,c);
+      n1 = Number.isInteger(a);
+      n2 = Number.isInteger(b);
+      n3 = Number.isInteger(c);
+      if(n1 && n2 && n3){
+        // console.log('모두 숫자');
+        document.write('모두 숫자');
+      }else{
+        // console.log('일부 숫자가 아님');
+        document.write('일부 숫자가 아님');
+      }
+}    
+// Num3();
+document.querySelector('button').addEventListener('click', Num3);
 // --------------------------------------------------
-
 
 var myNumber = function(a,b,c){
     var i = a, j = b, p = c, k = 0, l;
