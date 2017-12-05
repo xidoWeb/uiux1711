@@ -72,8 +72,8 @@ h2 + div{padding:0.7rem; background-color:#fcc; width:900px; height:auto; margin
 .banner>ul>li{width:20%; height:100%; float:left; text-align:center; line-height:500px;
   font-size:3rem;}
   /* 광고배너의 경우는 nth-child를 사용해서는 안된다!  */
-  .banner>ul>li:nth-child(1){background-color:#0af;}
-  .banner>ul>li:nth-child(2){background-color:#5aa;}
-  .banner>ul>li:nth-child(3){background-color:#a87;}
-  .banner>ul>li:nth-child(4){background-color:#c3c;}
-  .banner>ul>li:nth-child(5){background-color:#fcc;}
+  .banner>ul>li.banner_content_01{background-color:#0af;}
+  .banner>ul>li.banner_content_02{background-color:#5aa;}
+  .banner>ul>li.banner_content_03{background-color:#a87;}
+  .banner>ul>li.banner_content_04{background-color:#c3c;}
+  .banner>ul>li.banner_content_05{background-color:#fcc;}
