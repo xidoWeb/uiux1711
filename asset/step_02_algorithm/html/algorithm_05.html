@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>공약수 3자리 구하기</title>
+</head>
+<body>
+  <script>
+    function NumberTest(a, b, c){
+
+    var num1 = typeof(a);
+    var num2 = typeof(b);
+    var num3 = typeof(c);
+    // console.log(num1, num2, num3);
+    if(num1 == 'number' && num2 == 'number' && num3 == 'number'){
+      console.log('모두 숫자인것을 확인하였습니다.');
+    }else{
+      console.log('일부 숫자가 아닌것이 있습니다.\n다시 입력하세요.')
+    }
+    
+    // var num = [num1, num2, num3];
+    // console.log('작성한 값 세가지는: ', num);
+
+    // 사용한 값이 숫자인지 아닌지 판단.
+    }
+    // NumberTest(1,2,'a');
+// ---------------------------------------------------
+    // function Num2(){
+    //   var a = prompt('숫자 1');
+    //   // var b = prompt('숫자 2');
+    //   // var c = prompt('숫자 3');
+
+    //   var n1 = parseInt(a) ;
+    //   // var n2 = parseInt(b) ;
+    //   // var n3 = parseInt(c) ;
+    //   // console.log(a,b,c);
+    //   // console.log(n1,n2,n3);
+    //   if( typeof(n1) == NaN){
+    //     // console.log('모두 숫자입니다.');
+    //     console.log(n1);
+    //   }else{
+    //     console.log(n1, '+');
+    //     // console.log('일부 숫자가 아닌것이 있습니다.');
+    //   }
+    // }
+    // Num2();
+// --------------------------------------------------
+
+
+var myNumber = function(a,b,c){
+    var i = a, j = b, p = c, k = 0, l;
+    var arr = [];
+
+    // l의 변수를 통해서 큰숫자를 판단!
+    if(i >= j && i >= p){
+       l = i;
+      }else if(j >= p){
+       l = j;
+      }else{
+       l = p;
+      }
+          // var firstArr = [i , j, p];
+          // console.log(firstArr);
+          // firstArr.sort(function(ll, kk){ return kk-ll });
+          // console.log(firstArr);
+          // console.log(firstArr[0]);
+
+    // console.log('입력숫자중 큰숫자는: '+l);
+      for(; k <= l; k++){
+        if(i%k==0 && j%k==0 && p%k == 0){
+          arr.push(k);
+        }// if
+      }// for
+    console.log(arr);
+  }// myNumber
+  myNumber(100,2, 1200);
+  </script>
+</body>
+</html>
