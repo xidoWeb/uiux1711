@@ -4,20 +4,22 @@
   #wrap{width: 100%; min-width:960px; height: 100%;}
 
 /* #headBox =========================================== */
-  #headBox{width: 100%; height: 100px; box-sizing: border-box; 
-      padding:1rem; background-color: #afc;}
+  #headBox{width: 100%; height:auto; box-sizing: border-box; 
+      padding:1rem; background-color: #afc; position: absolute; bottom: 0;}
+  #headBox.fixed{position:fixed; top:0; bottom:auto;}
+  #headBox:after{content:" "; display: block; clear: both;}
   h1{width: 100px; height: 100px; background-color: #fff; float: left;}
 
 /* #gnb =========================================== */
   #gnb{width: 600px; height: 50px; margin-top: 50px; float: right; background-color: #f9c;}
 
   #gnb>ul{width: 100%; height: 100%;}
-  #gnb>ul>li{width: 100px; height: 100%; margin-right:20px; float: left; background-color: #45a;}
+  #gnb>ul>li{width: 100px; height:50px; margin-right:20px; float: left; background-color: #45a;}
   #gnb>ul>li:last-child{margin-right: 0;}
-  #gnb>ul>li>a{display: block; width: 100%; height: 100px; color:#fff;}
+  #gnb>ul>li>a{display: block; width: 100%; height: 100%; color:#fff;}
 
 /* #bannerBox =========================================== */
-  #bannerBox{width:100%; height:700px; margin:0 auto; background-color: #ccc;}
+  #bannerBox{width: 100%; height: 100%; min-height: 800px; margin:0 auto; background-color: #ccc;}
 
 /* #contentBox =========================================== */
   #contentBox{width: 960px; height: 3000px; margin:0 auto; background-color: #cc8;}
