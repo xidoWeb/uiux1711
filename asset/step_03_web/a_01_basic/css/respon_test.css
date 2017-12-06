@@ -1,0 +1,30 @@
+/* respon_test */
+
+body{background-color:#afc;}
+#wrap{width:960px; margin:0 auto;}
+#wrap::after, #gnb::after, #gnb>ul{content:" "; display:block; clear:both;}
+#gnb{width:700px; float:right; background-color:#f8a;}
+
+  h2{width:0; height:0; overflow:hidden; position:absolute; z-index:-100;}
+  #gnb>button{width:50px; height:50px; float:right; background-color:#333; 
+  color:#fff; font-weight:bold; display:none;}
+
+  #gnb>ul{width:100%; height:100%;}
+  #gnb>ul>li{float:left; margin-right:50px; padding:1rem; background-color:#fff;}
+  
+
+
+/*  ===============================================   */
+@media screen and (max-width:960px) {
+  body{background-color:#fac;}
+  #wrap{width:100%; min-width:620px;}
+}
+/*  ===============================================   */
+@media screen and (max-width:768px) {
+  body{background-color:#cca;}
+  #wrap{width:100%; min-width:620px;}
+  #gnb>button{display:block;}
+  #gnb>button:hover + ul{display:block;}
+  #gnb>ul{display:none; position:absolute; right:0; top:0;}
+  #gnb>ul.view{display:block;}
+}
