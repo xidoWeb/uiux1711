@@ -55,6 +55,18 @@ h3{padding: 0.3em; font-size: 1.2em; font-weight: bold; background-color: #25a; 
 .btn>li>button:focus{background-color: #f07;}
 
 /* #contentBox ===================================== */
-#contentBox{}
+#contentBox{width:960px; height: auto; margin: 0 auto; margin-bottom:10rem;}
+#contentBox:after{content:" "; display: block; clear: both;}
+.tabs{width: 100%; height: 50px;}
+.tabs>li{width: 150px; height: 50px; float: left; background-color: #fff; border:1px solid #555; border-top:0; border-bottom:0;}
+.tabs>li>button{width: 100%; height: 100%; background-color:transparent;}
+.tabs>li>button:focus{background-color: #f07; font-weight: bold;}
+.tabs>li.select{background-color: #0af; color:#fff;}
+
+.tab_content{width: 100%; height: auto; box-sizing:border-box; padding: 1.5rem; background-color: #cca;}
+.tab_content>li{width: 100%; height: auto; display: none;}
+.tab_content>li.select{display: block;}
+
+
 /* */
 #footBox{}
