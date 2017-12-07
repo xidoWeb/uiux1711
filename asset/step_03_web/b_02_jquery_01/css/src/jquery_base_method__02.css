@@ -1,0 +1,34 @@
+/* jquery_base_method__02.css */
+#wrap{width: 100%; min-width:960px; height: auto; margin: 0 auto; background-color:#ddd; }
+
+/* #headBox ===================================== */
+#headBox{width: 960px; height: auto; box-sizing: border-box; padding: 1rem; margin: 0 auto;
+        background-color: #ccc;}
+#headBox:after{content:" "; display:block; clear:both; }
+  h1{width: 250px; height: 70px; background-color: #f07; float: left;} 
+  h1>a{display: block; width: 100%; height: 100%;}
+    
+/* #gnb ===================================== */
+#gnb{width: 600px; height: auto; float: right; position: relative;}
+  /*버튼 모양 변경*/
+  .gnb_btn{width: 30px; height: 30px; background-color: #aaa; float: right; }
+
+  #gnb>ul{width:auto; height: auto; position: absolute; right: 0; top: 40px; background-color: #fff;}
+  #gnb>ul:after{content:" "; display: block; clear: both;}
+  #gnb>ul>li{float: left;text-transform:uppercase; border-right:1px solid #333;
+    padding:0 0.7rem; box-sizing:border-box; letter-spacing:-0.025rem;}
+
+  #gnb>ul>li:nth-child(1){padding-left: 0;}
+  #gnb>ul>li:nth-child(2){}
+  #gnb>ul>li:nth-child(3){}
+  #gnb>ul>li:nth-child(4){}
+  #gnb>ul>li:nth-child(5){}
+  #gnb>ul>li:nth-child(6){border-right: 0;}
+    
+/* #bannerBox ===================================== */
+#bannerBox{}
+
+/* #contentBox ===================================== */
+#contentBox{}
+/* */
+#footBox{}
