@@ -44,6 +44,8 @@ h3{padding: 0.3em; font-size: 1.2em; font-weight: bold; background-color: #25a; 
 .view:after{content:" "; display: block; clear: both;}
 .view>li{width: 200px; height: 200px; margin:1rem; background-color: #faa; text-align: center;
     line-height: 200px; float: left; font-size: 2rem;}
+  .view>li.myView{background-color:#50f; color:#fff;
+    border-radius:100%; transition:all 500ms ease;}
 
 .btn{width: 100%; height: auto;}
 .btn:after{content:" "; display: block; clear: both;}
