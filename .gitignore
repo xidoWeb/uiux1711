@@ -5,3 +5,5 @@
 **/*.psd
 
 **/*.config
+
+**/notIgnore
