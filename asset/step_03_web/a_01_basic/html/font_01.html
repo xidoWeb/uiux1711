@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>font</title>
+  <style>
+    /*
+      font-family
+      font-weight
+      font-style
+      font-size
+      line-height
+      letter-spacing
+      word-spacing
+      text-transform
+      text-indent
+      font-stratch
+      color
+    */
+  .font_01{font-family:"myriad pro", arial, dotum, sans-serif;}
+  .font_02{font-weight:bold; /* 100 ~ 900 */}
+  .font_03{font-style:italic; /* normal | italic */}
+  .font_04{font-size:150%;}
+  .font_05{line-height:300%; /* 단위값을 적지않으면 rem단위로 처리 */}
+  .font_06{/* font:weight style size/line family; */
+          font:italic 1.3rem/1.4 "myriad pro",dotum,sans-serif;}
+  .font_07{letter-spacing:0.24rem;}
+  .font_08{word-spacing:2rem;}
+  .font_09{font-kerning:none; /*자간 삼각형글꼴처리도 정리해서 사용 */
+        /* IE 안됨 */ }
+  .font_10{text-transform:capitalize; /* 대소문자처리  uppercase | lowercase | capitalize */}
+  .font_11{text-indent:-9999rem; font-weight: bold; color:#067; /* 들여쓰기 */}
+  .font_12{text-indent:-3rem;}
+  .font_13{font-stretch: condensed; /* ultra-condensed | extra-condensed | condensed | semi-condensed | normal | semi-expanded | expanded | extra-expanded | ultra-expanded; */}
+
+  .font_14{border-top:2px solid #0af; width: 600px; height: 50px; background-color: #ccc; text-align: justify; overflow: hidden;
+    /* left | right | center | justify (여러줄로 처리되었을때 사용가능) */}
+  .font_15:first-letter{text-transform:uppercase; font-size: 2rem; color:#0af;}
+  .font_16:first-line{color:#f0c;}
+  
+/*
+  width:0; height:0; text-indeng:-9999rem; overflow: hidden;
+*/
+
+  li:nth-child(5){font-size:2rem;} /* 연속된 코드(태그)일 경우에만 사용가능 (오로지 li)*/
+
+  div{width: 800px; height: auto; border:2px solid #cca; padding:0.5rem; box-sizing: border-box; margin: 0 auto;}
+  div>h2, div>p, div>pre{margin: 0; padding: 0; font-size: 1rem; font-weight: normal; line-height: 120%;}
+  div>h2:nth-of-type(2){color:#f0a;}
+  div>p:first-of-type{color:#aaa;}
+  div>p:last-of-type{color:#f05;}
+  div>p:nth-of-type(3){color:#00a;}
+  /* nth-of-type(){}  : 동레벨에서 연속되어 있지 않더라도 순서에 맞는 요소를 찾아서 선택하는 기능  */
+  </style>
+</head>
+<body>
+  <h1>font 이해하기</h1><hr />
+  <ul>
+    <li class="font_01">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_02">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_03">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_04">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_05">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_06">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_07">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_08">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_09">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_10">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_11">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_12">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_13">아무거나 텍스트 만들기Lorem ipsum dolor sit amet.</li>
+    <li class="font_14">
+      아무거나 텍스트 만들기 <br />
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quisquam, nostrum veniam odit voluptas ab molestias consectetur ea, optio vel, quis mollitia, maxime ullam qui autem rerum quas repellat vitae? ipsum dolor
+    </li>
+    <li class="font_15">oorem ipsum dolor sit amet.</li>
+    <li class="font_16">아무거나 텍스트 만들기<br />
+                        Lorem ipsum dolor sit amet.<br />
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, consequuntur.</li>
+  </ul>
+  <div>
+    <h2>child test</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem atque provident illo</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem atque provident illo</p>
+    <pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem atque provident illo</pre>
+    <h2>child test2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem atque provident illo</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem atque provident illo</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem atque provident illo</p>
+  </div>
+</body>
+</html>

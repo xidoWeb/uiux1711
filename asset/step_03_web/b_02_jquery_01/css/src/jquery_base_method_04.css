@@ -1,0 +1,14 @@
+/* jquery_base_method_04.css */
+
+#wrap{width:960px; height:auto; margin:0 auto; background-color: #dfdfdf;}
+
+#aniBox{width:100%; height:500px; box-sizing:border-box;
+      border:3px solid #555; position:relative; background-color: #fc0;}
+
+.ani{width:50px; height:50px; border-radius:50%; background-color:#03a; text-align: center; line-height: 50px; color:#fff; position: absolute; 
+  font-size:0.2rem; overflow: hidden;}
+
+#aniBtn{width:100%; height:70px; margin-top:3rem; border-top:3px solid #333;}
+#aniBtn>button{padding:0.5rem 1.5rem; background-color:#0ac; border-radius:1rem; color:#fff; transition:all 300ms ease-out; float:left; margin:1rem;}
+#aniBtn>button:hover{box-shadow:0.2rem 0.2rem 0.2rem rgba(50,50,50,0.5);}
+#aniBtn>button:active{box-shadow:0.2rem 0.2rem 0.2rem rgba(50,50,50,0.5) inset;}
