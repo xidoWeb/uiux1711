@@ -1,0 +1,13 @@
+/* base.css */
+
+#wrap{width: 100%; min-width: 960px; min-width: 60rem; height: auto;
+      min-height:500px; background-color: #ccc;}
+
+#headBox{width: 960px; height: 90px; height: 5.625rem; 
+          background-color: #fff;  margin: 0 auto;}
+#bannerBox{width: 960px; height: 720px; height: 45rem; 
+          background-color: #999;  margin: 0 auto;}
+#contentBox{width: 960px; height: 2000px; height: 125rem; 
+          background-color: #cca;  margin: 0 auto;}
+#footBox{width: 960px; height:300px; height: 18.75rem; 
+          background-color: #333;  margin: 0 auto;}
