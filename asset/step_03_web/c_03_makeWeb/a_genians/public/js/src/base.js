@@ -3,7 +3,7 @@
 
 // 각 기능을 요약해서 처리할 함수로 바꾸기
 var wrap = $('#wrap');
-function ImportFile(select, file, backgroundIf) {
+function ImportFile( select,file, backgroundIf) {
   select.load(file, function() {
     select.addClass('clearfix');
     var childrenBox = select.children();
@@ -43,42 +43,56 @@ wrap.prepend('<div id="headBoxWrap"></div>');
   //   console.log( headBox );
   //   headBoxWrap.css({'backgroundColor':headBoxBg});
   // });
-ImportFile(headBoxWrap, loadFile.headBox, true);
+
+  // =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ImportFile(headBoxWrap, loadFile.headBox, true);
 
 // bannerBox import
 headBoxWrap.after('<div id="bannerBoxWrap"></div>');
 var bannerBoxWrap = $('#bannerBoxWrap');
 // bannerBoxWrap.load(loadFile.bannerBox);
+
+// =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ImportFile(bannerBoxWrap, loadFile.bannerBox, true);
 
 // aboutBox
 bannerBoxWrap.after('<div id="aboutBoxWrap"></div>');
 var aboutBoxWrap = $('#aboutBoxWrap');
 // aboutBoxWrap.load(loadFile.aboutBox);
+
+// =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ImportFile(aboutBoxWrap, loadFile.aboutBox, true);
 
 // newsBox
 aboutBoxWrap.after('<div id="newsBoxWrap"></div>');
 var newsBoxWrap = $('#newsBoxWrap');
 // newsBoxWrap.load(loadFile.newsBox);
+
+// =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ImportFile(newsBoxWrap, loadFile.newsBox, true);
 
 // blogBox
 newsBoxWrap.after('<div id="blogBoxWrap"></div>');
 var blogBoxWrap = $('#blogBoxWrap');
 // blogBoxWrap.load(loadFile.blogBox);
+
+// =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ImportFile(blogBoxWrap, loadFile.blogBox, true);
 
 // lnbBox
 blogBoxWrap.after('<div id="lnbBoxWrap"></div>');
 var lnbBoxWrap = $('#lnbBoxWrap');
 // lnbBoxWrap.load(loadFile.lnbBox);
+
+// =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ImportFile(lnbBoxWrap, loadFile.lnbBox, true);
 
 // footNavBox
 lnbBoxWrap.after('<div id="footNavBoxWrap"></div>');
 var footNavBoxWrap = $('#footNavBoxWrap');
 // footNavBoxWrap.load(loadFile.footNavBox);
+
+// =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ImportFile(footNavBoxWrap, loadFile.footNavBox, true);
 
 // footbox import
@@ -91,6 +105,8 @@ var footBoxWrap = $('#footBoxWrap');
   //   console.log( footBox );
   //   footBoxWrap.css({'backgroundColor':footBoxBg});
   // });
+
+  // =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ImportFile(footBoxWrap, loadFile.footBox, true);
 
 
