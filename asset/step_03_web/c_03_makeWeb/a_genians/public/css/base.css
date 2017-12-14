@@ -3,11 +3,15 @@
 #wrap{width: 100%; min-width: 960px; min-width: 60rem; height: auto;
       min-height:500px; background-color: #ccc;}
 
-#headBox{width: 960px; height: 90px; height: 5.625rem; 
+#headBox{width:960px; height: 90px; height: 5.625rem; 
           background-color: #fff;  margin: 0 auto;}
 #bannerBox{width: 960px; height: 720px; height: 45rem; 
           background-color: #999;  margin: 0 auto;}
-#contentBox{width: 960px; height: 2000px; height: 125rem; 
-          background-color: #cca;  margin: 0 auto;}
+#aboutBox{width: 960px; height: 660px; background-color:#1af;margin: 0 auto;}
+#newsBox{width: 960px; height: 660px; background-color:#2a5;margin: 0 auto;}
+#blogBox{width: 960px; height: 660px; background-color:#3aa;margin: 0 auto;}
+#lnbBox{width: 960px; height: 660px; background-color:#4af;margin: 0 auto;}
+#footNavBox{width: 960px; height: 660px; background-color:#5a3;margin: 0 auto;}
+
 #footBox{width: 960px; height:300px; height: 18.75rem; 
           background-color: #333;  margin: 0 auto;}
