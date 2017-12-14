@@ -1,2 +1,11 @@
 /* newBox.css*/
-#newsBox{width: 960px; height: 660px; background-color:#2a5;margin: 0 auto;}
+/*#newsBox{}*/
+/*
+.content_box{}
+.title_area{}
+.content_area>div{}
+.content_area>div:last-of-type{}
+공통범위로  about.css에서 설정되었음 
+*/
+
+#newsBox>.content_area>div{height:270px;}

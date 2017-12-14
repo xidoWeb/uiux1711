@@ -2,8 +2,7 @@
   // jquery start ====================================
 
 // 각 기능을 요약해서 처리할 함수로 바꾸기
-var wrap = $('#wrap');
-function ImportFile( select,file, backgroundIf) {
+function ImportFile(select,file, backgroundIf) {
   select.load(file, function() {
     select.addClass('clearfix');
     var childrenBox = select.children();
@@ -16,6 +15,7 @@ function ImportFile( select,file, backgroundIf) {
     }
   });
 }
+
 // -------------------------------------------------------
 // validator : 
 // -------------------------------------------------------
@@ -108,7 +108,6 @@ var footBoxWrap = $('#footBoxWrap');
 
   // =+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ImportFile(footBoxWrap, loadFile.footBox, true);
-
 
 
 
