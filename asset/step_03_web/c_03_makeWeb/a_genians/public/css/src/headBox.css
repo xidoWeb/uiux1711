@@ -1,0 +1,13 @@
+/* headBox.css */
+
+#headBox{width:1164px; width:72.75rem; height: 90px; height: 5.625rem; box-sizing:border-box; 
+  padding:30px 5px; padding:1.875rem 0.3125rem;
+  background-color: #fff;  margin: 0 auto;}
+  
+  h1{width: 160px; height: 38px; background-color: #afc; float: left; margin-top:-4px;}
+
+  #gnb{width: 564px; height: 30px; float: left;
+    background-color: #aa4; margin-left: 136px;}
+
+  #unb{width: 227px; height: 30px; float: right;
+    background-color: #fa5;}
