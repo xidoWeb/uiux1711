@@ -3,6 +3,7 @@
 **/*.mp4
 
 **/*.psd
+!**/c_03_makeWeb/*.psd
 
 **/*.config
 
