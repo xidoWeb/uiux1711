@@ -73,10 +73,28 @@ h2{background-color: #0af; margin-bottom: 0.5rem; padding: 1rem; color:#fff;}
 */
 
 /* .size -----------------------------------------*/
-.size{}
+/* background-image의 기본은 1:1비율로 배치 */
+.size>div{width: 500px; height: 400px; border:1px solid #777;
+  float:left; margin:1rem;
+  background-image:url("../img/ny_city.jpg");
+  background-repeat:no-repeat; background-position:center;
+  font-size: 2rem; color:#fa0; font-weight: bold;}
+  .size_1{background-size:cover;}
+  .size_2{background-size:contain;}
+  .size_3{background-size:50% 30%}
+  .size_4{background-size:auto 100%;}
 
 /* .attachment -----------------------------------------*/
-.attachment{}
+.attachment{margin-bottom:150rem;}
+.attachment>div{width: 100%; height: 400px; 
+    background-color: #fff; 
+    border-bottom:1px solid #a77;
+    background-repeat:no-repeat; 
+    background-position:center 50%;
+    background-size:100% auto;}
+.at_1{background-image:url("../img/lego.jpg");}
+.at_2{background-image:url("../img/ny_city.jpg"); background-attachment:fixed;}
+.at_3{background-image:url("../img/skytree.jpg"); background-attachment:scroll;}
 
 /* .clip -----------------------------------------*/
 .clip{}
