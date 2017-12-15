@@ -31,9 +31,9 @@
       - narmal : 12pt ==> 1rem
     
 * font:
-      - english : "apple gothic" , "myriad pro", arial
-      - korean  : gothic, nanumGothic, dotum
-      - basic   : sans-serif
+      - english : Roboto, "myriad pro", arial
+      - korean  : 'Nanum Gothic Coding', dotum
+      - basic   : monospace, sans-serif
 
 * border:
       - thin :  border:1px solid #333
@@ -52,16 +52,17 @@
 
 
 /* base */
-html,body{margin:0; padding:0; color:#333; font-size:16px; font-size:1rem;}
+html,body{width: 100%; height: 100%; 
+        margin:0; padding:0; color:#333; font-size:16px; font-size:1rem;
+        font-family:Roboto,"myriad pro",arial,"Nanum Gothic Coding",dotum,monospace,sans-serif;}
 
 h1, h2, h3, h4, h5, h6, p, pre, ul, ol, li, dl, dt, dd, div, 
 table, thead, tbody, tfoot, tr, th, td, 
 form, fieldset, legend, input, textarea, select, button,
 a, img {
   margin:0; padding:0; border:0; outline:0; 
-  color:inherit;  font-size:inherit;
-  font-family:"apple gothic" , "myriad pro", arial, gothic, nanumGothic, dotum, sans-serif;
-}
+  color:inherit;  font-size:inherit; font-family:inherit;}
+
 address, em, wbr, strong, ins, del, abbr{font-style:normal; font-weight:normal;}
 h1{font-size: 32px; font-size: 2rem;}
 h2{font-size: 29px; font-size: 1.8125rem;}
@@ -70,13 +71,18 @@ h4{font-size: 24px; font-size: 1.5rem;}
 h5{font-size: 22px; font-size: 1.375rem;}
 h6{font-size: 20px; font-size: 1.25rem;}
 
-ul,ol,li{list-style:none;}
+ul,ol,li{list-style:none;     }
 a{text-decoration:none; color:#777;}
 a:hover, a:active{text-decoration:underline; color:#D07;}
 
-button{cursor:pointer;}
+button{cursor:pointer; border-radius:0; }
 
-/*  ============================================  */
+/* form ============================================ */
+select{-webkit-appearance:listbox;
+       -moz-appearance:listbox;
+        appearance:listbox; border: 0;}
+
+/*  html5 ============================================  */
 header, nav, article, section, footer, aside, main, figure, figcaption{
   display:block; color:inherit;
 }
