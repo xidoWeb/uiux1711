@@ -1,13 +1,49 @@
 /* headBox.css */
 
-#headBox{width:1164px; width:72.75rem; height: 90px; height: 5.625rem; box-sizing:border-box; 
-  padding:30px 5px; padding:1.875rem 0.3125rem;
+#headBox{width:72.75rem; height: 5.625rem; box-sizing:border-box; 
+  padding:1.875rem 0.3125rem;
   background-color: #fff;  margin: 0 auto;}
   
-  h1{width: 160px; height: 38px; background-color: #afc; float: left; margin-top:-4px;}
+/* h1 ========================================== */
+/* 위치확인*/
+  h1{width: 10rem; height: 2.375rem; background-color: #afc; float: left; margin-top:-0.25rem;}
+   /* 링크기능이 가능하게 */
+  h1>a{display: block; width: 100%; height: 100%; }
+  /* 숨김, 내용은 읽어줄 수 있도록 */
+  h1>a>span{display: block; width: 0; height: 0; overflow: hidden; 
+    position: absolute; z-index:-1; }
 
-  #gnb{width: 564px; height: 30px; float: left;
-    background-color: #aa4; margin-left: 136px;}
+/* #gnb ========================================== */
+  #gnb{width:auto; height:auto; float: left; margin-left: 8.5rem;}
+  #gnb>ul{width:auto; height:auto;}  
+  #gnb>ul>li{width: auto; height: 1.875rem; float: left; margin-right: 2.5rem;
+    font-size:1.125rem; font-weight:bold; color:#333; line-height:1.875rem;}  
+  #gnb>ul>li:last-child{margin-right: 0;}
+  #gnb>ul>li>a{color:inherit;}  
 
-  #unb{width: 227px; height: 30px; float: right;
-    background-color: #fa5;}
+/* #unb ========================================== */
+  #unb{width: 14.1875rem; height: 1.875rem; float: right; text-align: center;}
+
+  .language{width: 70px; height: 30px; background-color: #ccc; float:left;  margin-right: 0.7rem; line-height: 1.875rem;}
+  .sns{width:108px; height:30px; float:left; }
+  .sns>li{width:25px; height:30px; float:left; margin-right: 0.7rem; line-height: 1.875rem;}
+  .sns>li:last-child{margin-right: 0;}
+
+  .sns>li:last-child>a{display: block; width: 100%; height: 100%;
+    line-height:inherit;}
+  
+  .sns>li i{color:#555; font-size:1.5rem; line-height:inherit; vertical-align: middle;}
+  .my_naver_blog{display: block; width: 100%; height: 100%; 
+    background-image: url("../../img/headBox/naver_blog.svg");
+    background-repeat:no-repeat; background-position: center;
+    background-size:100% auto; 
+  }
+
+
+  .search_btn{width:30px; height:30px; float:right; position: relative;}
+
+  .search_btn:before{content:" "; display: block; 
+      position: absolute; left: -0.3rem; 
+      width:0; height: 80%; top:10%; 
+      border-left:1px solid #333;}
+  .search_btn>button{width: 100%; height: 100%; background-color:transparent;}

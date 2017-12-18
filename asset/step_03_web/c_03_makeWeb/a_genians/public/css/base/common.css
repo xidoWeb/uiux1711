@@ -3,6 +3,7 @@
 .clearfix::after{content:" "; display:block; width:100%; height:0; clear:both;}
 
 .hidden_wrap a>span, 
+.hidden_wrap button>span, 
 .hidden{display:block; width:0; height:0; position:absolute; z-index:-100; overflow:hidden;}
 .hidden_wrap a{display:block; width:100%; height:100%;}
 
