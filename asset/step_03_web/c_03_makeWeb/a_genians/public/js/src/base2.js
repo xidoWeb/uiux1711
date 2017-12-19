@@ -20,15 +20,15 @@ function ImportFile(makeFile, file, backgroundIf) {
   });
 }
 var wrap = $('#wrap');
- var baseUrl  = '../../html/src/';
- var loadFile = {headBox   : baseUrl + 'headBox.html',
-                 bannerBox : baseUrl + 'bannerBox.html',
-                 aboutBox  : baseUrl + 'aboutBox.html',
-                 newsBox   : baseUrl + 'newsBox.html',
-                 blogBox   : baseUrl + 'blogBox.html',
-                 lnbBox    : baseUrl + 'lnbBox.html',
-                 footNavBox: baseUrl + 'footNavBox.html',
-                 footBox   : baseUrl + 'footBox.html'};
+var baseUrl  = '../../html/src/';
+var loadFile = {headBox   : baseUrl + 'headBox.html',
+               bannerBox : baseUrl + 'bannerBox.html',
+               aboutBox  : baseUrl + 'aboutBox.html',
+               newsBox   : baseUrl + 'newsBox.html',
+               blogBox   : baseUrl + 'blogBox.html',
+               lnbBox    : baseUrl + 'lnbBox.html',
+               footNavBox: baseUrl + 'footNavBox.html',
+               footBox   : baseUrl + 'footBox.html'};
 
 ImportFile('headBox'   , loadFile.headBox    , true);
 ImportFile('bannerBox' , loadFile.bannerBox  , true);
