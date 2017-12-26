@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    dl,dt,dd{margin: 0; padding: 0; width: 100%; padding:0.5rem;}
+    dl{border:2px solid #ccc; padding:0.5rem; background-color: #9af;}
+    dt{background-color: #afc;}
+    dd{background-color: #fc8;}
+    dt,dd{display:none;}
+    dt.active,dd.active{display:block;}
+    .view{width: 100%; padding-bottom: 1rem; background-color: #ccc;}
+  </style>
+</head>
+<body>
+  <div class="view"> 
+  <dl>
+    <dt>question_1</dt>
+    <dd>answer</dd>
+    <dt>question_2</dt>
+    <dd>answer</dd>
+    <dt>question_3</dt>
+    <dd>answer</dd>
+    <dt>question_4</dt>
+    <dd>answer</dd>
+    <dt>question_5</dt>
+    <dd>answer</dd>
+    <dt>question_6</dt>
+    <dd>answer</dd>
+    <dt>question_7</dt>
+    <dd>answer</dd>
+    <dt>question_8</dt>
+    <dd>answer</dd>
+    <dt>question_9</dt>
+    <dd>answer</dd>
+    <dt>question_10</dt>
+    <dd>answer</dd>
+    <dt>question_11</dt>
+    <dd>answer</dd>
+    <dt>question_12</dt>
+    <dd>answer</dd>
+    <dt>question_13</dt>
+    <dd>answer</dd>
+    <dt>question_14</dt>
+    <dd>answer</dd>
+    <dt>question_15</dt>
+    <dd>answer</dd>
+    <dt>question_16</dt>
+    <dd>answer</dd>
+    <dt>question_17</dt>
+    <dd>answer</dd>
+    <dt>question_18</dt>
+    <dd>answer</dd>
+    <dt>question_19</dt>
+    <dd>answer</dd>
+    <dt>question_20</dt>
+    <dd>answer</dd>
+  </dl>
+  
+  <button type="button" class="more">더보기</button>
+
+</div>
+
+  <!-- +++++++++++++++++++++++++++++++++++  -->
+  <script src="../js/base/jquery-3.2.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script>
+    (function($) {
+      // $('dt,dd').hide();
+
+       $('dd').eq(4).prevAll().addClass('active');
+       $('dt').eq(4).prevAll().addClass('active');
+
+      $('.more').on('click',function(e) {
+        e.preventDefault();
+        // $('dd').eq(5).addClass('active');
+        // $('dt').eq(5).addClass('active');
+        var i = 0 ;
+        var viewLength = $('dd.active').length + 5;
+
+        for(;i< viewLength; i++){
+          $('dd').eq(i).addClass('active');
+          $('dt').eq(i).addClass('active');
+        }
+
+      })
+    })(this.jQuery);
+
+  </script>
+</body>
+</html>
