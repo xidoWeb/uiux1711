@@ -22,14 +22,7 @@ function ImportFile(makeFile, file, backgroundIf) {
 
 var wrap = $('#wrap');
 var baseUrl  = '../../html/src/';
-var loadFile = ['headBox',
-                'bannerBox',
-                'aboutBox',
-                'newsBox',
-                'blogBox',
-                'lnbBox',
-                'footNavBox',
-                'footBox'];
+var loadFile = ['headBox', 'bannerBox', 'aboutBox', 'newsBox', 'blogBox', 'lnbBox', 'footNavBox', 'footBox'];
 
 for(var i = 0 ; i < loadFile.length ; i++){
   ImportFile(loadFile[i],baseUrl+loadFile[i]+'.html', true);
