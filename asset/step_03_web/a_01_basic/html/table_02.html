@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../js/base/html5shiv-printshiv.js"></script>
+    <script src="../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <title>siteName</title>
+  <style>
+    table{width: 600px; height: auto; margin: 0 auto;}
+    caption{background-color: #acc; padding: 0.3rem; font-weight: bold;}
+    th, td{padding:0.5rem;}
+    .minus{color:#f04; font-weight:bold; margin-left:0.3rem;}
+    .plus{color:#07f; font-weight:bold; margin-left:0.3rem;}
+    
+    .colFirst{width:10%; background-color: #0af;}
+  </style>
+</head>
+<body>
+  <h1>table 이해하기 2</h1>
+  <table>
+    <caption>가계부만들기</caption>
+
+    <thead>
+      <tr>
+        <th scope="col">번호</th>
+        <th>날짜</th>
+        <th>내용</th>
+        <th>지출 및 수입</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>   <td scope="row">1</td> <td>12.27</td> <td>쌀국수</td>     <td>-3,900</td>   </tr>
+      <tr>   <td scope="row">2</td> <td>12.27</td> <td>커피</td>       <td>-5,000</td>   </tr>
+      <tr>   <td scope="row">3</td> <td>12.27</td> <td>키보드붓</td>   <td>-1,000</td>   </tr>
+    </tbody>
+    <tfoot>
+      <tr>   
+        <th colspan="2">총합</th>
+        <td>지출: <span class="minus">9,900</span></td> 
+        <td>수입: <span class="plus">0</span> </td>   
+      </tr>
+    </tfoot>
+  </table>
+  
+  <!-- script -->
+  <script src="../js/base/jquery-3.2.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+</body>
+</html>

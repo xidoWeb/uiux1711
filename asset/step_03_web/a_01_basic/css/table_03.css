@@ -1,0 +1,24 @@
+/* table_03.css */
+
+#wrap{width: 645px; height: auto; min-height:100px; background-color: #ccc;
+  margin: 0 auto; box-sizing: border-box; padding:10px 8px;}
+  .weather{width: 100%; height: 100%; background-color: #fff;}
+  .weather>dl{width: 100%; height:25px; margin-bottom: 6px; font-size:1rem;}
+  .weather>dl>dt{height: 100%; line-height:30px; font-weight: bold;  float: left;  margin-right:0.5rem;  position: relative;}
+  .weather>dl>dt:after{content:" "; display: block; border-right:1px solid #777;
+          width: 0; height: 60%; position: absolute; right:-0.245rem; top:20%; }
+  .weather>dl>dd{float: left;}
+  .weather>dl>dd:first-of-type{line-height:30px;}
+  .weather>dl>dd span:before{content:">"; color:#ccc; font-weight:bold;}
+  .weather>dl>dd:last-of-type{width:104px; height: 100%; float:right;}
+  .weather>dl>dd:last-of-type>button{width: 100%; height: 100%; box-sizing:border-box;
+      border-radius:0.5rem; border:2px solid #a7f; font-size:0.7rem; font-weight: bold;}
+/* ------------------------------------------------------------------------------------  */
+  table{width: 100%; height: auto;}
+  tbody{border:2px solid #9d9d9d; border-left: 0; border-right: 0; box-sizing:border-box;}
+  table tbody tr{background-color:#fff !important;}
+  table tr:first-of-type>td,
+  table tr:last-of-type>td{height:12px; border: 0;}
+  td{border: 0; border-right:1px solid #777; box-sizing:border-box; text-align: center;}
+  td:last-child{border: 0;}
+
