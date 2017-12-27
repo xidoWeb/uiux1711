@@ -1,8 +1,7 @@
 /* table_03.css */
 
-#wrap{width: 645px; height: auto; min-height:100px; background-color: #ccc;
-  margin: 0 auto; box-sizing: border-box; padding:10px 8px;}
-  .weather{width: 100%; height: 100%; background-color: #fff;}
+#wrap{width: 645px; height: auto; min-height:100px; margin: 0 auto; box-sizing: border-box; padding:10px 8px;}
+  .weather{width: 100%; height: 100%;}
   .weather>dl{width: 100%; height:25px; margin-bottom: 6px; font-size:1rem;}
   .weather>dl>dt{height: 100%; line-height:30px; font-weight: bold;  float: left;  margin-right:0.5rem;  position: relative;}
   .weather>dl>dt:after{content:" "; display: block; border-right:1px solid #777;
@@ -19,6 +18,17 @@
   table tbody tr{background-color:#fff !important;}
   table tr:first-of-type>td,
   table tr:last-of-type>td{height:12px; border: 0;}
-  td{border: 0; border-right:1px solid #777; box-sizing:border-box; text-align: center;}
+  td{border: 0; border-right:1px solid #777; box-sizing:border-box; text-align: center;
+    font-weight: bold; color:#555; font-size: 0.8rem;}
+  td>span{color:#999;}
+
   td:last-child{border: 0;}
 
+  .weather_date>td{height: 15px; padding-bottom: 12px;}
+  .weather_date span:before{content:"/";}
+  .weather_img>td{height: 52px;}
+  .weather_img>td>img{width: auto; height:100%;}
+  .weather_data>td{height: 16px;}
+  .weather_temp>td{height: 18px;}
+  .weather_temp span:after{content:"/"; }
+  
