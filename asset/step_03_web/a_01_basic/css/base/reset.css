@@ -63,6 +63,16 @@ a, img {
   margin:0; padding:0; border:0; outline:0; 
   color:inherit;  font-size:inherit; font-family:inherit;}
 
+table,tr,td,th,thead,tbody,tfoot{border-collapse:collapse; border-spacing:0; }
+thead{background-color:#d07; color:#fff; text-indent:0;}
+tbody>tr:nth-of-type(2n+1){background-color:#faa; text-indent:0.5rem;}
+tbody>tr:nth-of-type(2n){background-color:#fff; text-indent:0.5rem;}
+tfoot{background-color: #7cf; font-weight: bold;}
+th,td{border:1px solid #777; border-left:0; border-right: 0;}
+/*th:first-of-type, td:first-of-type{border-left:0;} 
+th:last-of-type,  td:last-of-type{border-right: 0;} */
+
+
 address, em, wbr, strong, ins, del, abbr{font-style:normal; font-weight:normal;}
 h1{font-size: 32px; font-size: 2rem;}
 h2{font-size: 29px; font-size: 1.8125rem;}
