@@ -1,0 +1,17 @@
+/* lnbBox.css */
+
+#lnbBox{width:60rem; height:100px; border-bottom:1px solid #eee;}
+#lnbBox>ul{width: 100%; height: 100%;}
+#lnbBox>ul>li{width:9.6%; margin:0 0.2%; height: 100%; float: left;}
+#lnbBox>ul>li>a{background-position:center 10px;}
+
+#lnbBox>ul>li:nth-child(1)>a{background-image:url('../../../img/lnb_01.jpg');}
+#lnbBox>ul>li:nth-child(2)>a{background-image:url('../../../img/lnb_02.jpg');}
+#lnbBox>ul>li:nth-child(3)>a{background-image:url('../../../img/lnb_03.jpg');}
+#lnbBox>ul>li:nth-child(4)>a{background-image:url('../../../img/lnb_04.jpg');}
+#lnbBox>ul>li:nth-child(5)>a{background-image:url('../../../img/lnb_05.jpg');}
+#lnbBox>ul>li:nth-child(6)>a{background-image:url('../../../img/lnb_06.jpg');}
+#lnbBox>ul>li:nth-child(7)>a{background-image:url('../../../img/lnb_07.jpg');}
+#lnbBox>ul>li:nth-child(8)>a{background-image:url('../../../img/lnb_08.jpg');}
+#lnbBox>ul>li:nth-child(9)>a{background-image:url('../../../img/lnb_09.jpg');}
+#lnbBox>ul>li:nth-child(10)>a{background-image:url('../../../img/lnb_10.jpg');}

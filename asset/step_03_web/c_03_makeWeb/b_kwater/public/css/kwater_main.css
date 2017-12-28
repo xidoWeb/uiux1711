@@ -1,0 +1,7 @@
+/* kwater_main.css */
+@import url('./src/all/wrap.css');
+@import url('./src/all/headBox.css');
+@import url('./src/main/bannerBox.css');
+@import url('./src/main/lnbBox.css');
+@import url('./src/main/contentBox.css');
+@import url('./src/all/footBox.css');
