@@ -29,7 +29,7 @@
     li:hover{background-color: #a7a;}
     dl{position: relative;}
     dd{width: 150px; height: auto; border:2px solid #fa0; position: absolute; display: none;}  
-    dl:hover>dd{display: block;}
+   /* dl:hover>dd{display: block;}*/
 
     label[for="selector"]{width: 100%; height: auto; display: block; padding: 0.3rem; background-color: #aac;}
     select{width: 0; height: 0; overflow: hidden;}
@@ -81,19 +81,24 @@ input 속성(attribute)
       <div class="sample_03">
         <ul>
           <li>
-            <input type="search" id="searchBox" name="searchBox" value="" required />
+            <input type="search" id="searchBox" name="searchBox" value="" required
+            placeholder="검색내용" />
           </li>
           <li>
-            <input type="tel" id="telBox" name="telBox" value="" required />
+            <input type="tel" id="telBox" name="telBox" value="" required 
+            placeholder="연락처 입력" />
           </li>
           <li>
-            <input type="email" id="emailBox" name="emailBox" value="" required />
+            <input type="email" id="emailBox" name="emailBox" value="" required 
+            placeholder="이메일 작성" />
           </li>
           <li>
-            <input type="url" id="urlBox" name="urlBox" value="" required />
+            <input type="url" id="urlBox" name="urlBox" value="" required 
+            placeholder="웹페이지 주소 입력" />
           </li>
           <li>
-            <input type="date"  id="dateBox" name="dateBox" value="" required />
+            <input type="date"  id="dateBox" name="dateBox" value="" required 
+            placeholder="날짜 입력" />
           </li>
         </ul>
         <div class="hidden">
@@ -148,23 +153,23 @@ input 속성(attribute)
       </textarea><br />
       <p>올해 마지막을 같이하고싶은 사람은?</p>
 
-      <label for="selector">
+      <label for="selector" class="selector">
         <dl>
-          <dt>선택</dt>
+          <dt><a href="#">선택</a></dt>
           <dd>
             <ul>
-              <li>수지</li>
-              <li>방민아</li>
-              <li>사나</li>
-              <li>모모</li>
-              <li>쯔위</li>
+              <li><a href="#">수지</a></li>
+              <li><a href="#">방민아</a></li>
+              <li><a href="#">사나</a></li>
+              <li><a href="#">모모</a></li>
+              <li><a href="#">쯔위</a></li>
             </ul>
           </dd>
         </dl>
       </label>
 
-
-      <select name="selector" id="selector">
+    <input type="text" id="selector" name="" value="">
+     <!--  <select name="selector" id="selector">
          <option>선택</option>
         <optgroup label="가수별">
           <option value="수지">수지</option>
@@ -180,7 +185,7 @@ input 속성(attribute)
           <option value="와이프">와이프</option>
         </optgroup>
 
-      </select>
+      </select> -->
  
     <button type="submit" name="">확인</button>
     <button type="reset" name="">취소</button>
@@ -203,5 +208,30 @@ input 속성(attribute)
       <label for="insertFile">첨부파일선택</label>
     </fieldset>
   </form>
+   <script src="../js/base/jquery-3.2.1.js"></script>
+   <script src="../js/base/jquery-ui.js"></script>
+   <script>
+     (function($) {
+        var st  = $('.selector');
+        st.find('dt').on('click', function(e){
+          e.preventDefault();
+          $(this).next('dd').slideDown();
+
+          var selectorLi = $(this).next().find('li');
+          selectorLi.on('click',function(e) {
+            e.preventDefault();
+            var selectData = $(this).find('a').text();
+
+            $(this).parent().parent().slideUp();
+            $('#selector').val(selectData);
+            console.log(selectData);
+          });
+        });
+
+  
+
+
+     })(this.jQuery);
+   </script>
 </body>
 </html>

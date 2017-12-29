@@ -1,0 +1,34 @@
+/* formTest._01.css */
+
+#wrap{width: 100%; height: 100%; background-color: #e2e2e2; padding-top: 5rem;}
+/* --------------------------------------- */
+.form_box{width: 472px; height:auto; margin:0 auto;  background-color: #fefefe; padding-top:34px}
+h1{width: 100%; height: 24px; text-transform: uppercase; font-weight: normal; text-align: center; color:#a2a2a2;
+  margin-bottom: 26px; font-size:1.5rem; line-height: 24px;}
+form{width: 100%; height: auto; }
+form>fieldset{width: 100%; height: auto;}
+.member{width: 100%; height: auto; box-sizing:border-box;
+  padding: 0 48px 42px; }
+  .member>li{width: 100%; height: 60px; background-color: #58626e;
+      box-sizing:border-box; padding:1rem 1.25rem; color:#d0d6f8;}
+.user{ margin-bottom:4px;}
+
+.member>li>input{width:calc(100% - 34px); height: 100%; float: left; background-color:transparent;
+  color:inherit; cursor: pointer;}
+.member>li>label{display: block; float: right; width: 34px; height: 100%; font-size: 1.5rem;
+  cursor:pointer;}
+.member>li>label:hover{color:#f36564;}
+.member>li>input::-webkit-input-placeholder{color:inherit;}
+.member>li>input::-moz-placeholder{color:inherit;}
+.member>li>input:-ms-placeholder{color:inherit;}
+.member>li>input::-o-placeholder{color:inherit;}
+.member>li>input::placeholder{color:inherit;}
+/*.pwd{}*/
+
+.login_btn{width: 100%; height: 70px; background-color: #f16767;}
+input[type="submit"]{width: 100%; height: 100%; background-color:inherit;
+    cursor: pointer; color:#fff; font-weight: bold; text-transform:uppercase;
+    word-spacing:-0.25rem; font-size: 1.3rem;} 
+/* --------------------------------------- */
+  #wrap>p{text-align: center; margin-top: 1rem; color:#58626e;
+    font-weight: bold;}
