@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- form_01.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    form{width: 100%; height: auto; padding: 0.2rem; background-color: #dfdfdf;
+      box-sizing: border-box;}
+    fieldset{border:1px dashed #0af;}
+    legend{background-color:#fff; width:100%; text-align:center;}
+    div{background-color: #faa; padding-bottom: 0.2rem; 
+        border-bottom:1px solid #fff; margin-bottom:0.3rem;}
+   .hidden{width: 0; height: 0; overflow: hidden; display: block;
+            position: absolute; z-index: -1;}
+    input{border:1px solid #f06; box-sizing: border-box; border-radius:0.2rem;}
+    textarea{width: 400px; height: 200px; border:2px solid #0af;}
+
+    select{width:200px; height:150px; background-color: #0af; text-indent:1rem; font-size: 1.5rem; color:#fff;}
+    select>option{background-color: #fa0;}
+    optgroup{background-color: #f07;}
+
+
+    /* sample select */
+    dl,dt,dd,ul,li{list-style-type: none; margin: 0;padding: 0;}
+    dt,li{width:150px; height:30px; border-top:1px solid #ccc;
+          background-color: #fff; font-size: 1.5rem; line-height: 30px;}
+    li{background-color: #08a; color:#fff; font-weight: bold;}
+    li:hover{background-color: #a7a;}
+    dl{position: relative;}
+    dd{width: 150px; height: auto; border:2px solid #fa0; position: absolute; display: none;}  
+    dl:hover>dd{display: block;}
+
+    label[for="selector"]{width: 100%; height: auto; display: block; padding: 0.3rem; background-color: #aac;}
+    select{width: 0; height: 0; overflow: hidden;}
+  </style>
+</head>
+<body>
+  <h1>form</h1>
+  <hr />
+  <form action="#" method="post">
+    <fieldset>
+      <legend>input 기능</legend>
+      <div class="sample_01">
+          <input id="sample" type="text" name="" value=""
+                 placeholder="데이터를 입력하세요."
+                 maxlength="4" minlength="3" required="required"
+                 autocomplete="off" autofocus="autofocus"
+                 size="10" />
+<!--
+input 속성(attribute)
+
+  id           : 이름을 가지는기능, 하나의 페이지에 한번만 사용,
+                 label속성중 for기능과 연결하여 사용(시각적 접근성)
+  type         : 여러 타입속성이 존재, input의 다양한 기능(모양)을 처리
+  name         : 서버언어와 연동하기 위해 사용되는 이름
+  value        : 서버(DB)에 전송할 값을 담는 곳(상황에 따라 입력을 아에 안할 수 도 있다.)
+  placeholder  : type종류 중 입력기능시 보여주는 시각적 화면 형태(html5)
+  maxlength    : 최대 글자수
+  minlength    : 최소 글자수(html5)
+  required     : 필수 입력사항(html5)
+  autocomplete : 자동 완성기능(html5) - on | off
+  autofocus    : 자동으로 포커스를 잡아주는 기능, 하나의 페이지에서는 한번만 사용
+                 필요하지않으면 사용하지 않는 것을 권장(html5)
+  size         : 기본 크기값을 설정하는기능 기본은 20글자정도 입력할 수 있도록 처리, 
+                 디자이너나  front계통에서는 css로 (width)작성  
+  -->
+          <label for="sample">sample input과 연결</label>
+      </div>
+      <div class="sample_02">
+        <input type="text" id="idName" name="idName" value="" 
+          placeholder="사용자의 아이디를 입력하세요." size="30" />
+        <label for="idName" class="hidden">아이디를 입력하세요</label>
+        <br>
+        <input type="password" id="pwName" name="pwName" value=""
+          placeholder="비밀번호를 입력하세요." />
+        <label for="pwName" class="hidden">
+          비밀번호를 입력하세요.
+        </label>
+      </div>
+      <div class="sample_03">
+        <ul>
+          <li>
+            <input type="search" id="searchBox" name="searchBox" value="" required />
+          </li>
+          <li>
+            <input type="tel" id="telBox" name="telBox" value="" required />
+          </li>
+          <li>
+            <input type="email" id="emailBox" name="emailBox" value="" required />
+          </li>
+          <li>
+            <input type="url" id="urlBox" name="urlBox" value="" required />
+          </li>
+          <li>
+            <input type="date"  id="dateBox" name="dateBox" value="" required />
+          </li>
+        </ul>
+        <div class="hidden">
+          <label for="searchBox">search 기능이해하기</label>
+          <label for="telBox">tel 기능이해하기</label>
+          <label for="emailBox">email 기능이해하기</label>
+          <label for="urlBox">url 기능이해하기</label>
+          <label for="dateBox">date 기능이해하기</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>select_1</legend>
+      <p>당신의 좋아하는 이성을 선택하세요.</p>
+      <input type="radio" name="generator" value="male" id="generatorMale">
+      <label for="generatorMale">남자</label>
+      <input type="radio" name="generator" value="female" id="generatorFemale">
+      <label for="generatorFemale">여성</label>
+      <input type="radio" name="generator" value="both" id="generatorBoth">
+      <label for="generatorBoth">둘다</label>
+    </fieldset>
+    <fieldset>
+      <legend>select_2</legend>
+      <p>좋아하는 이상형을 선택하세요.</p>
+      <input type="checkbox" name="checkSelect" id="check_01" value="이도형">
+      <label for="check_01">이도형</label>
+      <input type="checkbox" name="checkSelect" id="check_02" value="이도형">
+      <label for="check_02">그린컴 수원점 웹디 남자강사</label>
+      <input type="checkbox" name="checkSelect" id="check_03" value="이도형">
+      <label for="check_03">xido 라는 이니셜을 가진 사람</label>
+      <input type="checkbox" name="checkSelect" id="check_04" value="이도형">
+      <label for="check_04">현재 수업을 진행하는 강사</label>
+    </fieldset>
+    <fieldset>
+      <legend>select_more</legend>
+      <label for="gage_01">원하는 수량</label>
+      <input type="number" id="gage_01" name="gage_01" value="" min="1" max="100" step="5" />
+
+      <label for="gage_02">원하는 값</label>
+      <input type="range" id="gage_02" name="gage_02" value="" min="1" max="100" step="5" />
+
+      <label for="color">원하는 색상을 선택</label>
+      <input type="color" id="color" name="color" value="" />      
+    </fieldset>
+
+    <fieldset>
+      <legend>multiple</legend>
+      <label for="multiText">작성하실 내용을 입력하세요.</label>
+      <textarea name="" id="multiText" readonly="readonly" wrap="hard">
+계약서
+1. 사용자는....
+      </textarea><br />
+      <p>올해 마지막을 같이하고싶은 사람은?</p>
+
+      <label for="selector">
+        <dl>
+          <dt>선택</dt>
+          <dd>
+            <ul>
+              <li>수지</li>
+              <li>방민아</li>
+              <li>사나</li>
+              <li>모모</li>
+              <li>쯔위</li>
+            </ul>
+          </dd>
+        </dl>
+      </label>
+
+
+      <select name="selector" id="selector">
+         <option>선택</option>
+        <optgroup label="가수별">
+          <option value="수지">수지</option>
+          <option value="방민아">방민아</option>
+          <option value="사나">사나</option>
+          <option value="모모">모모</option>
+          <option value="쯔위">쯔위</option>
+        </optgroup>
+        <optgroup label="탤런트">
+          <option value="소이현">소이현</option>
+        </optgroup>
+        <optgroup label="기타">
+          <option value="와이프">와이프</option>
+        </optgroup>
+
+      </select>
+ 
+    <button type="submit" name="">확인</button>
+    <button type="reset" name="">취소</button>
+    <button type="button" name="">버튼</button>
+    <!-- <label for=""></label> -->
+    </fieldset>
+    <fieldset>
+      <legend>etc</legend>
+      <input type="hidden" name="myId" value="어떠한 값을 가져와서 숨김">
+    </fieldset>
+    <fieldset>
+      <legend>버튼의 기능</legend>
+      <input type="submit" name="" value="확인 및 전송" />
+      <input type="reset" name="" value="취소" />
+      <input type="image" name="" value="확인 및 전송처리" 
+             src="../img/images.jpg" alt="모든 데이터 첨부" />
+      <input type="button" name="" value="중복확인" />
+
+      <input type="file" id="insertFile" name="insertFile" value="" />
+      <label for="insertFile">첨부파일선택</label>
+    </fieldset>
+  </form>
+</body>
+</html>
