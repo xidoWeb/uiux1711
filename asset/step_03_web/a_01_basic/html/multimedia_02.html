@@ -27,7 +27,7 @@
   <div id="wrap">
     <h1>mp3 player</h1>
     <div class="audio_file">
-      <audio controls>
+      <audio>
         <p>사용하고 계신 브라우저는 노래가 나오지 않아요!<br />
            최신 브라우저를 사용하용하시길 권해용~!
            <a href="http://google.com">최신브라우저 설치하러가기!</a>
@@ -36,8 +36,18 @@
         <source src="../multi/audio/DoItAgain.mp3" type="audio/mp3" /> -->
       </audio>
       <div class="audio_btn">
-        <button type="button" class="play"><i class="fa fa-play"></i>play</button>
-        <button type="button" class="pause"><i class="fa fa-pause"></i>pause</button>
+        <button type="button" class="prev">
+          <i class="fa fa-step-backward"></i>prev
+        </button>
+        <button type="button" class="play">
+          <i class="fa fa-play"></i>play
+        </button>
+        <button type="button" class="pause">
+          <i class="fa fa-pause"></i>pause
+        </button>
+        <button type="button" class="next">
+          <i class="fa fa-step-forward"></i>next
+        </button>
       </div>
     </div>
   </div>
@@ -46,6 +56,7 @@
   <script src="../js/base/jquery-3.2.1.js"></script>
   <script src="../js/base/jquery-ui.js"></script>
   <!-- use script(jQuery) -->
-  <script src="../js/src/multimedia_02.js"></script>
+  <!-- <script src="../js/src/multimedia_02.js"></script> -->
+  <script src="../js/src/multimedia_03.js"></script>
 </body>
 </html>
