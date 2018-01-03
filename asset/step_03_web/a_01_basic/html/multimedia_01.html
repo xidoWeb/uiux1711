@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- multimedia_01.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    h1{padding: 1rem; background-color: #07f; color:#ff0; text-align: center; }
+    h2{margin-top: 1rem; text-align: center; border-bottom:1px solid #07f; }
+    .multi{width: 90%; height: auto; padding: 0.5rem; background-color: #ccc; margin-bottom: 1rem;      margin: 0 auto;}
+    button{padding: 0.5rem; background-color: #0aa; color:#fff; font-weight: bold; border: 0;}
+    button:hover,
+    button:focus{background-color: #a54;}
+  </style>
+</head>
+<body>
+  <h1>multimedia</h1>
+  <h2>audio</h2>
+  <div class="multi audioBox">
+    <!-- step_01 단일파일 사용시 -->
+    <!-- <audio src="../multi/audio/CheerU.mp3" controls autoplay loop muted preload="metadata"></audio> -->
+    <!-- step_02 다양한 확장자 사용시, 호환하지 않는 브라우저에서 사용법 -->
+    <audio controls="controls">
+      <source src="../multi/audio/CheerU.ogg" type="audio/ogg" />
+      <source src="../multi/audio/CheerU.mp3" type="audio/mp3" />
+      <p>본 브라우저는 오디오를 재생할 수 없습니다. <br />
+      최신브라우저(<a href="http://google.com/chrome" target="_blank">크롬설치하기</a>)를 설치하여 주세요!</p>
+    </audio>
+    <div class="btn">
+      <button type="button" class="audio_play">play</button>
+      <button type="button" class="audio_pause">pause</button>
+      <button type="button" class="audio_get_name">get file name</button>
+    </div>
+  </div>
+
+  <h2>video</h2>
+  <div class="multi videoBox">
+    <!-- step_01 단일파일 사용시 -->
+    <!-- <video src="../multi/video/parade_YOUNHA.mp4" controls="controls" loop="loop" muted poster="../img/amazing.jpg"></video> -->
+    <!-- step_02 다양한 확장자 사용시, 호환하지 않는 브라우저에서 사용법 -->
+    <video controls poster="../img/images.jpg">
+      <source src="../multi/video/heartShaker_TWICE.mp4" type="video/mp4" />
+      <p>본 브라우저는 비디오를 재생할 수 없습니다. <br />
+      최신브라우저(<a href="http://google.com/chrome" target="_blank">크롬설치하기</a>)를 설치하여 주세요!</p>
+    </video>
+  </div>
+
+  <script src="../js/base/jquery-3.2.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script>
+    (function($) {
+      // load(), play(), pause(), next(), prev(), attr()
+      var audio = $('audio');
+      var myaudioData;
+      var myAudio = $('.audio_get_name');
+
+
+      myAudio.on('click', function(e) {
+        e.preventDefault(); 
+        // myaudioData = audio.find('source').eq(0);
+        // console.log(myaudioData);
+
+        // $.each(myaudioData,function(i,v) {
+        //   // dataAttr = myaudioData.attr('src');
+        //   // console.log(v);
+        //   dataAttr = v;
+        //   console.log(dataAttr);
+        // });
+        
+    // src파일 확인하기1
+        // var source1 = audio.find('source').eq(0);
+        // var source2 = audio.find('source').eq(1);
+        // var mySrc1 =  source1.attr('src');
+        // var mySrc2 =  source2.attr('src');
+        // console.log(mySrc1);
+        // console.log(mySrc2);
+
+        // src파일 확인하기2
+        var souceLength = audio.find('source').length;
+        // console.log(souceLength);
+          // for(var i = 0; i < souceLength; i++){
+          //   var source = audio.find('source').eq(i).attr('src');
+          //   var source2 = audio.find('source').eq(i).attr('type');
+          //   console.log(source);
+          //   console.log(source2);
+          // }
+
+          
+           // $.each([10, 40, 100, 'a'], function(index, value){
+           //  console.log(index + ": " + value);
+           // });
+           /*
+            for 반복문은,  시작과, 끝을 설정하고 해당값을 일정량 가감해서 처리하는 방법을 알려줘야한다.
+            배열형식에서는 각각 배분해서 처리할 경우, 굳이 for문을 통해서 사용한다면, 다소 번거롭고 불편하다는 문제점이 발생
+            그래서 each문이 생겼다!!
+            
+            each는 jQuery 메소드기능으로 유틸리티 메소드 라고 한다!
+            배열의 사용시 반복순환하는경우에 사용하고, 순서(index)와, 값(value)를 인수로 삽입하여 사용하는 기능
+
+            $.each(배열값, function(index, value){ 값 사용 });
+           */
+
+          var source = audio.find('source');
+          $.each(source,function(i,v) {
+            console.log(source.eq(i).attr('src'));
+            console.log(source.eq(i).attr('type'));
+          }); // $.each()
+
+      }); // button.on('click')
+
+    })(this.jQuery);
+  </script>
+</body>
+</html>
