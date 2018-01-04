@@ -1,0 +1,10 @@
+/* multimedia_04.css */
+div{padding: 1rem; background-color: #ccc; margin-bottom: 1rem;}
+video{width: 90%; height: auto; margin: 0 auto; border:2px solid #555;}
+button{padding: 1rem 2rem; background-color: #f05; color:#fff;
+  transition:all 300ms ease-in;}
+button:hover{box-shadow:0.2rem 0.2rem 0.2rem rgba(50,50,50,0.7);}
+button:focus{box-shadow:0.2rem 0.2rem 0.2rem rgba(50,50,50,0.7) inset;
+      background-color: #0af; border-radius:0.3rem;
+      font-size: 1.3rem;}
+button>i{margin-right: 0.5rem;}
