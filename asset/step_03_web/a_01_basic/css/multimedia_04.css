@@ -1,8 +1,11 @@
 /* multimedia_04.css */
-div{padding: 1rem; background-color: #ccc; margin-bottom: 1rem;}
-video{width: 90%; height: auto; margin: 0 auto; border:2px solid #555;}
+#wrap{width:100%; }
+div{padding: 1rem; background-color: #ccc; margin-bottom: 1rem; float: left;}
+video{width:100%; height: auto; margin: 0 auto; border:2px solid #555;}
+.video_player{width: 50%;}
+.video_btn{width: 20%; background-color: #aaa;}
 button{padding: 1rem 2rem; background-color: #f05; color:#fff;
-  transition:all 300ms ease-in;}
+  transition:all 300ms ease-in; margin: 0.5rem;}
 button:hover{box-shadow:0.2rem 0.2rem 0.2rem rgba(50,50,50,0.7);}
 button:focus{box-shadow:0.2rem 0.2rem 0.2rem rgba(50,50,50,0.7) inset;
       background-color: #0af; border-radius:0.3rem;
