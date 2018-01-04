@@ -82,4 +82,14 @@ contentBox.children('li').on('click',function(e) {
   video[0].play();
 });
 
+$(document).on('keydown',function(e) {
+  if(e.keyCode == 27){
+    video[0].pause();
+  }else if(e.keyCode == 13){
+    video[0].play();    
+  }
+});
+
+//  http://keycode.info/
+
 })(this.jQuery);
