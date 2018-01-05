@@ -24,6 +24,14 @@ function test(){
 ```
 
 ``` javascript
+var spliteFile = document.all['fileURL'].value;
+var arr = spliteFile.split("\\");
+var name = arr[arr.length-1];
+```
+
+
+
+``` javascript
 <html> 
 
 <head> 
