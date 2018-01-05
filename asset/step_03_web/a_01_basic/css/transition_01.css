@@ -1,0 +1,53 @@
+ /* transition_01.css */
+#wrap{width: 800px; height: auto; padding: 1rem; background-color: #ddd;
+    margin: 0 auto;}
+h1{padding: 1rem; background-color: #07f; color:#fff; margin-bottom: 1rem;}
+#wrap>div{width:200px; height:50px; background-color:#afc; margin-bottom: 1rem;}
+
+/* transition: 기본적으로 단편적인 애니메이션을 수행하기 위해 사용되는 기능 
+
+   transition-property: transition을 적용시킬 속성명을 입력하는것(color, width, all) 
+   transition-duration: transition을 적용시 반응하는 시간 1초=>1s 0.5초=>0.5s | 500ms
+   transition-timing-function: transition을 사용시 해당하는 시간에 따른 움직임 처리
+           (ease:자연스럽게, 
+            ease-in:점점빠르게, 
+            ease-out:점점느리게, 
+            ease-in-out:가속되다 느리게, 
+            linear:지속적인(동일한 속도),  
+            cubic-bezier:수치를 내맘대로 조정: http://cubic-bezier.com/
+                ->  cubic-bezier(시작베지어포인트X, 시작베지어포인트Y, 종료베지어X, 종료베지어Y) ->최대수치는 1 )
+   transition-delay: 지연시간-일정시간이 지난후에 transition을 적용(0.5초 => 0.5s | 500ms)
+  
+   transition:property duration timing-fn(기본은 ease) delay;
+*/
+#wrap>.trs_01{transition-property:font-size;
+              transition-duration:500ms;}
+#wrap>.trs_01:hover{width:100%; 
+              background-color: #f06;
+              color:#fff; font-size: 2rem;
+              transition-property:font-size, width;
+              transition-duration:5000ms, 2000ms;}
+
+#wrap>.trs_02{transition-property:color, width, background-color; 
+              transition-duration:1000ms, 1500ms, 3000ms;        
+              transition-timing-function:linear, cubic-bezier(1,2,0,-2), ease-out;
+              transition-delay:300ms, 1ms, 1000ms;}
+#wrap>.trs_02:hover{color:#fff; width:100%; background-color: #f06;}
+
+#wrap>.trs_03{transition:all 1000ms ease 0.5s; line-height:1.2rem;}
+#wrap>.trs_03:hover{width: 100%; height: 500px; background-color: #0a3; font-size: 2rem;
+              text-indent:20rem; line-height: 500px;}
+.trs_04:hover{}
+
+.trs_05{width:100%; height:500px; box-sizing:border-box; border:1px solid #333;
+      background-color: #fff;}
+  .trs_05>li{width: 20px; height: 50px; margin-bottom: 1rem; 
+            background-color:#0af; border-bottom:1px solid #059; line-height:50px;}
+  .trs_05>li:nth-child(1){transition:all 2000ms linear;}
+  .trs_05>li:nth-child(2){transition:all 2000ms ease;}
+  .trs_05>li:nth-child(3){transition:all 2000ms ease-in-out;}
+  .trs_05>li:nth-child(4){transition:all 2000ms ease-in;}
+  .trs_05>li:nth-child(5){transition:all 2000ms ease-out;}
+  .trs_05>li:nth-child(6){transition:all 2000ms cubic-bezier(1,0.2,0,-2);}
+  .trs_05:hover>li{width: 100%;}
+  /* ----------------------------------- 

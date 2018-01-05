@@ -1,0 +1,81 @@
+/* animateion_01.css */
+#wrap{width: 100%; height: auto; padding: 1rem; 
+      box-sizing: border-box;background-color: #ccc;}
+h1{padding: 1rem; border-bottom:1px solid #333; text-align: center;}
+.ani_box{width: 100%; height: auto; border:2px solid #07a;}
+.ani_box>li{width: 100px; height: 100px; border-radius:50%; 
+            background-color: #f67; color:#fff; 
+            text-align: center; line-height: 100px; margin-bottom: 1rem;}
+.ani_box>li>a{color:inherit; font-weight: bold;}
+
+/* animation: animation이란, transition과 유사하지만, 단편적인 형태를 띄는것이 아닌, 
+  반복효과를 처리할 수 있는 기능 
+  - animation의 기능은 혼자 사용하는 것이아닌 해당한 애니메이션의 시간에따라 처리기능을 부여하기위해 별도의 시간의 흐름을 제어하는 기능이 존재( @keyframes{} ) 
+
+  animation-name: animation을 실행시 동작 제어할 keyframe의 이름을 선택
+  ( a{ animation-name:xido; }
+    @keyframe xido {}
+  )
+  animation-duration: animation을 실행하는 시간
+  animation-timing-function: ani를 실행하는 기능(linear, ease, ease-in, ease-out, ease-i0n-out, step-start, step-end ........)
+  animation-delay: 지연시간
+
+  animation-iteration-count: 반복횟수, infinite(무한)
+  animation-direction: 진행방향(normal , reverse, alternate, alternate-reverse)
+  aimation-fill-mode: 움직이지 않는 상황에 위치하는곳 (none, forwards, backwards, both)
+  animation-play-state: 조건부 상태처리(paused, running)
+
+  animation: name duration time-fn delay count direction fill play;
+  animation: name duration count direction;
+
+  @keyframes name {
+    0% {}  | from {}
+    10% {}
+    35% {}
+    .
+    .
+    100% {} | to {}
+  }
+
+  @-webkit-keyframes name {}
+*/
+
+.ani_box:hover>li:nth-child(1){animation-name: ani_01; animation-duration:2s; 
+                animation-iteration-count:2;  animation-direction:alternate-reverse; 
+                animation-fill-mode:backwards;}
+  @keyframes ani_01 {
+    0% {background-color: #fff; transform:translateX(0) rotate(0deg);}
+    50% {background-color: #f06;}
+    100% {background-color: #0af;  transform:translateX(500px) rotate(3turn);}
+  }
+.ani_box>li:nth-child(2){
+  /*animation:ani_01 4s infinite reverse;*/
+}
+.ani_box>li:nth-child(3){
+  /*animation:ani_02 4s 4 normal;*/
+}
+@keyframes ani_02 {
+  0%{transform:translate(0, 0) rotate(0deg);}
+  25%{transform:translate(400px, 0) rotate(1turn);}
+  50%{transform:translate(400px, 300px) rotate(2turn);}
+  75%{transform:translate(0, 300px) rotate(3turn);}
+  100%{transform:translate(0, 0) rotate(4turn);}
+}
+.ani_box:hover>li:nth-child(4){
+  animation-play-state:paused;}
+
+.ani_box>li:nth-child(4){position: fixed; right: 20%;
+      background-color: #0f4; color:#717177;
+       /* bottom:-20%; */  /*bottom:100%;*/
+       animation:ani_03 10s infinite normal;}
+@keyframes ani_03 {
+  0% {bottom:-20%;}
+  30% {transform:rotate(720deg);}
+  100% {bottom:100%;}
+}
+
+
+
+
+
+
