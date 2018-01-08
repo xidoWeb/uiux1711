@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<!-- rwd_01.html -->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
-  <!-- meta:vp 반응형Emmet 단축키-->
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
-
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!--[if lte IE9]>
     <script src="../js/base/html5shiv-printshiv.js"></script>
@@ -18,7 +15,7 @@
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
   <!-- use css -->
-  <link rel="stylesheet" href="../css/rwd_01.css">
+  <link rel="stylesheet" href="../css/rwd_02.css">
   <!-- faviconFile -->
   <link rel="apple-touch-icon" href="../favicon.png">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
@@ -26,8 +23,20 @@
 </head>
 <body>
   <div id="wrap">
-    <header id="headBox">headBox</header>
+    <header id="headBox">
+      <h1><a href="#">headBox</a></h1>
+      <div class="menu_btn"><button type="button"><span class="hidden">menu</span></button></div>
+      <nav id="gnb">웹페이지 전체 메뉴버튼을 만들기</nav>
+    </header>
     <section id="bannerBox">bannerBox</section>
+    <aside id="lnbBox">
+    <!--   <ul>
+        <li>list_01</li>
+        <li>list_02</li>
+        <li>list_03</li>
+        <li>list_04</li>
+      </ul> -->
+    </aside>
     <article id="contentBox">contentBox</article>
     <footer id="footBox">footBox</footer>
   </div>
@@ -36,6 +45,6 @@
   <script src="../js/base/jquery-3.2.1.js"></script>
   <script src="../js/base/jquery-ui.js"></script>
   <!-- use script -->
-  <script src="../js/src/rwd_01.js"></script>
+  <script src="../js/src/rwd_02.js"></script>
 </body>
 </html>

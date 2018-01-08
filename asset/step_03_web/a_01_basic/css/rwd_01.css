@@ -1,0 +1,37 @@
+ /* rwd_01.css */
+
+#wrap{width: 100%; min-width: 960px; height: auto; 
+    min-height: 800px; margin: 0 auto; 
+    background-color: #ccc;}
+
+#headBox{width: 100%; height: 100px; background-color: #ddd;}
+#bannerBox{margin-top:0.5rem; width: 100%; height:500px;
+          background-color: #cca;}
+#contentBox{width: 960px; height:1200px; margin: 0 auto;
+          background-color: #ff7;}
+#footBox{width: 100%; height: 50px; background-color: #555;}
+
+
+/* 반응형웹(@media screen) 제작에는 IE 를 고려할 필요가 없다! 
+   그렇다고 IE를 아에 생각안하고 제작하는 것은 아니다.!
+   최소한의 내용은 제작을하고, 이외의 부분에대해서는
+   최신브라우저를 고려해서 제작!
+*/
+
+/* mobile max480 */
+@media screen and (max-width:480px) {
+  #wrap{background-color: #fa0;}
+
+}
+
+/* tablet-V(android) min481 ~ max767 */
+@media screen and (min-width:481px) and (max-width:767px) {
+  #wrap{background-color: #0cf;}
+}
+
+@media screen and (min-width: 768px) and (max-width:1366px) { 
+  #wrap{background-color: #f5c;}
+}
+@media screen and (min-width: 1367px) { 
+  #wrap{background-color: #afc;}
+}

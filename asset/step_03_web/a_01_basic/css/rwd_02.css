@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* rwd_02.css */
+/* base(basic) layout (IE and 공통)-------------------------------- */
+#wrap{width: 100%; min-width:960px; height: auto; margin: 0 auto;}
+  #headBox{width: 100%; height: 150px; background-color: #fa0;}
+  h1{width: 100px; height: 100%; float: left; background-color: #4fa;}
+  h1>a{display: block; width: 100%; height: 100%; font-size: 1rem; color:#fff;}
+  .menu_btn{display: none;}
+
+  #bannerBox{width: 100%; height: 450px; background-color: #a7f;}
+  #lnbBox{width: 100%; height: 600px; background-color: #ccc;}
+  #contentBox{display: none;}
+  #footBox{width: 100%; height: 100px; background-color: #970;}
+
+/* responsive web ================================== */
+/* max480(mob) layout -------------------------------- */
+@media screen and (max-width:480px) {
+  /* design */
+  #wrap{min-width: auto;}
+   #headBox{height: 6.25rem; background-color: #afc; position: relative;}
+    h1{width: 100%; height: 100%;}
+    h1>a{background-color: #f06; text-align: center; font-size: 3rem; line-height: 6.25rem;}
+    .menu_btn{display: block; width:10vw; min-width:3rem; 
+              height: 10vw; min-height:3rem; background-color: #fff;
+              position: absolute; right: 10%; top: 1rem; z-index:200;}
+    .menu_btn>button{width: 100%; height: 100%; }
+    #gnb{width: 100%; height: 100%; position: fixed; z-index:100; top: 0; left: 0;
+        box-sizing:border-box; padding-top:6.25rem; background-color:rgba(0,0,0,0.7);
+          display: none; color:#fff; font-size: 2rem;}
+    #gnb.view{display:block;}
+
+   #bannerBox{height: 25rem; background-color: #75a;}
+   #lnbBox{height: 25rem; background-color: #aaf;}
+   #lnbBox>ul{width: 100%; height: 100%;}
+  #lnbBox>ul>li{width: 50%; height: 50%; float: left; box-sizing: border-box; border:1px solid #333;}
+  #lnbBox>ul>li:nth-child(2n){background-color: #afc;}
+   #contentBox{display: block; width: 100%; height: 18.75rem; background-color: #ffa;}
+   #footBox{background-color: #630;}
+}/* ------- max480 */
+
+/* 481 ~ 767(tabV) layout -------------------------------- */
+@media screen and (min-width:481px) and (max-width:767px) {
+  /* design */
+  #wrap{min-width: auto;}
+  #headBox{background-color: #a70;}
+
+
+  #bannerBox{height: 39.113429vw; /* 300 / 767 * 100 = 39.113429 */
+    min-height:12.5rem; max-height:18.75rem; background-color: #0af;}
+  #lnbBox{height:25rem; background-color: #af5;}
+
+  #contentBox{display: block; height:39.113429vw; /* 300 / 767 * 100 = 39.113429 */}
+  /*#footBox{  }*/
+
+  /*
+  vw, vh:
+  vw는 화면가로 전체를 기준으로 가로값을 %비율로 처리하는 공식
+  vh는 화면세로 전체를 기준으로 세로값을 %비율로 처리하는 공식
+  
+  width:10vw;   => 주어진값의 가로값을 화면전체의 가로값에서 10%정도의 가로값을 가진다
+  height:20vw;  => 주어진값의 세로값을 화면전체의 가로값에서 20%정도의 가로값을 세로값으로 설정
+
+  사용공식:
+    고정수치 기준(가로값 600px기준에서 높이값이 300px)
+    (높이값 / 기준가로값 * 100)vw
+    300 / 600 * 100 => 50vw
+    
+  */
+}/* ------- 481 ~ 767 */
+
+/* 768 ~ 1366(tabPc) layout -------------------------------- */
+@media screen and (min-width:768px) and (max-width:1366px) {
+  /* design */
+  #wrap{min-width: auto;}
+  #headBox{background-color: #aa0;}
+  #bannerBox{height: 32.942899vw; /* 450 / 1366 * 100 =  32.942899 */ 
+          background-color: #0af;}
+  #lnbBox{height:25rem; background-color: #af5;}
+}/* ------- 768 ~ 1366 */
+
+/* min1367(pcFull) layout -------------------------------- */
+@media screen and (min-width:1367px) {
+  /* design */
+    /* design */
+  #wrap{min-width: auto;}
+  #headBox{height: auto; background-color: #aa0;}
+  h1{width: 7vw; max-width:20rem; height: 7vw; max-height:20rem;}
+  #headBox:after{content:" "; display: block; clear: both;}
+
+
+  #bannerBox{height: 32.942899vw; /* 450 / 1366 * 100 =  32.942899 */
+           min-height:450px; max-height:70vh; background-color: #0af;}
+  #lnbBox{height:25rem; background-color: #af5;}
+}/* ------- min1367 */
