@@ -9,8 +9,20 @@
 
   #bannerBox{width: 100%; height: 450px; background-color: #a7f;}
   #lnbBox{width: 100%; height: 600px; background-color: #ccc;}
+  #lnbBox>ol{display: none;}
+
+  #lnbBox>ul{width: 100%; height: 100%;}
+  #lnbBox li{width: 50%; height:auto; float: left; box-sizing: border-box;}
+  #lnbBox>ul>li:nth-child(2n+1){background-color: #0cc;}
+  #lnbBox>ul>li:nth-child(2n+2){background-color: #afc;}
+
   #contentBox{display: none;}
+  #contentBox>div{width: 100%;}
+   .content_area_01{height:40%; background-color:#fa0;}
+   .content_area_02{height:60%; background-color:#f04;}
+
   #footBox{width: 100%; height: 100px; background-color: #970;}
+  #footBox>h2{width:100px; height:100%; background-color:#afa; float: left;}
 
 /* responsive web ================================== */
 /* max480(mob) layout -------------------------------- */
@@ -31,11 +43,14 @@
 
    #bannerBox{height: 25rem; background-color: #75a;}
    #lnbBox{height: 25rem; background-color: #aaf;}
-   #lnbBox>ul{width: 100%; height: 100%;}
-  #lnbBox>ul>li{width: 50%; height: 50%; float: left; box-sizing: border-box; border:1px solid #333;}
-  #lnbBox>ul>li:nth-child(2n){background-color: #afc;}
+   #lnbBox>ul>li{height:50%;}
+   #lnbBox>ul>li:nth-child(2n+1){border-right:1px solid #333;}
+   #lnbBox>ul>li:first-child,
+   #lnbBox>ul>li:nth-child(2){border-bottom:1px solid #333;}
+
    #contentBox{display: block; width: 100%; height: 18.75rem; background-color: #ffa;}
    #footBox{background-color: #630;}
+   #footBox>h2{width: 50%; margin: 0 auto; float:none;}
 }/* ------- max480 */
 
 /* 481 ~ 767(tabV) layout -------------------------------- */
@@ -43,14 +58,15 @@
   /* design */
   #wrap{min-width: auto;}
   #headBox{background-color: #a70;}
-
-
   #bannerBox{height: 39.113429vw; /* 300 / 767 * 100 = 39.113429 */
     min-height:12.5rem; max-height:18.75rem; background-color: #0af;}
   #lnbBox{height:25rem; background-color: #af5;}
+  #lnbBox>ul>li{width: 25%; height:100%; border-right:1px solid #333;}
+  #lnbBox>ul>li:last-child{border-right:none;}
 
   #contentBox{display: block; height:39.113429vw; /* 300 / 767 * 100 = 39.113429 */}
   /*#footBox{  }*/
+
 
   /*
   vw, vh:
@@ -76,6 +92,8 @@
   #bannerBox{height: 32.942899vw; /* 450 / 1366 * 100 =  32.942899 */ 
           background-color: #0af;}
   #lnbBox{height:25rem; background-color: #af5;}
+  #lnbBox>ul>li{width: 25%; height:100%; border-right:1px solid #333;}
+  #lnbBox>ul>li:last-child{border-right:none;}
 }/* ------- 768 ~ 1366 */
 
 /* min1367(pcFull) layout -------------------------------- */
@@ -91,4 +109,11 @@
   #bannerBox{height: 32.942899vw; /* 450 / 1366 * 100 =  32.942899 */
            min-height:450px; max-height:70vh; background-color: #0af;}
   #lnbBox{height:25rem; background-color: #af5;}
+  #lnbBox>ul{height: 50%;}
+  #lnbBox li{width: 25%; height: 100%; border-right:1px solid #333;}
+  #lnbBox li:last-child{border-right:none;}
+
+  #lnbBox>ol{display: block; width: 100%; height: 50%;}
+  #lnbBox>ol>li:nth-child(2n+1){background-color: #afc;}
+  #lnbBox>ol>li:nth-child(2n+2){background-color: #0cc;}
 }/* ------- min1367 */
