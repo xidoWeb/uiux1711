@@ -1,0 +1,5 @@
+/* mob.css */
+@media screen and (max-width:480px) {
+ #wrap{}
+ #headBox{} 
+}

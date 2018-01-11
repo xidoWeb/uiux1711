@@ -1,0 +1,83 @@
+<!-- bootstrap_01.html -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--[if lte IE9]>
+    <script src="../js/base/html5shiv-printshiv.js"></script>
+    <script src="../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../fontAwesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="../font/transfonterNanum/stylesheet.css" />
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.css" />
+  <!-- use css -->
+  
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../favicon.png" />
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+  <title>siteName</title>
+  <style>
+    .container{height: 100px; background-color: #afc;}
+    .row>li{box-sizing: border-box; border:1px solid #000;}
+    .row>li:nth-child(2n+1){background-color: #0af; color:#fff;}
+    .row>li:nth-child(2n){background-color: #f0a;}
+  </style>
+</head>
+<body>
+ <!-- bootstrap: css framework 중의 하나
+      - css를 전~혀 몰라도 사용 가능
+      - background-color 를 몰라도 색상을 적용 가능
+      - 디자이너가 없어도 디자인이 완성
+      - 반응형웹(미디어쿼리)코드를 몰라도 반응형을 제작이 가능
+      - fontAwesome이 없어도 적용가능(glyphicon)
+      - 일부: html코드를 몰라도 간단하게 디자인 코딩이 가능
+      ==========================================================
+      - css를 모르기때문에 class이름이 엄~청나게 많이 생성
+      - 색상에대한 체계를 모르기때문에 bootstrap의 지정색상만 사용
+      - 디자이너가 없다면, 원하는 퀄리티와, 스타일을 적용할 수 없다.
+      - 미디어쿼리코드를 모르기때문에 세세한 조정이 불가능
+      - fontAwesome을 대체할 수는 있지만 대부분은 유료
+      - html코드를 모른다면 : 연봉이 오르지 않는다~!!!
+      ==========================================================
+      bootstrap만 사용하는 것보다, 조율해서 의미에맞게 작업하고,
+      그에따른 필요한 기능에만 사용할 것을 권장
+      bootstrap이외에 다른 css framework도 같이 사용해볼것을 권장.
+      (bulma, materialize css, suzy, ...)
+  --> 
+  <div class="container">
+    <ul class="row">
+      <li class="col-md-6 col-sm-3 col-xs-4">list_01</li>
+      <li class="col-md-3 col-sm-3 col-xs-3">list_02</li>
+      <li class="col-md-3 col-sm-3 col-xs-3">list_03</li>
+      <li>list_04</li>
+      <li>list_05</li>
+      <li>list_06</li>
+      <li>list_07</li>
+      <li>list_08</li>
+      <li>list_09</li>
+      <li>list_10</li>
+      <li>list_11</li>
+      <li>list_12</li>
+      <li>list_13</li>
+      <li>list_14</li>
+      <li>list_15</li>
+      <li>list_16</li>
+    </ul>
+  </div>
+
+
+  <!-- script jquery and bootstrap -->
+  <script src="../js/base/jquery-3.2.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script scr="../bootstrap/js/bootstrap.js"></script>
+  <!-- use script -->
+</body>
+</html>

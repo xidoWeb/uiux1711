@@ -1,0 +1,10 @@
+/* main.css */
+
+@import url("./src/main_base.css");
+@import url("./src/main_mob.css");
+@import url("./src/main_tabV.css");
+@import url("./src/main_tabPc.css");
+@import url("./src/main_pcFull.css");
+
+
+
