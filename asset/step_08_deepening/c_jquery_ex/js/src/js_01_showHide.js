@@ -12,52 +12,61 @@
 // 선택자 가져오기
  var btn = $('#navigation').find('li');
  var par = $('p'); 
- var tr  = [
-            show(), 
-            hide(), 
-            toggle(), 
-            fadeIn(), 
-            fadeOut(), 
-            fadeToggle(), 
-            slideDown(), 
-            slideUp(), 
-            slideToggle(), 
-            addClass("show"),
-            removeClass("show"),
-            toggleClass("show")];
+ var timed = 500;
+ // easings.net/ko
+ var easing = 'easeInBounce';
+ var myindex = function(i){
+  switch(i){
+    case 0:
+      par.show(timed);               break;
+    case 1:
+      par.hide(timed, easing);               break;
+    case 2:
+      par.toggle(timed, easing);             break;
+    case 3:
+      par.fadeIn(timed, easing);             break;
+    case 4:
+      par.fadeOut(timed, easing);            break;
+    case 5:
+      par.fadeToggle(timed, easing);         break;
+    case 6:
+      par.slideDown(timed, easing);          break;
+    case 7:
+      par.slideUp(timed, easing);            break;
+    case 8:
+      par.slideToggle(timed, easing);        break;
+    case 9:
+      par.removeAttr('style');
+      par.delay(timed).addClass('show');     break;
+    case 10:
+      par.removeAttr('style');
+      par.delay(timed).removeClass('show');  break;
+    default:
+      par.removeAttr('style');
+      par.toggleClass('show');
+  }
+ };
 
- btn.on('click', ['a'], function(e){
-  e.preventDefault();
-  // console.log( $(this).index() );
-  var i =  $(this).index();
-  par.tr[i];
-  // switch(i){
-  //   case 0:
-  //   par.show();               break;
-  //   case 1:
-  //   par.hide();               break;
-  //   case 2:
-  //   par.toggle();             break;
-  //   case 3:
-  //   par.fadeIn();             break;
-  //   case 4:
-  //   par.fadeOut();            break;
-  //   case 5:
-  //   par.fadeToggle();         break;
-  //   case 6:
-  //   par.slideDown();          break;
-  //   case 7:
-  //   par.slideUp();            break;
-  //   case 8:
-  //   par.slideToggle();        break;
-  //   case 9:
-  //   par.addClass('show');     break;
-  //   case 10:
-  //   par.removeClass('show');  break;
-  //   default:
-  //   par.toggleClass('show');
-  // }
-});
+ // btn.on('click', ['a'], function(e){
+ //  e.preventDefault();
+ //  // console.log( $(this).index() );
+ //  var i =  $(this).index();
+ //  myindex(i);
+ // });
+
+
+// $.each([배열], 함수(순서, 값){});
+ // $.each(btn, function(index,value){
+ //  console.log(index, value);
+ // });
+
+ btn.each(function(index){
+  $(this).on('click', function(e){
+    e.preventDefault();
+    console.log(index);
+    myindex(index);
+  });
+ });
 
 
 })(this.jQuery);
