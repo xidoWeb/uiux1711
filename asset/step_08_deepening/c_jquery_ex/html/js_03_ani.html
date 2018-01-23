@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- js_03_ani.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../js/base/html5shiv-printshiv.js"></script>
+    <script src="../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <!-- <link rel="stylesheet" href="../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../font/transfonterNanum/stylesheet.css"> -->
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <!-- use css -->
+  
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <title>jquery_animate</title>
+  <style>
+    #wrap{width: 100%; height: auto;}
+    h1{padding-bottom: 1rem; border-bottom: 5px solid  #f06; margin-bottom: 2rem;text-align: center;	}
+    .button_list{width: 100%; height: auto; padding: 1rem; box-sizing:border-box;
+      margin-bottom: 2rem;  }
+    button{padding: 0.5rem 2rem; background-color: #07a; color:#fff; font-weight: bold; border-radius:0.5rem; font-size: 1.5rem; margin-left: 3rem; }
+    button:hover{box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.3);}
+    .result{width: 100%; height: auto; margin-bottom: 2rem; }
+    .result>p{width: 400px; height: 400px; float:left; margin-left:4rem;
+        background-color: #acf; color:#333; font-weight: bold; font-size:1.5rem; 
+        text-align: center; line-height:120%; box-sizing:border-box; padding:1rem;
+        box-shadow:0.2rem 0.2rem 0.1rem #777; 
+        padding-top: 3rem;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>animate</h1>
+    <div class="button_list">
+      <button type="button">margenta, white, 2</button>
+      <button type="button">skyBlue, yellow, 4</button>
+      <button type="button">yelloDeep, deepgray, 6</button>
+      <button type="button">mint, margenta, 8</button>
+      <button type="button">gray, sky, 10</button>
+    </div>
+    <div class="result clearfix">
+      <p>
+        버튼을 클릭하면,<br /> 
+        글씨색은 흰색으로 변하고난 후, <br />
+        배경색이 해당하는 색상으로변경되게 만들기
+      </p>
+      <p>
+        버튼을 클릭하면,<br />
+        선택된배경색상은 반대로 변하게한 후,<br />
+        border-radius:Nrem 으로 만들고,<br />
+        y축으로 한바퀴 회전처리
+      </p>
+    </div>
+    <button type="button" class="reset">새로고침하기</button>
+  </div>
+  
+  <!-- script -->
+  <script src="../js/base/jquery-3.2.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <!-- use script -->
+  <script>
+    (function($) {
+
+      var listBtn = $('.button_list').find('button');
+      var bgcolorArr = ['#f06', '#09f', '#f90','#0bc','#777'];
+      var colorArr = ['#fff', '#ff0', '#555','#f06','#0ff'];
+      var firstP = $('.result').children('p').first();
+      var lastP = $('.result').children('p').last();
+      var rot = 0;
+      listBtn.on('click',function() {
+      	var thisI = $(this).index();
+      	firstP.stop().animate({color:colorArr[thisI]}, function() {
+      		firstP.stop().animate({'backgroundColor':bgcolorArr[thisI]});
+      		// console.log(colorArr[thisI]);
+      	});
+      	lastP.stop().animate({color:bgcolorArr[thisI]},function() {
+      		lastP.stop().animate({'backgroundColor':colorArr[thisI]},function() {
+      			lastP.stop().animate({'borderRadius':thisI*2 + 'rem'},function() {
+      				rot +=180;
+      				lastP.css({'transform':'rotate('+ rot +'deg)','transition':'all 1000ms'});
+      			});
+      		});
+      	});
+      });
+
+     var reset = $('.reset');
+     reset.on('click',function() {
+     	window.location.reload();
+     });
+    })(this.jQuery);
+  </script>
+  <script>
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* js_03_animateCallback.css */
+
+#wrap{width: 100%; min-width: 960px; height: auto; background-color: #ccc;}
+h1{text-align: center; padding-top: 1rem; }
+.btn{width: 900px; height: auto; border-bottom: 3px solid  #f06; margin:2rem auto;
+padding: 1rem 0;  }
+button{padding: 0.5rem 1rem; background-color: #09c; transition:all 1s ease-out;
+    margin-left: 2rem; }
+.par{width: 100%;  margin-top: 3rem; padding: 1rem; box-sizing:border-box;}
+.par:after{content:" ";display: block; clear: both; }
+.par>p{width: 300px; height: 300px; background-color: #ccc; box-sizing:border-box;
+    padding: 2rem; font-size: 1.5em; float:left; margin-left: 3rem; 
+    border:2px solid #f06;}
+.reset{margin-top: 1rem; width: 200px; margin: 0 auto;}
+.reset>button{background-color: #f06;}
+
+button:hover, button:focus{border-radius:0.3rem; box-shadow:0.3rem 0.3rem 0.3rem #aaa;}
