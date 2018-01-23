@@ -3,9 +3,9 @@
 #wrap{width: 100%; min-width: 960px; height: auto; background-color: #ccc;}
 h1{text-align: center; padding-top: 1rem; }
 .btn{width: 900px; height: auto; border-bottom: 3px solid  #f06; margin:2rem auto;
-padding: 1rem 0;  }
-button{padding: 0.5rem 1rem; background-color: #09c; transition:all 1s ease-out;
-    margin-left: 2rem; }
+padding: 1rem 0;}
+button{padding: 0.5rem 1rem; background-color: #09c; transition:all 0.5s ease-out;
+    margin-left: 0.55rem; color:#fff; font-weight: bold; font-size: 1.3em; }
 .par{width: 100%;  margin-top: 3rem; padding: 1rem; box-sizing:border-box;}
 .par:after{content:" ";display: block; clear: both; }
 .par>p{width: 300px; height: 300px; background-color: #ccc; box-sizing:border-box;
@@ -15,3 +15,4 @@ button{padding: 0.5rem 1rem; background-color: #09c; transition:all 1s ease-out;
 .reset>button{background-color: #f06;}
 
 button:hover, button:focus{border-radius:0.3rem; box-shadow:0.3rem 0.3rem 0.3rem #aaa;}
+button:hover{background-color: #f80;}
