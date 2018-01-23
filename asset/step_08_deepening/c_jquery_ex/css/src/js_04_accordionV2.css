@@ -1,0 +1,23 @@
+/* js_02_accordionV */
+#wrap{background-color:#dfdfdf;}
+h1{background-color: #fff; padding-top: 1rem; padding-bottom:0.5rem; border-bottom:3px solid #f06; text-align: center;}
+
+.accordion{width: 100%; height: auto; margin: 0 auto; border:2px solid #f06;}
+.accordion>dl{width: 100%; height: auto;}
+.accordion dt{width: 100%; height: 60px; border-bottom:1px solid #fff;}
+
+.accordion button{width: 100%; height: 100%; font-size:1.5rem; font-weight: bold; background-color: #ca0; background-image:linear-gradient(30deg, #ab0 20%, transparent);
+  transition:all 500ms ease; color:#fff; position: relative; overflow: hidden;}
+.accordion button:hover{color:#fff; text-shadow:0.1rem 0.1rem 0.1rem #730;
+      background-color:#950;}
+.accordion button:focus{background-color: #0af;}
+.accordion button:before{content:">"; position:absolute; top:0.6rem; color:#fff; font-size:2rem; left:-2rem; transition:all 0.4s;}
+.accordion button:focus:before{left:20%;}
+
+.accordion dd{width: 100%; height: auto; 
+  box-sizing:border-box; padding: 2rem; background-color: #fda; 
+   overflow: hidden; /* transition:all 0.5s; */
+  }
+
+
+.accordion dd.active{height: 0; padding-top: 0; padding-bottom: 0;}
