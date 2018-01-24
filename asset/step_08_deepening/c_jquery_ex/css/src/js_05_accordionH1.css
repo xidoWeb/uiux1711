@@ -1,0 +1,40 @@
+/* js_05_accordionH1.css */
+
+#wrap{width: 100%; min-width: 960px; margin: auto;}
+#headBox{width: 100%; text-align: center; height: 50px; border-bottom:2px solid #f06;
+  padding-top: 0.5em; text-transform:capitalize; font-size: 2rem;
+  background-color: #0cf; background-image:linear-gradient(30deg, transparent, #acf 30%);
+  transition:all 500ms ease;}
+#headBox:hover{background-color: #07a;}
+
+/* #bannerBox ---------------------- */
+#bannerBox{width: 100%; height:600px; box-sizing:border-box; padding: 1rem; background-color: #fff; }
+#bannerBox>dl{width:920px; height: 100%; min-width: 800px; margin: auto;
+  background-color:inherit; box-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.7) inset; overflow: hidden;
+  box-sizing:border-box; padding:1rem;}
+#bannerBox>dl>dt{width:50px; height:100%; float:left; background-color:#daa;
+  position: relative; margin-left:5px; margin-bottom: 1rem;border-left:1px solid #fff;}
+
+#bannerBox>dl>dt>a{display: block; width: 100%; height: 100%;}  
+
+#bannerBox>dl>dt>a:hover{background-color: #799; color:#fff;}
+#bannerBox>dl>dt.focus>a{background-color: #333; color:#fff;position:relative;}
+#bannerBox>dl>dt.focus>a:after{content:" "; display: block; width:30px; height:30px; 
+            background-color: inherit; position:absolute; top:3rem; right:-15px; 
+            transform:rotate(45deg); z-index:90;}
+
+  .title{display: block; width:150px; height:50px; 
+    transform:rotate(-90deg) translateY(-30px); font-size: 1.3rem;
+    position:relative; z-index:100;}
+  .num{position: absolute; bottom: 0; right:10px; font-size: 1.5rem;}
+
+#bannerBox>dl>dd{width:550px; height:100%; float:left; background-color:#ccc; position: relative; display: none; z-index:40; margin-bottom: 1rem;}
+  .shot{width: 100%; height: 100%; background-color: #aaa;
+    font-size: 1.5em; position: absolute; z-index:50;
+    top:0; left: 0; box-sizing:border-box; padding: 2rem;}
+
+/* #contentBox ------------------- */
+#contentBox{width: 100%; height:800px; box-sizing:border-box; padding:3rem; background-color: #333;}
+
+/* #footBox ------------------- */
+#footBox{width: 100%; height:100px; box-sizing:border-box; padding: 0.5em;}
