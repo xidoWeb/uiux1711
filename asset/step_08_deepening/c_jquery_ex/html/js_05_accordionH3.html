@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- js_05_accordionH1.html -->
+<!-- js_05_accordionH3.html -->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
@@ -16,19 +16,40 @@
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
   <!-- use css -->
-  <link rel="stylesheet" href="../css/js_05_accordionH1.css">
+  <link rel="stylesheet" href="../css/src/js_05_accordionH3.css">
   <!-- faviconFile -->
   <link rel="apple-touch-icon" href="../favicon.png">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
   <title>siteName</title>
 </head>
 <body>
-  #wrap>header#headBox+section#bannerBox+article#contentBox+footer#footBox
-  
+  <div id="wrap">
+    <header id="headBox">
+      <h1>full page</h1>
+      <nav id="gnb">
+        <h2 class="hidden">navigation</h2>
+        <ul>
+          <li><a href="#">link_01</a></li>
+          <li><a href="#">link_02</a></li>
+          <li><a href="#">link_03</a></li>
+          <li><a href="#">link_04</a></li>
+          <li><a href="#">link_05</a></li>
+        </ul>
+      </nav>
+     </header>
+<!--    <section id="bannerBox" class="test t_0"> bannerBox</section>
+    <article class="test t_1">t_1</article>
+    <article class="test t_2">t_2</article>
+    <article class="test t_3">t_3</article> -->
+    <footer id="footBox">
+      <h2>brand name</h2>
+    </footer>
+  </div>
+
   <!-- script -->
   <script src="../js/base/jquery-3.2.1.js"></script>
   <script src="../js/base/jquery-ui.js"></script>
   <!-- use script -->
-  <script src="../js/src/js_05_accordionH1.js"></script>
+  <script src="../js/src/js_05_accordionH3.js"></script>
 </body>
 </html>
