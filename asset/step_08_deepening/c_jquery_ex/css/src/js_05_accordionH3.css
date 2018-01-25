@@ -20,10 +20,14 @@ html,body{width: 100%; height: 100%;}
   #gnb a:hover{/* background-color:rgba(20,20,20,0); */ color:#333; font-size: 3rem;
     width: 130%; background-color:inherit; z-index:200; left: -15%;
     }
-  #gnb a:focus:after{content:"방문하시겠습니까? \A test";  white-space:pre; display:block; width:80%; height:20%; min-height:50px; 
+  #gnb a.focus{ background-color:inherit; color:#333; font-size: 3rem; z-index:200;}
+
+  #gnb a.focus:after{content:"방문하시겠습니까? \A test";  white-space:pre; display:block; 
+        width:80%; height:20%; min-height:50px; 
         position: absolute; bottom:10%; left: 10%; background-color: rgba(255,255,255,0.8);
-        border-radius:3rem; text-align: center; 
+        border-radius:3rem; text-align: center; z-index:200;
         line-height:120%; font-size: 1.2rem; color:#222; padding-top: 2rem;}  
+
 
     #gnb li:nth-child(1)>a:hover{left: 0;}
     #gnb li:nth-child(5)>a:hover{left:-30%;}
