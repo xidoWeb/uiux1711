@@ -1,0 +1,24 @@
+/* js_05_tabMenu_01.css */
+#wrap{width: 900px; margin: 0 auto; padding: 1rem; background-color: #ccc;}
+dl{width: 90%; height: 500px; border:1px solid #f06; margin: auto;
+  position: relative;}
+dl:after{content:" "; display: block; clear: both;}
+dt{width: 150px; height: 40px; text-align: center;
+  line-height: 40px; color:#fff; font-size: 1.3rem;
+    float:left; margin-right: 0.2rem; position: relative; }
+dt>.shape{display: block; width: 130px; height: 40px; background-color: #333; 
+        position:absolute; top: 0;left: 0; z-index:100; opacity:0.5}
+dt>.shape:after{content:" "; display: block; width: 40px; height: 40px; 
+        background-color:inherit; transform:skewX(30deg); 
+        position: absolute; top: 0; right:-26px;}
+dt>a{display: block; width: 100%; height: 100%; color:inherit; position: relative;
+    z-index:200;}
+dd{width: 100%; height:460px; border-top:3px solid #333; box-sizing: border-box; padding: 2.5rem; background-color: #fff; font-size: 2rem; color:#377;
+    float:left; display: none; 
+    position: absolute; bottom: 0; left: 0;}
+
+dd.view{display: block;}
+dt:hover>.shape{opacity:0.7; background-color: #0af;}
+dt>a:focus{outline: 0; background-color: transparent; color:#333;}
+dt>a:focus + .shape{opacity: 1; z-index: 150; background-color: #fa0;}
+

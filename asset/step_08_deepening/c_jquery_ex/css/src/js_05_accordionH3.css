@@ -18,7 +18,7 @@ html,body{width: 100%; height: 100%;}
       background-color:rgba(20,20,20,0.4); transition:all 300ms ease;
       position: absolute; right: 0; left:0;}
   #gnb a:hover{/* background-color:rgba(20,20,20,0); */ color:#333; font-size: 3rem;
-    width: 130%; background-color:inherit; z-index:200; left: -15%;
+    width: 120%; background-color:inherit; z-index:200; left: -10%;
     }
   #gnb a.focus{ background-color:inherit; color:#333; font-size: 3rem; z-index:200;}
 
@@ -30,7 +30,7 @@ html,body{width: 100%; height: 100%;}
 
 
     #gnb li:nth-child(1)>a:hover{left: 0;}
-    #gnb li:nth-child(5)>a:hover{left:-30%;}
+    #gnb li:nth-child(5)>a:hover{left:-20%;}
 
 #footBox{width: 100%; height:5%; max-height:30px; background-color: #af0; position:fixed;
          left: 0; bottom: 0; z-index:1000; box-shadow:0 -0.05rem 0.1rem rgba(0,0,0,0.5);}
