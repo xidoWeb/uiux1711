@@ -14,12 +14,15 @@
     "chalk": "^2.3.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-watch": "^5.0.0",
     "jquery": "^3.3.1",
     "mk-dirs": "^1.0.0",
     "node-font-awesome": "^1.0.2",
     "write": "^1.0.3"
   },
   "dependencies": {
-    "jqueryui": "^1.11.1"
+    "jqueryui": "^1.11.1",
+    "lt-ie-9": "^0.1.0"
   }
 }
