@@ -4,17 +4,17 @@ var gulp        = require('gulp');
 
 // 폴더 및 파일생성 및 삭제 -----------------
 var mkdir       = require('mk-dirs');
-var fs          = require('fs');
+// var fs       = require('fs');  //에러로인하여 사용하지 않음
 var writeFile   = require('write');
 var del         = require('del');
 
 // 기능부여 ---------------------------------
 var jquery      = require('jquery');
-var jquery      = require('jquery-ui');
-var fontAwesome = require('font-awesome');
+// var jqueryui      = require('jquery-ui');
+var fontAwesome = require('node-font-awesome');
 
 // 장식기능----------------------------------
-var chalk       = require('chalk');
+// var chalk       = require('chalk');
 
 // ------------------------------------------
 // 기본 경로 설정
@@ -47,7 +47,7 @@ gulp.task('makedir', function() {
       mkdir(url.after + 'font')
     ]);
 });
-// fs모듈을 이용하여 기본 파일생성
+// write 모듈을 이용하여 기본 파일생성
 gulp.task('makefile', function(){
   writeFile.sync(url.before+'index.html', '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <script>\n    window.location = "./html/main.html";\n  </script>\n  <title>Document</title>\n</head>\n<body>\n  \n</body>\n</html>');
 
@@ -57,6 +57,22 @@ gulp.task('makefile', function(){
   writeFile.sync(url.before+'css/base/common.css','/* common.css */\n .clearfix:after{content:" "; display:block; width:100%; height:0; clear:both;}\n .clearfix::after{content:" "; display:block; width:100%; height:0; clear:both;}\n \n .hidden_wrap a>span, \n .hidden{display:block; width:0; height:0; position:absolute; z-index:-100; overflow:hidden;}\n .hidden_wrap a{display:block; width:100%; height:100%;}\n \n #wrap ul>.first, \n #wrap ol>.first{margin-left:0; border-left:0;}\n #wrap ul>.last, \n #wrap ol>.last{margin-right:0; border-right:0;}\n #wrap ul>.top, \n #wrap ol>.top{margin-top:0; border-top:0;}\n #wrap ul>.bottom, \n #wrap ol>.bottom{margin-bottom:0; border-bottom:0;}\n \n .wrap{width: 100%; height: auto;}\n .wrap_full {width: 100%; min-width: 960px; height: auto; margin: 0 auto;}\n .wrap:after, .wrap_full:after {content:" "; display: block; clear: both;}\n \n @media screen and (min-width:1024px){\n   .wrap {width: 960px;  margin: 0 auto;}\n   .wrap_full {width: 100%; min-width: 960px;}\n }\n \n \n /* accessibility.css */\n a:focus, button:focus,\n input[type="submit"]:focus,\n input[type="reset"]:focus,\n input[type="image"]:focus,\n input[type="file"]:focus,\n input[type="button"]:focus{outline:2px solid #d07; outline-offset:3px;\n                           background-color:#d07; color:#fff; }\n \n input[type="text"]:focus,\n input[type="password"]:focus,\n input[type="search"]:focus,\n input[type="email"]:focus,\n input[type="tel"]:focus,\n input[type="number"]:focus,\n input[type="date"]:focus,\n input[type="month"]:focus,\n input[type="year"]:focus,\n input[type="week"]:focus,\n input[type="url"]:focus,\n textarea:focus{outline:2px solid #d07; outline-offset:3px;\n               background-color:#faa;}\n \n \n /* grid_responsive.css */\n .row{width:auto; height: auto;}\n .row:after{content:" "; display: block; clear: both;}\n \n @media screen and (max-width:480px) {  \n   /* 100 / 6 = 16.6666666 */\n   .mob_1{float:left; width:16.666667%;}\n   .mob_2{float:left; width:33.333333%;}\n   .mob_3{float:left; width:50%;}\n   .mob_4{float:left; width:66.666667%;}\n   .mob_5{float:left; width:83.333333%;}\n   .mob_6{float:left; width:100%;}\n }\n \n @media screen and (min-width:481px) {\n   /* 100 / 9 = 11.111111 */\n   .tab_v_1{float:left; width:11.111111%;}\n   .tab_v_2{float:left; width:22.222222%;}\n   .tab_v_3{float:left; width:33.333333%;}\n   .tab_v_4{float:left; width:44.444444%;}\n   .tab_v_5{float:left; width:55.555556%;}\n   .tab_v_6{float:left; width:66.666667%;}\n   .tab_v_7{float:left; width:77.777778%;}\n   .tab_v_8{float:left; width:88.888889%;}\n   .tab_v_9{float:left; width:100%;}\n }\n \n @media screen and (min-width:768px){\n   /* 100 / 12 = 8.333333 */\n   .tab_pc_1{float:left; width:8.333333%;}\n   .tab_pc_2{float:left; width:16.666666%;}\n   .tab_pc_3{float:left; width:25%;}\n   .tab_pc_4{float:left; width:33.333332%;}\n   .tab_pc_5{float:left; width:41.666665%;}\n   .tab_pc_6{float:left; width:50%;}\n   .tab_pc_7{float:left; width:58.333331%;}\n   .tab_pc_8{float:left; width:66.666664%;}\n   .tab_pc_9{float:left; width:75%;}\n   .tab_pc_10{float:left; width:83.333333%;}\n   .tab_pc_11{float:left; width:91.666663%;}\n   .tab_pc_12{float:left; width:100%;}\n }\n @media screen and (min-width:1367px) {\n   /* 100 / 12 = 8.333333 */\n   .pc_full_1{float:left; width:8.333333%;}\n   .pc_full_2{float:left; width:16.666666%;}\n   .pc_full_3{float:left; width:25%;}\n   .pc_full_4{float:left; width:33.333332%;}\n   .pc_full_5{float:left; width:41.666665%;}\n   .pc_full_6{float:left; width:50%;}\n   .pc_full_7{float:left; width:58.333331%;}\n   .pc_full_8{float:left; width:66.666664%;}\n   .pc_full_9{float:left; width:75%;}\n   .pc_full_10{float:left; width:83.333333%;}\n   .pc_full_11{float:left; width:91.666663%;}\n   .pc_full_12{float:left; width:100%;}\n }\n ');
 });
 
+// ----------------------------------------
+// 기능추가
+// jquery
+gulp.task('jquery',function() {
+  gulp.src(['./node_modules/jquery/dist/jquery.min.js', './node_modules/jqueryui/jquery-ui.min.js'])
+      .pipe( gulp.dest(url.before+ 'js/base/') );
+});
+// fontAwesome(4.7.0-201801)
+gulp.task('fontAwesomeFonts',function() {
+  gulp.src(fontAwesome.fonts)
+      .pipe( gulp.dest(url.before+'fontAwesome/fonts/') );
+})
+gulp.task('fontAwesomeCss',function() {
+  gulp.src(fontAwesome.css)
+      .pipe( gulp.dest(url.before+'fontAwesome/css'));
+})
 // ----------------------------------------
 // del모듈이용하여 필요시 폴더를 삭제처리
 // public 폴더 삭제
@@ -77,8 +93,10 @@ gulp.task('cleanCss', function() {
 // ----------------------------------------
 // 2가지 이상 모듈 사용시 통합기능사용
 // 최초 makedir, makefile 기능 처리하기
-gulp.task('make', ['makedir', 'makefile']);
+gulp.task('fontAwesome',['fontAwesomeFonts','fontAwesomeCss']);
+gulp.task('make', ['makedir', 'makefile', 'jquery','fontAwesome']);
 
+// gulp.task('default', []);
 // 
 
 
