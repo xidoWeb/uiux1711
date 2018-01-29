@@ -7,7 +7,8 @@
   // 4. 3번의 속성값(링크할 위치)를 객체형식으로 처리하여 사용.
   // 5. button태그를 삭제하고, 객체형식의 목록내용(갯수를파악)으로 버튼생성
   
-  var btn = $('.btn').children('button');
+  var btnBox = $('.btn');
+  // var btn = btnBox.children('button');  // 4-1의 경우 button을 생성해야하므로 후에 지정
   var show = $('.show').children('p');
   var box = $('.box').children('div');
 
@@ -68,6 +69,16 @@
       {text:'jquery'     , link:'http://jquery.com'},
       {text:'sass'       , link:'http://sass-lang.com'}
       ];
+
+ var i = 0;
+ var linkPageLength = linkPage.length;
+ for(; i<linkPageLength; i++){
+  btnBox.append('<button type="button"></button>');
+  btnBox.children('button').eq(i).text( linkPage[i].text );
+ }
+
+  var btn = btnBox.children('button');
+
   btn.on('click',['button'], function(e) {
     e.preventDefault();
 
