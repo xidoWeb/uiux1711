@@ -1,0 +1,16 @@
+/* js_07_indexEq_01.css */
+
+#wrap{width: 100%; min-width: 960px; height: auto;}
+.btn{ width: 100%; padding: 0.5rem; box-sizing:border-box; margin-bottom: 2rem; }
+.btn>button{padding: 0.5rem 2rem; background-color: #07c; color:#fff;
+    border-radius: 0.3em;}
+.btn>button:hover{font-weight: bold;}
+
+.show{background-color: #ddd; padding: 0.3rem; font-weight: bold;}
+.show a{padding: 0.3rem 1rem; background-color: #5ac; color:#fff; font-weight: bold;}
+
+.box{padding: 1rem; background-color: #ccc;}
+.box>div{width:10rem; height: 2rem; margin-bottom: 1rem; border: 1px solid  #f06;
+        transition:all 500ms ease;}
+.box>div>p{height: 100%; background-color: rgba(0,200,200,0.9);}        
+.box>div.active{width: 100%; background-color: #fa0;}
