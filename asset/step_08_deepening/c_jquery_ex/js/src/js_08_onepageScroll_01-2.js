@@ -109,11 +109,8 @@ $(window).on('scroll',function() {
   (navTop <= docScroll+20) ? nav.addClass('fixed') : nav.removeClass('fixed');
   //5. 스크롤시, h1이 왼쪽 상단으로 위치 이동
 
- if(h1ALeftOrigin <= docScroll){
-   h1A.css({marginLeft: h1AMarginLeft - h1ALeftOrigin});
- }else{
-   h1A.css({marginLeft: h1AMarginLeft - docScroll });
- }
+ if(h1ALeftOrigin <= docScroll){   h1A.css({marginLeft: h1AMarginLeft - h1ALeftOrigin});
+ }else{   h1A.css({marginLeft: h1AMarginLeft - docScroll }); }
 
  // 6. docScroll값과,  pageArr값이 일치할때 처리
  // if(pageArr[1] >= docScroll){ 
@@ -138,9 +135,9 @@ var focus = function(k){
 }; 
 
 var wh = page.outerHeight(true);
-var myCount = parseInt(docScroll/wh);
+var myCount = parseInt(docScroll / wh);
 // console.log(myCount);
-if(pageArr[myCount+1] >= docScroll){
+if(pageArr[myCount] <= docScroll){
   focus(myCount);
 }
 
