@@ -70,17 +70,40 @@ var style = $('head')
   var topView = page.eq(2).offset().top;
     // console.log(topView);
 
+ // 5. h1값 설정
+ var h1A = $('h1').find('a');
+ // h1>a의 margin-left 값을 가져오기
+ var h1AMarginLeft = parseInt(h1A.css('marginLeft'));
+ // console.log('h1>a의 margin-left 값: ',h1AMarginLeft);
+ // 브라우저왼쪽에서 떨어진 값 찾기
+ var h1ALeftOrigin = h1A.offset().left;
+ console.log('h1ALeftOrigin: ',h1ALeftOrigin);
+ // ---------------------------------------
 $(window).on('scroll',function() {
+ var h1ALeft = h1A.offset().left;
+ // console.log('h1>a의 브라우저왼쪽에서부터: ', h1ALeft +'px');
+
   var docScroll = $('html,body').scrollTop();
-  // console.log(docScroll);
+  console.log(docScroll);
   
-  // top버튼 위치고정
+  //3. top버튼 위치고정
   // if(topView <= docScroll){ top.fadeIn(); }else{ top.fadeOut(); }
   (topView <= docScroll) ? top.fadeIn() : top.fadeOut(); 
-  // nav위치고정
+  //4. nav위치고정
   // if(navTop <= docScroll+20){ nav.addClass('fixed'); }else{ nav.removeClass('fixed'); }
   (navTop <= docScroll+20) ? nav.addClass('fixed') : nav.removeClass('fixed');
+  //5. 스크롤시, h1이 왼쪽 상단으로 위치 이동
+
+ if(h1ALeftOrigin <= docScroll){
+   h1A.css({marginLeft: h1AMarginLeft - h1ALeftOrigin});
+ }else{
+   h1A.css({marginLeft: h1AMarginLeft - docScroll });
+ }
+
+
 });
+// -----------------------------------------
+
 
 
 })(this.jQuery);
