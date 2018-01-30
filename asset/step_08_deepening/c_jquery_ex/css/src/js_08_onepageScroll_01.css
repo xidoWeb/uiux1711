@@ -47,6 +47,7 @@
 
 .indicator>ul>li>a>span:after{content:" "; display: block; width: 1rem; height: 1rem; background-color: inherit; position: absolute; top:25%; right: -0.2rem; z-index: -100; transform:rotate(45deg);}
 
-.indicator>ul>li>a:focus {border:0.5rem solid #f06; outline: 0;}      
+.indicator>ul>li>a:focus,
+.indicator>ul>li.focus>a {border:0.5rem solid #f06; outline: 0;}      
 .indicator>ul>li>a:focus>span {display: block;}      
 .indicator>ul>li>a:hover>span {display: block; background-color: #0ac;} 

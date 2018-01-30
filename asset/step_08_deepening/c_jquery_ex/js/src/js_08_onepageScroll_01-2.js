@@ -60,7 +60,7 @@
 wrap.append('<div class="top"><a href="#">top</a></div>');
 var top = $('.top');
 var style = $('head')
-    .append('<style>\n .top{width:3rem; height:auto; color:#fff; font-size:1.3rem; position:fixed; bottom:2rem; right:0.5rem; border-radius:0.3rem; overflow:hidden; display:none;}\n .top>a{display:block; width:100%; height:auto; text-transform:uppercase; color:inherit; font-weight:bold; background-color:#333; padding:1rem 0.2rem; } \n</style>');
+    .append('<style>\n .top{width:3rem; height:auto; color:#fff; font-size:1.3rem; position:fixed; bottom:2rem; right:0.5rem; border-radius:0.3rem; overflow:hidden; display:none;}\n .top>a{display:block; width:100%; height:auto; text-transform:uppercase; color:inherit; font-weight:bold; background-color:#333; padding:1rem 0.4rem; } \n .top>a:focus, .top>a:hover{background-color:#777; }</style>');
 
   // top btn 생성
   var nav       = $('#nav');
@@ -79,12 +79,27 @@ var style = $('head')
  var h1ALeftOrigin = h1A.offset().left;
  console.log('h1ALeftOrigin: ',h1ALeftOrigin);
  // ---------------------------------------
+
+ //6. scroll 처리시, 해당위치에 맞는 indicator addClass('focus') 처리
+ var pageArr = [];   // .page의 각각의 값을 저장하기위해 배열변수 만들기
+ var j = 0; 
+ for(; j < page.length; j++){
+   // .page의 각각의 값을 변수 pageArr의 순서에 맞게 저장
+  pageArr[j] = page.eq(j).offset().top;
+ }
+ // 검증(배열의 결과물 확인하기)
+ // console.log(pageArr);
+
+ // --------------------------------------
+ // 최초 값처리(indicator 첫번째에 focus효과 처리)
+ indiLi.eq(0).addClass('focus');
+
 $(window).on('scroll',function() {
  var h1ALeft = h1A.offset().left;
  // console.log('h1>a의 브라우저왼쪽에서부터: ', h1ALeft +'px');
 
   var docScroll = $('html,body').scrollTop();
-  console.log(docScroll);
+  // console.log(docScroll);
   
   //3. top버튼 위치고정
   // if(topView <= docScroll){ top.fadeIn(); }else{ top.fadeOut(); }
@@ -99,6 +114,35 @@ $(window).on('scroll',function() {
  }else{
    h1A.css({marginLeft: h1AMarginLeft - docScroll });
  }
+
+ // 6. docScroll값과,  pageArr값이 일치할때 처리
+ // if(pageArr[1] >= docScroll){ 
+ //  indiLi.removeClass('focus');
+ //  indiLi.eq(0).addClass('focus');
+
+ // }else if(pageArr[2] >= docScroll){ 
+ //  indiLi.removeClass('focus');
+ //  indiLi.eq(1).addClass('focus');
+
+ // }else if(pageArr[3] >= docScroll){ 
+ //  indiLi.removeClass('focus');
+ //  indiLi.eq(2).addClass('focus');
+
+ // }else if(pageArr[4] >= docScroll){ 
+    // focus(3);
+ // }
+
+var focus = function(k){
+  indiLi.removeClass('focus');
+  indiLi.eq(k).addClass('focus');
+}; 
+
+var wh = page.outerHeight(true);
+var myCount = parseInt(docScroll/wh);
+// console.log(myCount);
+if(pageArr[myCount+1] >= docScroll){
+  focus(myCount);
+}
 
 
 });
