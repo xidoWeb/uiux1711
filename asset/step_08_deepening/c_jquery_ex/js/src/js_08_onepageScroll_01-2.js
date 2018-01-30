@@ -72,11 +72,8 @@ $(window).on('scroll',function() {
   // nav위치고정
   if(navTop <= docScroll+20){
     nav.addClass('fixed');
-    nav.css({height:'2rem'});
-    nav.animate({'backgroundColor':'inherit'});
   }else{
     nav.removeClass('fixed');
-    nav.animate({'backgroundColor':'transparent'});
   }
 
   // top btn 생성
