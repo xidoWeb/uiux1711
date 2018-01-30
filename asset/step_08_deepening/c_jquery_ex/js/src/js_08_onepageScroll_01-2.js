@@ -7,9 +7,9 @@
 */
 
 // 2. html문서에서 동일한 class이름을 사용할경우 쉽게 data를 가져와서 '.indicator'기능을 생성
+ var wrap = $('#wrap');
  var page = $('.page');
  // console.log(page.length);
- var wrap = $('#wrap');
  var headBox = $('#headBox');
   headBox.append('<div class="indicator"><ul></ul></div>');
  var indi    = $('.indicator');
@@ -54,37 +54,32 @@
   });
 
 
-// 3. nav 이동하여 상단 고정
-// 4. top 버튼 생성하기
+// 3. top 버튼 생성하기
+// 4. nav 이동하여 상단 고정
 // var wrap = $('#wrap');
 wrap.append('<div class="top"><a href="#">top</a></div>');
 var top = $('.top');
 var style = $('head')
     .append('<style>\n .top{width:3rem; height:auto; color:#fff; font-size:1.3rem; position:fixed; bottom:2rem; right:0.5rem; border-radius:0.3rem; overflow:hidden; display:none;}\n .top>a{display:block; width:100%; height:auto; text-transform:uppercase; color:inherit; font-weight:bold; background-color:#333; padding:1rem 0.2rem; } \n</style>');
 
-var nav       = $('#nav');
-var navTop    = nav.offset().top;
-console.log(navTop);
+  // top btn 생성
+  var nav       = $('#nav');
+  var navTop    = nav.offset().top;
+  // console.log(navTop);
+  // 기준 3번째 상자가 상단에 위치하면 
+  var topView = page.eq(2).offset().top;
+    // console.log(topView);
 
 $(window).on('scroll',function() {
   var docScroll = $('html,body').scrollTop();
   // console.log(docScroll);
+  
+  // top버튼 위치고정
+  // if(topView <= docScroll){ top.fadeIn(); }else{ top.fadeOut(); }
+  (topView <= docScroll) ? top.fadeIn() : top.fadeOut(); 
   // nav위치고정
-  if(navTop <= docScroll+20){
-    nav.addClass('fixed');
-  }else{
-    nav.removeClass('fixed');
-  }
-
-  // top btn 생성
-  // 기준 3번째 상자가 상단에 위치하면
-  var topView = page.eq(2).offset().top;
-    // console.log(topView);
-  if(topView <= docScroll){
-    top.fadeIn();
-  }else{
-    top.fadeOut();
-  }
+  // if(navTop <= docScroll+20){ nav.addClass('fixed'); }else{ nav.removeClass('fixed'); }
+  (navTop <= docScroll+20) ? nav.addClass('fixed') : nav.removeClass('fixed');
 });
 
 
