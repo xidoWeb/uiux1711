@@ -24,7 +24,7 @@
   gnbDl.on('mouseleave',function() {
     gnbDd.delay(timed).slideUp();
   });
-  gnbDd.find('a').last().on('blur',function() {
+  gnbDd.last().find('a').last().on('blur',function() {
     gnbDd.delay(timed).slideUp();
   });
 // ---------------------------------------------------------
@@ -49,7 +49,10 @@ var lnbTitleFn = function(){
 // lnbTitle.on({'mouseenter':lnbTitleFn, 'focus':lnbTitleFn});
 lnbTitle.on({'mouseenter':lnbTitleFn});
 lnbTitle.on('keydown',function(e) {
-  var evt = e.which;  //키보드 컨트롤
+  e.stopPropagation();
+  // var evt = e.which;  //키보드 컨트롤
+  // var evt = e.keyCode;  //키보드 컨트롤(which와 동일)
+  var evt = e.keyCode;  //키보드 컨트롤
   console.log(evt);
   // 왼쪽 37,  위 38, 오른쪽 39, 아래 40, 엔터 9, 스페이스 32, esc 27
   // if(evt == 39){  }else if(evt == 37){  }else if(evt == 9){  }
@@ -77,7 +80,38 @@ lnbTitle.on('keydown',function(e) {
 lnbList.on('mouseleave',function() { lnbOl.slideUp(); });
 lnbLinkList.last().children('a').on('blur',function() { lnbOl.slideUp(); });
 
+// -------------------------------------------------
+var openBtn = $('.open_btn');
+var cnbBox = $('.cnb_box');
+var bodyW = $('body').width();
 
+// 1
+// cnbBox.hide();
 
+// 2.
+cnbBox.css({transform:'translateX(' + bodyW + 'px)', transition:'all ' + timed + 'ms ease'});
+var active =function(){ $('.active').css({transform:'translate(0)'}); };
+
+openBtn.on('click',function(e) {
+  e.preventDefault();
+ // 1. slide기능으로 사라지거나 나타나게 만들기.
+ // cnbBox.slideToggle();
+
+ // 2. transform 기능으로 움직여서 처리하기
+ // cnbBox.toggleClass('active');
+ var cnbtr = cnbBox.hasClass('active');
+  // console.log(cnbtr);
+  if(!cnbtr){
+    cnbBox.addClass('active');
+    openBtn.addClass('active');
+    cnbBox.css({transform:'translate(0)'});
+    active();
+  }else{
+    cnbBox.removeClass('active');
+    openBtn.removeClass('active');
+    cnbBox.css({transform:'translateX(' + bodyW + 'px)'});
+  }
+
+});
 
 })(this.jQuery);
