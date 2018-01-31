@@ -1,0 +1,25 @@
+ 
+@import './src/var';
+/* css로 변환시 남아있는 주석 */
+// 한줄주석, css로 변환이 안되는 주석
+
+
+body{background-color:$primary;
+  background-image:url($url+'test.png');}
+#wrap{background-color:#fff;  
+     color:$primary}
+h1{background-color:transparent;
+  color:lighten($primary, 10%);
+
+  &:hover{background-color:rgba($primary,0.5);
+    color:darken($primary, 25%);}
+  &>a{color:#fff;
+    &:hover{color:#fff;
+      &:before{color:#fff;}
+      &:after{color:#fff}
+    }// a:hover
+    &:focus{color:#fff;}
+  }// a
+} // h1
+
+

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* css로 변환시 남아있는 주석 */
+body { background-color: #10f; background-image: url("../../img/headBox/test.png"); }
+
+#wrap { background-color: #fff; color: #10f; }
+
+h1 { background-color: transparent; color: #4133ff; }
+
+h1:hover { background-color: rgba(17, 0, 255, 0.5); color: #090080; }
+
+h1 > a { color: #fff; }
+
+h1 > a:hover { color: #fff; }
+
+h1 > a:hover:before { color: #fff; }
+
+h1 > a:hover:after { color: #fff; }
+
+h1 > a:focus { color: #fff; }
