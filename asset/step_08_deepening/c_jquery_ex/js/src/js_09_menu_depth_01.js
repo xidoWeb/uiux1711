@@ -89,7 +89,7 @@ var bodyW = $('body').width();
 // cnbBox.hide();
 
 // 2.
-cnbBox.css({transform:'translateX(' + bodyW + 'px)', transition:'all ' + timed + 'ms ease'});
+cnbBox.css({transform:'translateX(' + bodyW + 'px)', transition:'all'+ ' ' + timed + 'ms ease'});
 var active =function(){ $('.active').css({transform:'translate(0)'}); };
 
 openBtn.on('click',function(e) {
