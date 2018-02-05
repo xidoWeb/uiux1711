@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- js_09_menu_depth_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <!-- use css -->
+  <link rel="stylesheet" href="../../css/src/js_09_menu_depth_01.css">
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>siteName</title>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>menu depth</h1>
+      <!-- nav#gnb>h2.hidden{global navigation} -->
+      <nav id="gnb">
+        <h2 class="hidden">global navigation</h2>
+        <!-- dl>(dt>a[#]{gnb_$$}+dd>a[#]{gnb_list_$$}*4)*4 -->
+        <dl class="clearfix">
+          <dt><a href="#">gnb_01</a></dt>
+          <dd>
+            <a href="#">gnb_list_01</a>
+            <a href="#">gnb_list_02</a>
+            <a href="#">gnb_list_03</a>
+            <a href="#">gnb_list_04</a>
+            <a href="#">gnb_list_05</a>
+          </dd>
+          <dt><a href="#">gnb_02</a></dt>
+          <dd>
+            <a href="#">gnb_list_01</a>
+            <a href="#">gnb_list_02</a>
+            <a href="#">gnb_list_03</a>
+            <a href="#">gnb_list_04</a>
+          </dd>
+          <dt><a href="#">gnb_03</a></dt>
+          <dd>
+            <a href="#">gnb_list_01</a>
+            <a href="#">gnb_list_02</a>
+            <a href="#">gnb_list_03</a>
+          </dd>
+          <dt><a href="#">gnb_04</a></dt>
+          <dd>
+            <a href="#">gnb_list_01</a>
+            <a href="#">gnb_list_02</a>
+            <a href="#">gnb_list_03</a>
+            <a href="#">gnb_list_04</a>
+            <a href="#">gnb_list_05</a>
+            <a href="#">gnb_list_06</a>
+          </dd>
+        </dl>
+      </nav>
+    </header>
+    <section id="lnbBox">
+      <h2>local navigation Box</h2>
+      <!-- ul.lnb>li*4>a[#]{lnb}+(ol>li*4>a[#]{lnb_link_$$}) -->
+      <ul class="lnb clearfix">
+        <li>
+          <a href="#">lnb_01</a>
+          <ol>
+            <li><a href="#">list_01</a></li>
+            <li><a href="#">list_02</a></li>
+            <li><a href="#">list_03</a></li>
+            <li><a href="#">list_04</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#">lnb_02</a>
+          <ol>
+            <li><a href="#">list_01</a></li>
+            <li><a href="#">list_02</a></li>
+            <li><a href="#">list_03</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#">lnb_03</a>
+          <ol>
+            <li><a href="#">list_01</a></li>
+            <li><a href="#">list_02</a></li>
+            <li><a href="#">list_03</a></li>
+            <li><a href="#">list_04</a></li>
+            <li><a href="#">list_05</a></li>
+            <li><a href="#">list_06</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#">lnb_04</a>
+          <ol>
+            <li><a href="#">list_01</a></li>
+            <li><a href="#">list_02</a></li>
+            <li><a href="#">list_03</a></li>
+            <li><a href="#">list_04</a></li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+    <article id="contentBox">
+      <h2>contentBox</h2>
+       <!-- (dl.cnb>(dt>a[#]{cnb_$$}^dd>a[#]{cnb_list_$$}*4))*4 -->
+       <button class="open_btn" type="button">
+        <span class="btn_bar"><!-- btn line --></span>
+        <span class="hidden">menu button show</span>
+       </button>
+       <div class="cnb_box clearfix">
+         <dl class="cnb">
+           <dt><a href="#">cnb_01</a></dt>
+           <dd>
+             <a href="#">cnb_list_01</a>
+             <a href="#">cnb_list_02</a>
+             <a href="#">cnb_list_03</a>
+             <a href="#">cnb_list_04</a>
+           </dd>
+         </dl>
+         <dl class="cnb">
+           <dt><a href="#">cnb_02</a></dt>
+           <dd>
+             <a href="#">cnb_list_01</a>
+             <a href="#">cnb_list_02</a>
+             <a href="#">cnb_list_03</a>
+             <a href="#">cnb_list_04</a>
+           </dd>
+         </dl>
+         <dl class="cnb">
+           <dt><a href="#">cnb_03</a></dt>
+           <dd>
+             <a href="#">cnb_list_01</a>
+             <a href="#">cnb_list_02</a>
+             <a href="#">cnb_list_03</a>
+             <a href="#">cnb_list_04</a>
+           </dd>
+         </dl>
+         <dl class="cnb">
+           <dt><a href="#">cnb_04</a></dt>
+           <dd>
+             <a href="#">cnb_list_01</a>
+             <a href="#">cnb_list_02</a>
+             <a href="#">cnb_list_03</a>
+             <a href="#">cnb_list_04</a>
+           </dd>
+         </dl>
+       </div>
+    </article>
+    <footer id="footBox">
+      <h2>footBox</h2>
+    </footer>
+  </div>
+  
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+  <!-- use script -->
+  <script src="../../js/src/js_09_menu_depth_01.js"></script>
+</body>
+</html>

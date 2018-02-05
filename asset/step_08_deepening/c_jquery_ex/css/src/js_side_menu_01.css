@@ -1,0 +1,59 @@
+/*js_side_menu_01.css*/
+
+#wrap{width:100%; height: auto; background-color: #fff; overflow-x: hidden;}
+#headBox{width:960px; height: 150px; background-color: #ccc; margin: auto;}
+/* gnb ----------------- */
+.gnb_show{position: fixed; top:0.5rem; right: 1rem; width: 2rem; height: 2rem;}
+.gnb_show>button{font-size:1.5rem; width: 100%; height: 100%; background-color:transparent;}
+.gnb_show>button{color:#333;}
+
+#gnb{position: fixed; width: 200px; height: 100%; z-index:500;  top:0; right:0; background-color:#fff; box-shadow:-0.1rem 0rem 0.1rem rgba(0,0,0,0.7); margin-right:-200px;
+  transition:all 500ms ease;}
+#gnb.active{margin-right: 0;}
+
+.gnb_btn{position: absolute; top:0.5rem; right: 1rem; width: 2rem; height: 2rem;}
+.gnb_btn>button{font-size:1.5rem; width: 100%; height: 100%; background-color:transparent;}
+.gnb_btn>button:focus{color:#333;}
+
+
+
+
+#bannerBox{width:100%; height: 650px; background-color: #0ac;}
+#contentBox{width:960px; height: 1200px; background-color: #ccc; margin: auto;}
+
+
+/* sideBox */
+#sideBox{position: fixed; top:100px; left: 0; width: 200px; height: auto; background-color: #dfdfdf; border:1px solid #777;
+  /*transform:translateX(-202px);*/
+  margin-left:-202px;  transition:all 500ms ease; padding-top: 3rem;}
+
+#sideBox.active{/*transform:translateX(0);*/ margin-left: 0;}
+
+.side_btn{width: 70px; height: 50px; background-color: #777;
+    position: absolute; top: 0; right: -70px;}
+.side_btn>button{width: 100%; height: 100%; background-color:transparent;
+    color:#fff; font-size: 1.5rem;}
+
+#sideBox>ul{width: 100%; box-sizing:border-box;padding: 0.5rem;}
+#sideBox>ul>li{width: 100%; height: 5rem; margin-bottom: 1rem; background-color: #afc;}
+
+#sideBox>ul>li>a{display: block; text-align: center; line-height: 5rem; width: 100%; height: 100%; }
+
+#sideBox>ul>li>a:hover,
+#sideBox>ul>li>a:focus{animation:linkMotion 500ms ease 1;}
+
+@keyframes linkMotion{
+  0%{line-height: 5rem; font-size:1rem;}
+  50%{line-height: 3rem; font-size: 2rem;}
+  100%{line-height: 5rem; font-size:1rem;}
+}
+
+
+#sideBox>.top{width: 100px; height: 2rem; background-color: #7aa; text-align: center; line-height: 2rem; font-size: 1.2rem; color:#fff; text-transform:uppercase; font-weight: bold; float: right; margin-right: -100px;
+transition:all 500ms ease}
+
+#sideBox>.top.active{width:100%; margin-right: 0;}
+
+#sideBox>.top>a{display: block; width: 100%; height: 100%; color:inherit;}
+
+#footBox{width:100%; height: 120px; background-color: #555; margin: auto;}
