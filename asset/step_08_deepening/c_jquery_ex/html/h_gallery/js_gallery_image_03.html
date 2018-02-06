@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- js_gallery_image_03.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <!-- use css -->
+<!--   <link rel="stylesheet" href="../../css/src/js_gallery_image_02.css"> -->
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>gallery_image</title>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>image gallery 만들기3</h1>
+    </header>
+    <section class="view_box">
+      <h2 class="hidden">이미지 갤러리 만들기 js기능을 통해처리</h2>
+      <!-- <div class="gallery_view"></div>
+      <div class="gallery_list"></div> -->
+    </section>
+  </div>
+  
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+  <!-- use script -->
+  <!-- <script src="../../js/src/js_gallery_image_02.js"></script> -->
+  <script src="../../js/src/js_gallery_image_03.js"></script>
+  <script>
+    (function($) {
+      // 이미지 리스트 담는곳( 첫번째 인자 )
+      var myjson = '../../js/data/galleryImage_01.json';
+      // 이미지가 담긴 경로체크하는 곳(두번째 인자)
+      var baseUrl = '../../img/gallery_img_01/';
+
+      $('.view_box').myGallery(myjson, baseUrl);
+    })(this.jQuery);
+  </script>
+</body>
+</html>
