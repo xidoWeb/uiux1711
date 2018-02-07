@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- plugin_01.html -->
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <!-- use css -->
+  <!-- <link rel="stylesheet" href="../../css/multimedia_02.css"> -->
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>siteName</title>
+</head>
+<body>
+  <h1>plugin 만들기의 간단한 이해</h1>
+  
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+  
+  <script>
+    (function($) {
+      // 메소드체이닝
+      
+      // $('h1').css('color','#0af'); //플러그인으로1
+              $.fn.myColor = function() {
+                this.css('color','#720');
+                return this;  // 반환을 만들어주면 메소드 체이닝이 가능하다!
+              };
+          //위 내용을 풀이하자면..      
+          // var  $ = { fn: { myColor: function() { this.css('color','#720'); } } };
+
+      // $('h1').css('color','#450').delay(1000).fadeOut(1000);
+
+      // 가로형 show/hide
+      $.fn.wideOpen = function() {
+        this.css({'display':'block','width':'0','height':'40px','overflow':'hidden','background':'#cca'});
+        this.animate({'width':'100%'},1000);
+        return this;
+      };
+       $.fn.wideClose = function() {
+        this.animate({'width':0},1000, function(){  
+          $(this).css({'display':'none'});   
+        }); 
+       return this;
+      };
+
+      // 위 기능을 하나로 만들기
+      $.fn.wideView = function(action) {
+        switch(action){
+          case 'open': 
+          this.css({'display':'block','width':'0','height':'40px','overflow':'hidden','background':'#cca'});
+          this.animate({'width':'100%'},1000);
+          break;
+          case 'close':
+          this.animate({'width':0},1000, function(){  
+            $(this).css({'display':'none'});   
+          }); 
+          break;
+        }
+        return this;
+      };
+      //-------------------------------------------------------
+    // 기본옵션설정후, 옵션을 변경해서 사용할 수 있도록 처리!
+    $.fn.myGrahpic = function(option) {
+      var set = $.extend({ color:'#03a', backgroundColor:'#fca' },option);
+
+      // $.extend() 의 간단한 의미해석을 해보자면 
+      //if(color == false){ color:'#03a'} else{ color: option의 설정값 };
+
+      // $.extend()
+      // var obj  = {a:10, b:4};
+      // var obj2 = {b:100};
+      // var plus = $.extend(obj, obj2);
+      // var plusMore = $.extend({}, obj, obj2);
+
+      /* var plus 결과를 설명
+         plus == obj == {a:10, b:100};
+         obj2 == {b:100};
+
+         * $.extend() 메소드는 merge의 기능을 가지며, 뒤에오는 값을 앞에 덮어씌워 합치는 기능
+      */
+      /* var plusMore 결과를 설명
+         plusMore == {a:10, b:100};
+         obj == {a:10};
+         obj2 == {b:100};
+      */
+     
+
+
+
+      return this.css({color:set.color, backgroundColor:set.backgroundColor});
+    };
+
+
+
+    })(this.jQuery);
+    // this의미, 
+    // 1: window(과거 설계의 오류로 인한 현상)
+    // 2: 선택자(객체)
+  </script>
+  <script>
+    // ------------------------------------------------
+    (function($) {
+      // $('h1').myColor() // 기본플러그인 만들기
+      // $('h1').myColor().delay(1000).fadeOut(1000);  // 메소드체이닝기법으로 처리되도록 만들기
+      //1
+      // $('h1').hide();
+
+      //2
+      // $('h1').wideOpen().wideClose();
+
+      //3
+      // $('body').on('click',function() {
+      //   $('h1').wideView('open');
+      // });
+      // $('h1').on('click',function() {
+      //   $('h1').wideView('close');
+      // });
+
+      //4
+      $('h1').myGrahpic({color:'#f06', backgroundColor:'#acc'});
+    })(this.jQuery);
+    // ----------------------------------------------
+  </script>
+</body>
+</html>
