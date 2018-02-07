@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- js_modal_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <!-- use css -->
+  <link rel="stylesheet" href="../../css/src/js_modal_01.css">
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>modal window</title>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>modal window 만들기</h1>
+    </header>
+    <section id="modalBox">
+      <div class="view_box">
+        <button type="button">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <span class="hidden">닫기</span>
+        </button>
+        <img src="../../img/gallery_img_01/big/gallery_image_1.jpg" alt="큰 이미지 설명">
+      </div>
+      <div class="list_box">
+        <ul class="clearfix">
+          <li>
+            <button type="button">
+              <img src="../../img/gallery_img_01/thum/gallery_image_1.jpg" alt="이미지_01">
+            </button>
+          </li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_2.jpg" alt="이미지_02"></button></li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_3.jpg" alt="이미지_03"></button></li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_4.jpg" alt="이미지_04"></button></li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_5.jpg" alt="이미지_05"></button></li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_6.jpg" alt="이미지_06"></button></li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_7.jpg" alt="이미지_07"></button></li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_8.jpg" alt="이미지_08"></button></li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_9.jpg" alt="이미지_09"></button></li>
+          <li><button type="button"><img src="../../img/gallery_img_01/thum/gallery_image_10.jpg" alt="이미지_10"></button></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+  <!-- use script -->
+  <script src="../../js/src/js_modal_01.js"></script>
+</body>
+</html>
