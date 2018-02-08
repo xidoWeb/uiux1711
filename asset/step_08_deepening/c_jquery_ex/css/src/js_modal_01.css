@@ -6,7 +6,7 @@ h1{border-bottom:3px solid #f05; color:#dfdfaa; text-align: center;}
 
 .view_box{width:900px; height:auto; border:10px solid #fff; 
       box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.7); 
-      position: fixed;  top:50%; left: 50%; margin-left: -450px; margin-top: -400px;}
+      position: fixed;  top:50%; left: 50%; margin-left: -450px; margin-top: -300px;}
 .view_box>button{position: absolute; top:-2rem; right:-2rem; width: 4rem; height: 4rem; background-color: #fa0; border-radius:2rem; font-size:3rem; transition:all 500ms;}
 .view_box>button:focus, 
 .view_box>button:hover {transform:rotate(180deg); background-color: #f05;}
