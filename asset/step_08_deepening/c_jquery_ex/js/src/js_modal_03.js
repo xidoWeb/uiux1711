@@ -54,16 +54,10 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
    // 모달 'modalRight', 'modalLeft' 버튼 기능시 2곳이상에서 사용하기위한 함수처리
  var memoryBtn = function (memoriIndex){
      if(memoriIndex <= 0){ 
-     memoriIndex = 0;
-     modalLeft.fadeOut(300); 
-     modalRight.fadeIn(300);
+     memoriIndex = 0;     modalLeft.fadeOut(300);      modalRight.fadeIn(300);
    }else if(memoriIndex >= dataLength-1){
-     memoriIndex = dataLength-1; 
-     modalRight.fadeOut(300);
-     modalLeft.fadeIn(300);
-   }else{
-     modalLeft.fadeIn(300);
-     modalRight.fadeIn(300);
+     memoriIndex = dataLength-1;      modalRight.fadeOut(300);     modalLeft.fadeIn(300);
+   }else{     modalLeft.fadeIn(300);     modalRight.fadeIn(300);
    }
  };
 
@@ -116,8 +110,7 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
 // 위 modalRight modalLeft 기능을 하나로 합치자!
  var slideBtn = $('.slide_btn');
  slideBtn.children('button').on('click',function(e) {
-  e.preventDefault();
-  var _this = $(this);
+  e.preventDefault();  var _this = $(this);
 
   // 클릭 버튼 구분
   // console.log(_this);
@@ -125,11 +118,7 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
   // console.log(modalLeft);
 // modalLeft
 modalRight
-  if(_this[0] == modalRight[0]) { 
-    memoriIndex+=1; console.log(_this);
-  }else if(_this[0] == modalLeft[0]){
-    memoriIndex-=1; console.log(_this);
-  }
+  if(_this[0] == modalRight[0]) { memoriIndex+=1; }else if(_this[0] == modalLeft[0]){ memoriIndex-=1; }
   // 선택1: 무한으로 돌릴려면
   // if(memoriIndex <= 0){ memoriIndex = dataLength - 1; }else if(memoriIndex >= dataLength){ memoriIndex = 0 }
   // 선택2: 한쪽방향으로만 보게만들려면(버튼도 구분하여 처리해야함)
