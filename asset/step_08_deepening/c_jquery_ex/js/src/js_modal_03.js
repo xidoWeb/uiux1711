@@ -146,21 +146,25 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
     var viewBoxSee = viewBox.css('display') == 'block';
     // console.log(viewBoxSee);
     if(viewBoxSee){
+      $(document).unbind('keydown');    
+
       $(document).on('keydown', function(event) {
-        // console.log(event.key, event.keyCode);
+        // console.log(event.key, event.keyCode, event.which);
         // ArrowLeft 37, ArrowRight 39, Escape 27
-        if(doubleKey){
-          switch (event.keyCode){ 
+          switch (event.which){ 
             case 37:
-              // modalLeft.focus();
-              modalLeft.trigger('click');              break;
+              modalLeft.focus();
+              modalLeft.trigger('click');    
+              break;
             case 39:
-              // modalRight.focus();
-              modalRight.trigger('click');             break;
+              modalRight.focus();
+              modalRight.trigger('click');  
+              break;
             case 27:
-              // viewBox.find('.close').focus();
-              viewBox.find('.close').trigger('click'); break;
-          } }//if
+              viewBox.find('.close').focus();
+              viewBox.find('.close').trigger('click'); 
+              break;
+          } 
       });
     }// if(viewBoxSee)
   }//  function mView();
