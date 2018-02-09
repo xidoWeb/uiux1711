@@ -68,8 +68,7 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
     viewBox.find('button.close').focus();
     console.log(memoriIndex);
     // memoriIndex기능의 좌우버튼 처리기능
-    memoryBtn(memoriIndex);
-    mView();
+    memoryBtn(memoriIndex);    mView();    modalPage();    modalNarr();
   }); // listBtn.on('click')
 
   // viewBox가 보이는 상태에서 오른버튼 클릭시 현재 보이는 이미지의 다음이미지를 보이게 만들자!!!
@@ -110,34 +109,22 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
 // 위 modalRight modalLeft 기능을 하나로 합치자!
  var slideBtn = $('.slide_btn');
  slideBtn.children('button').on('click',function(e) {
-  e.preventDefault();  var _this = $(this);
-
-  // 클릭 버튼 구분
-  // console.log(_this);
-  // console.log(modalRight);
-  // console.log(modalLeft);
-  // modalLeft
-  // modalRight
-  if(_this[0] == modalRight[0]) { 
-    var thisI = memoriIndex+=1;
-    // memoryBtn(thisI);
-
-  }else if(_this[0] == modalLeft[0]){
-   var thisI = memoriIndex-=1; 
-   // memoryBtn(thisI);
-  }
+  e.preventDefault();  
+  var _this = $(this);
+  var thisI;
+  if(_this[0] == modalRight[0]) {     thisI = memoriIndex+=1;  }
+  else if(_this[0] == modalLeft[0]){    thisI = memoriIndex-=1;  }
   // 선택1: 무한으로 돌릴려면
   // if(memoriIndex <= 0){ memoriIndex = dataLength - 1; }else if(memoriIndex >= dataLength){ memoriIndex = 0 }
   // 선택2: 한쪽방향으로만 보게만들려면(버튼도 구분하여 처리해야함)
   // 단, 기본기능에서 체크시 처음이나 마지막위치에서는 일부 원활하게 되지 않으므로, 별도의 함수로사용하여 구동되게 만드는 것이 좋다!
   // memoriIndex기능의 좌우버튼 처리기능
   memoriIndex = memoryBtn(thisI);
-  console.log(memoriIndex);
+  // console.log(memoriIndex);
+  modalPage();   modalNarr();
   viewBox.find('img').attr({alt:data[memoriIndex].big, src:bigDir + data[memoriIndex].file });
   // console.log(memoriIndex);
- });
-
-
+ }); 
 
  // 4. modal 닫기버튼 클릭시 사라지기(modal창) ==> $.getJSON 으로 이동
   viewBox.find('button.close').on('click',function(e) {
@@ -147,43 +134,69 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
   });
 
 // ------------------------------------------------------------------------------------
+/** 2018.02.09 키보드제어 버그
+  * 리스트 클릭후 이미지보고 나갔을때 다시확인시 좌우 이동이미지 위치가 원활하지 않음 
+*/
   // 모달창에서만 키포커스 움직이기
   viewBox.find('button').last().on('blur',function() {
     viewBox.find('button.close').focus();
   });
-
   // 모달창 키보드 제어
   function mView() {
     var viewBoxSee = viewBox.css('display') == 'block';
-    console.log(viewBoxSee);
+    // console.log(viewBoxSee);
     if(viewBoxSee){
       $(document).on('keydown', function(event) {
-        console.log(event.key, event.keyCode);
+        // console.log(event.key, event.keyCode);
         // ArrowLeft 37, ArrowRight 39, Escape 27
-
-        switch (event.keyCode){ 
-          case 37:
-            modalLeft.trigger('click');
-
-          break;
-          case 39:
-            modalRight.trigger('click');
-          break;
-          case 27:
-            viewBox.find('.close').trigger('click');
-          break;
-        }
+        if(doubleKey){
+          switch (event.keyCode){ 
+            case 37:
+              // modalLeft.focus();
+              modalLeft.trigger('click');              break;
+            case 39:
+              // modalRight.focus();
+              modalRight.trigger('click');             break;
+            case 27:
+              // viewBox.find('.close').focus();
+              viewBox.find('.close').trigger('click'); break;
+          } }//if
       });
-    }// if
+    }// if(viewBoxSee)
   }//  function mView();
   mView();
-  // if(viewBoxSee){
-  //   viewBox.on('keydown', function(event) {
-  //     console.log(event);
-  //     // switch (event){ }
-  //   });
-  // }
+// -----------------------------------------------------------------------------------
+// 모달창 설명 보이기 기능만들기
+function modalNarr() {
+  var pageNarrView = viewBox.find('p.page_narr').length;
 
+  if(pageNarrView <= 0){ 
+    viewBox.find('img').after('<p class="page_narr" style="display:none">'+ data[memoriIndex].big +'</p>'); 
+  }else if(pageNarrView >= 1){ 
+    $('.page_narr').before('<p class="page_narr" style="display:none">'+ data[memoriIndex].big +'</p>'); 
+  }
+  var parrNarr = $('.page_narr');
+  parrNarr.fadeToggle();
+  parrNarr.eq(1).remove();
+  parrNarr.last().text(data[memoriIndex].big);
+
+  parrNarr.css({position:'absolute', bottom:'0.5rem', left:'0.5rem', zIndex:500, textAlign:'left',
+                        width:'500px', height:'auto', backgroundColor:'#fff',
+                        padding:'0.5rem 0', borderRadius:'3rem', fontWeight:'bold', textIndent:'1rem'});
+}// modalNarr();
+
+// 모달페이지 순서 보이기 기능 만들기
+  function modalPage() {
+    var modalPageView = viewBox.find('p.modal_page').length;
+    // console.log('modal_page: ',modalPageView);
+    if(modalPageView <= 0){ viewBox.find('img').after('<p class="modal_page"></p>'); }
+    var modalPage = $('.modal_page');
+    // console.log('count: ', memoriIndex);
+    modalPage.text((memoriIndex+1) + '/' + dataLength);
+    modalPage.css({position:'absolute', bottom:'0.5rem', right:'0.5rem', zIndex:500, textAlign:'center',
+                        width:'100px', height:'auto', backgroundColor:'rgba(255,255,255,0.8)',
+                        padding:'0.5rem 0', borderRadius:'3rem', fontWeight:'bold'});
+  }// modalPage();
 
 }); // $.getJSON
 
