@@ -29,13 +29,10 @@
   var modalLeft  = viewBox.find('.left_btn');
   var modalRight = viewBox.find('.right_btn');
 // ---------------------------------------------------------------------------------------------------------
-
-
   // 어두운 배경 만들기/숨기기
   var bgBack  = $('.bg_back');
-  bgBack.css({width:'100%', height:'100%', position:'fixed', zIndex:'500', top:0, left:0, backgroundColor:'rgba(0,0,0,0.5)'});
+  bgBack.css({width:'100%',height:'100%',position:'fixed',zIndex:'500',top:0,left:0,backgroundColor:'rgba(0,0,0,0.5)'});
   viewBox.css({zIndex:1000});
-
   viewBox.hide();  bgBack.hide();
 
   // 5. json파일불러오기(서버구동필수)
@@ -53,12 +50,14 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
   var listBtn = listBox.find('li');
    // 모달 'modalRight', 'modalLeft' 버튼 기능시 2곳이상에서 사용하기위한 함수처리
  var memoryBtn = function (memoriIndex){
-     if(memoriIndex <= 0){ 
+   if(memoriIndex <= 0){ 
      memoriIndex = 0;     modalLeft.fadeOut(300);      modalRight.fadeIn(300);
    }else if(memoriIndex >= dataLength-1){
      memoriIndex = dataLength-1;      modalRight.fadeOut(300);     modalLeft.fadeIn(300);
    }else{     modalLeft.fadeIn(300);     modalRight.fadeIn(300);
    }
+   // console.log(memoriIndex);
+   return memoriIndex;
  };
 
   listBtn.on('click', ['button'], function(e) {
@@ -70,6 +69,7 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
     console.log(memoriIndex);
     // memoriIndex기능의 좌우버튼 처리기능
     memoryBtn(memoriIndex);
+    mView();
   }); // listBtn.on('click')
 
   // viewBox가 보이는 상태에서 오른버튼 클릭시 현재 보이는 이미지의 다음이미지를 보이게 만들자!!!
@@ -116,19 +116,25 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
   // console.log(_this);
   // console.log(modalRight);
   // console.log(modalLeft);
-// modalLeft
-modalRight
-  if(_this[0] == modalRight[0]) { memoriIndex+=1; }else if(_this[0] == modalLeft[0]){ memoriIndex-=1; }
+  // modalLeft
+  // modalRight
+  if(_this[0] == modalRight[0]) { 
+    var thisI = memoriIndex+=1;
+    // memoryBtn(thisI);
+
+  }else if(_this[0] == modalLeft[0]){
+   var thisI = memoriIndex-=1; 
+   // memoryBtn(thisI);
+  }
   // 선택1: 무한으로 돌릴려면
   // if(memoriIndex <= 0){ memoriIndex = dataLength - 1; }else if(memoriIndex >= dataLength){ memoriIndex = 0 }
   // 선택2: 한쪽방향으로만 보게만들려면(버튼도 구분하여 처리해야함)
   // 단, 기본기능에서 체크시 처음이나 마지막위치에서는 일부 원활하게 되지 않으므로, 별도의 함수로사용하여 구동되게 만드는 것이 좋다!
   // memoriIndex기능의 좌우버튼 처리기능
-  memoryBtn(memoriIndex);
-
-  viewBox.find('img').attr({alt:data[memoriIndex].big, src:bigDir + data[memoriIndex].file });
-
+  memoriIndex = memoryBtn(thisI);
   console.log(memoriIndex);
+  viewBox.find('img').attr({alt:data[memoriIndex].big, src:bigDir + data[memoriIndex].file });
+  // console.log(memoriIndex);
  });
 
 
@@ -139,6 +145,45 @@ modalRight
     console.log(memoriIndex);
     listBtn.eq(memoriIndex).find('button').focus();
   });
+
+// ------------------------------------------------------------------------------------
+  // 모달창에서만 키포커스 움직이기
+  viewBox.find('button').last().on('blur',function() {
+    viewBox.find('button.close').focus();
+  });
+
+  // 모달창 키보드 제어
+  function mView() {
+    var viewBoxSee = viewBox.css('display') == 'block';
+    console.log(viewBoxSee);
+    if(viewBoxSee){
+      $(document).on('keydown', function(event) {
+        console.log(event.key, event.keyCode);
+        // ArrowLeft 37, ArrowRight 39, Escape 27
+
+        switch (event.keyCode){ 
+          case 37:
+            modalLeft.trigger('click');
+
+          break;
+          case 39:
+            modalRight.trigger('click');
+          break;
+          case 27:
+            viewBox.find('.close').trigger('click');
+          break;
+        }
+      });
+    }// if
+  }//  function mView();
+  mView();
+  // if(viewBoxSee){
+  //   viewBox.on('keydown', function(event) {
+  //     console.log(event);
+  //     // switch (event){ }
+  //   });
+  // }
+
 
 }); // $.getJSON
 
