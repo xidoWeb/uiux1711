@@ -158,6 +158,7 @@ baseLink.find('a').on('click',function(e) {
 
   focusId.attr('tabindex','0');
   focusId.focus();
+  focusId.css({outline:'2px solid #f06'});
   focusId.on('blur',function() {
     focusId.removeAttr('tabindex');
   });
