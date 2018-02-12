@@ -117,13 +117,29 @@ for(; c < wrapInBox.length; c++){
 // console.log(boxArr);
 // console.log(boxLinkArr);
 
+// ----------------------------
 wrap.prepend($('<div>',{class:'base_link'}));
 var baseLink =$('.base_link');
 
-baseLink.prepend('<a href="#'+boxArr[0]+'">'+ boxLinkArr[0] +'</a>');
+$.each(boxArr, function(index, value){
+  baseLink.append('<a href="#'+ value +'">'+ boxLinkArr[index] +'</a>');  
+});
 
-baseLink.css({width:'100%', height:'auto', background:'#05f', position:'fixed', top:0,left:0, zIndex:1500});
-baseLink.find('a').css({display:'block', width:'100%', padding:'0.5rem 0', fontSize:'1.3rem',color:'#fff', textAlign:'center'});
+baseLink.css({width:'100%', height:'auto', background:'#05f'});
+// baseLink.find('a').css({display:'block', width:'100%', padding:'0', fontSize:'0',color:'#fff', textAlign:'center'});
+// baseLink.find('a.active').css({padding:'0.5rem 0', fontSize:'1.3rem'});
+$('head').append('<style>');
+$('head').find('style').append( '\n .base_link  a{display:block; width:100%; padding:0; font-size:0; color:#fff; text-align:center}\n');
+$('head').find('style').append( '\n .base_link  a.active{padding:0.5rem 0; font-size:1.3rem;}\n');
+
+baseLink.find('a').on('focus',function() {
+  $(this).addClass('active');
+  $(this).siblings('a').removeClass('active');
+});
+baseLink.find('a').last().on('blur',function() {
+  $(this).removeClass('active');
+});
+// ------------------------------
 
 
 
