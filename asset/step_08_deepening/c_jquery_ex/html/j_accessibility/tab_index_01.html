@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- tab_index_01.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--[if lte IE 9]>
+		<script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../../ie/ie7/IE9.js"></script>
+		<script src="../../ie/css3pie/PIE_IE9.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="../../css/base/reset.css" />
+	<link rel="stylesheet" href="../../css/base/normalize.css" />
+	<link rel="stylesheet" href="../../fontAwesome/css/font-awesome.min.css" />
+	<style>
+		*:focus{background-color: #6aa; color:#fff;}
+	</style>
+	<title>my title</title>
+</head>
+<body>
+	
+	<h1>tab index 이해하기</h1>
+	<div><a href="#" tabindex="-1">link_list_01</a></div>
+	<p tabindex="0" class="focus">tab-index 예제이해하기 01</p>
+	<p tabindex="1">tab-index 예제이해하기 02</p>
+	<p tabindex="-1">tab-index 예제이해하기 03</p>
+	<p tabindex="2">tab-index 예제이해하기 04</p>
+
+ <p> tabindex 속성은 강제 focus기능을 주어지도록 처리하는것</p>
+ <p> 수치 0은 기본값으로 인지하여, 다른 focus기능을 가진 요소들과 동일한 위치로 인지</p>
+ <p> -x 수치는 focus를 가질수 없는 요소로 변경</p>
+ <p> 1부터 시작해서 수치값이 점점 큰쪽으로 tabindex를 찾아간다!</p>
+ <p> 접근성에서는 tabindex속성을 자주 사용하지는 않는다!</p>
+ <p> 일반요소에도 강제로 focus를 가질수 있으나! 실제로는 버튼/링크의 기능에 할당하는것이 좋다!</p>
+
+	<div class="focus_btn"><a href="#">link_list_02</a></div>
+
+	<!-- jquery-->
+	<script src="../../js/base/jquery-3.2.1.min.js"></script>
+	<script src="../../js/base/jquery-ui.min.js"></script>
+	<script>
+		//1
+		$('.focus').focus();
+
+		//2
+		$('.focus_btn').on('click',function(e) {
+			e.preventDefault();
+				$('.focus').focus();
+
+		});
+	</script>
+</body>
+</html>
