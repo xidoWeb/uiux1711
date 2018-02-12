@@ -136,10 +136,12 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
 // ------------------------------------------------------------------------------------
 /** 2018.02.09 키보드제어 버그
   * 리스트 클릭후 이미지보고 나갔을때 다시확인시 좌우 이동이미지 위치가 원활하지 않음 
+  * 버블링이 일어나는 버그로 $(document).unbind('keydown'); 내용을 작성하여 처리
 */
   // 모달창에서만 키포커스 움직이기
-  viewBox.find('button').last().on('blur',function() {
-    viewBox.find('button.close').focus();
+  viewBox.find('button').last().on('blur',function(event) {
+        viewBox.find('button.close').focus();
+    // console.log(event.type);   
   });
   // 모달창 키보드 제어
   function mView() {
@@ -161,7 +163,7 @@ $.getJSON(jsonUrl,  function(data){ // console.log(data);
               modalRight.trigger('click');  
               break;
             case 27:
-              viewBox.find('.close').focus();
+              viewBox.find('.close').focus();     
               viewBox.find('.close').trigger('click'); 
               break;
           } 
