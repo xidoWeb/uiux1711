@@ -34,5 +34,28 @@
 
   });
 
+  moreBtn.find('button').on('keydown',function(event) {
+    console.log(event.key, event.keyCode);
+    // tab 9, ese 27, enter 13
+    $(document).unbind('keydown');
+    console.log(start-view);
+    switch(event.keyCode){
+      case 9:
+        listLi.eq(start-view-1).find('a').focus();
+      break;
+      case 27:
+        $(this).blur();
+      break;
+      case 38:
+         listLi.eq(start-view).find('a').focus();
+      break;
+      case 40:
+         $(this).trigger('click');
+      break;
+    }
+  });
+
+//주의사항: 전체에서 현재 보이는 내용말고는 없는지?
+
 
 })(this.jQuery);

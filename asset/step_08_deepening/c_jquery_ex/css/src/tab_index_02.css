@@ -1,6 +1,7 @@
 /* tab_index_02.css */
 
-#wrap{width: 100%; min-width: 960px; margin: auto; background-color: #ddf;}
+body{overflow-x:hidden}
+#wrap{width: 100%; min-width: 960px; margin: auto;}
 #headBox{width: 100%; box-sizing:border-box; padding: 1rem;
   border-bottom: 3px solid  #f06;}
 h1{font-size: 1.5rem; text-align: center;}
@@ -16,6 +17,19 @@ h2{text-align: center; margin-bottom: 1rem; font-size: 1.2rem; font-weight: bold
                 border-bottom: 1px solid  #fff; margin-bottom: 0.2rem; background-color: #9aa; display: none;}
 .list_area>ul>li>a{display: block; width: 100%; color:#fff;}
 
-.more{width: 100%; height: 2rem;}
-.more>button{width: 100%; height: 100%; background-color: #377; color:#fff; font-weight: bold;}
+.more{width: 100%; height:4rem;}
+.more>button{width: 100%; height: 100%; background-color: #377; color:#fff; font-weight: bold; font-size: 1.3rem;}
 .more>button:focus{background-color: #733; font-size: 1.5rem;}
+.more>button>span{color:#fa0; font-size: 0.8rem; display: none;}
+#footBox{width: 960px; height: 100px; margin: auto; background-color: #555; box-sizing: border-box; padding: 1rem; position: relative;}
+#footBox:after{content:" "; display: block; 
+              position: absolute; z-index:-1; top: 0; left: 50%; margin-left: -50vw;
+              width: 100vw; height: 100%; 
+              background-color:inherit;} 
+.info_area{width: 50%; float:left;}
+.info_area>li{float: left; margin-right: 1rem; color:#fff; position: relative;}
+.info_area>li:after{content:" "; display: block; width: 0; height: 50%; border-right:1px solid #ccc; position: absolute; top: 25%; right:-0.5rem;}
+.info_area>li:last-child{margin-right: 0;}
+.info_area>li:last-child:after{display: none;}
+
+.info_area>li>a{color:inherit;}
