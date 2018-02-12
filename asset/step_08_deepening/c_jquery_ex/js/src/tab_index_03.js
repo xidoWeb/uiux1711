@@ -140,7 +140,10 @@ baseLink.find('a').last().on('blur',function() {
   $(this).removeClass('active');
 });
 // ------------------------------
-
+baseLink.find('a').on('click',function(e) {
+  // e.preventDefault();
+  
+})
 
 
 })(this.jQuery);

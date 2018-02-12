@@ -4,7 +4,15 @@ body{overflow-x:hidden}
 #wrap{width: 100%; min-width: 960px; margin: auto;}
 #headBox{width: 100%; box-sizing:border-box; padding: 1rem;
   border-bottom: 3px solid  #f06;}
-h1{font-size: 1.5rem; text-align: center;}
+h1{font-size: 1.5rem; text-align: center; margin-bottom: 1.5rem;}
+
+#gnb{width: 100%;  height: auto; background-color: #fa0;}
+#gnb>h2{width: 0;  height: 0; overflow: hidden; position: absolute;  z-index:-1;}
+#gnb ul{width: 100%; height:auto;  background-color: #fcc;}
+#gnb ul:after{content:" "; display: block; clear: both; }
+#gnb ul>li{width: 20%; height: 2rem;  float: left; margin-right: 2rem; line-height: 100%; line-height: 2rem; text-align: center;  }
+#gnb ul>li:last-child{margin-right: 0;}
+#gnb ul>li a{padding:0.3rem 1rem;}
 
 #listBox{width: 60rem; height: auto; background-color: #acc; box-sizing: border-box; padding: 1rem; margin: auto;}
 h2{text-align: center; margin-bottom: 1rem; font-size: 1.2rem; font-weight: bold; border-bottom: 2px solid #fff;}
