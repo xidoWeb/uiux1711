@@ -157,10 +157,9 @@ baseLink.find('a').on('click',function(e) {
 
   focusId.attr('tabindex','0');
   focusId.focus();
-});
-
-focusId.on('blur',function() {
-  $(thisId).removeAttr('tabindex');
+  focusId.on('blur',function() {
+    focusId.removeAttr('tabindex');
+  });
 });
 
 
