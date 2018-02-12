@@ -142,14 +142,15 @@ baseLink.find('a').last().on('blur',function() {
   baseLink.find('a').removeAttr('tabindex');
 });
 // ------------------------------
-var focusId;
+
 baseLink.find('a').on('click',function(e) {
   //해당하는 경로를 찾아갈것이므로 prevendDefault()는 사용하면 안됨
   // e.preventDefault(); 
+  baseLink.find('a').removeClass('active');
   baseLink.find('a').removeAttr('tabindex');
   var thisId = $(this).attr('href');
   // console.log(thisId);
-  focusId = $(thisId);
+  var focusId = $(thisId);
   focusId.animate({backgroundColor:'#5cc'},function() {
     focusId.removeAttr('style',{'transition':'all 1500ms'});
   });
