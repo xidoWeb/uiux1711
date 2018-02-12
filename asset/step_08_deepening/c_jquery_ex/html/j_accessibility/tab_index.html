@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- tab_index_01.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--[if lte IE 9]>
+		<script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../../ie/ie7/IE9.js"></script>
+		<script src="../../ie/css3pie/PIE_IE9.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="../../css/base/reset.css" />
+	<link rel="stylesheet" href="../../css/base/normalize.css" />
+	<link rel="stylesheet" href="../../fontAwesome/css/font-awesome.min.css" />
+	<!-- css work file link -->
+	<link rel="stylesheet" href="../../css/src/tab_index_01.css" />
+	<style>
+		*:focus{background-color: #acc;}
+	</style>
+	<title>my title</title>
+</head>
+<body>
+	
+	<h1>tab index 이해하기</h1>
+	<p tabindex="0">tab-index 예제이해하기 01</p>
+	<p tabindex="-1">tab-index 예제이해하기 02</p>
+	<p tabindex="0">tab-index 예제이해하기 03</p>
+	<p tabindex="0">tab-index 예제이해하기 04</p>
+
+	<!-- jquery-->
+	<script src="../../js/base/jquery-3.2.1.min.js"></script>
+	<script src="../../js/base/jquery-ui.min.js"></script>
+	<!-- <script src="../../js/src/tab_index_01.js"></script> -->
+	<script>
+		$('p').last().on('blur',function() {
+			$('p').first().attr('tabindex','2').focus();
+		});
+	</script>
+</body>
+</html>
