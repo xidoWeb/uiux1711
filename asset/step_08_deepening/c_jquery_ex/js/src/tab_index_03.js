@@ -122,7 +122,7 @@ wrap.prepend($('<div>',{class:'base_link'}));
 var baseLink =$('.base_link');
 
 $.each(boxArr, function(index, value){
-  baseLink.append('<a href="#'+ value +'">'+ boxLinkArr[index] +'</a>');  
+  baseLink.append('<a tabindex="1" href="#'+ value +'">'+ boxLinkArr[index] +'</a>');  
 });
 
 baseLink.css({width:'100%', height:'auto', background:'#05f'});
@@ -138,12 +138,30 @@ baseLink.find('a').on('focus',function() {
 });
 baseLink.find('a').last().on('blur',function() {
   $(this).removeClass('active');
+  // baseLink.find('a').attr('tabindex','-1');
+  baseLink.find('a').removeAttr('tabindex');
 });
 // ------------------------------
+var focusId;
 baseLink.find('a').on('click',function(e) {
-  // e.preventDefault();
-  
-})
+  //해당하는 경로를 찾아갈것이므로 prevendDefault()는 사용하면 안됨
+  // e.preventDefault(); 
+  baseLink.find('a').removeAttr('tabindex');
+  var thisId = $(this).attr('href');
+  // console.log(thisId);
+  focusId = $(thisId);
+  focusId.animate({backgroundColor:'#5cc'},function() {
+    focusId.removeAttr('style',{'transition':'all 1500ms'});
+  });
+  // $(thisId).find('a').eq(0).focus();
+
+  focusId.attr('tabindex','0');
+  focusId.focus();
+});
+
+focusId.on('blur',function() {
+  $(thisId).removeAttr('tabindex');
+});
 
 
 })(this.jQuery);
