@@ -5,7 +5,7 @@
   var listWrap = listArea.find('ul');
   var listLi   = listWrap.children('li');
   var listLiLength = listLi.length;
-  console.log(listLiLength);
+  // console.log(listLiLength);
   var moreBtn  = $('.more');
 
   var start = 10;
@@ -31,7 +31,7 @@
     console.log(event.key, event.keyCode);
     // tab 9, ese 27, enter 13
     $(document).unbind('keydown');
-    console.log(start-view);
+    // console.log(start-view);
     switch(event.keyCode){
       // case 9: listLi.eq(start-view-1).find('a').focus(); break;
       case 27:
@@ -64,7 +64,7 @@
 
 // 목록에서 기능부여
  listLi.children('a').on('keydown',function(event) {
-  console.log(event.key, event.keyCode);
+  // console.log(event.key, event.keyCode);
   // 왼쪽 37, 위 38, 오른쪽 39, 아래 40, esc 27, 탭 9
      var thisI =  $(this).parent().index();
 
@@ -91,5 +91,40 @@
       moreBtn.find('button').focus();
   }
  });
+
+
+// 큰영역 체크하기
+var wrap          = $('#wrap');
+var wrapInBox     = wrap.children();
+var boxArr        = [], boxLinkArr    = [];
+// console.log(wrapInBox.length);
+// console.log(wrapInBox.eq(2).attr('id'));
+var b = 0, c = 0;
+// id값 가져오기
+for(; b < wrapInBox.length; b++){ boxArr[b] = wrapInBox.eq(b).attr('id'); }
+// console.log( wrapInBox.eq(0).find('h1').length );
+
+// 해당 영역 제목 가져오기 접속시 키보드 접근성으로 영역 빠르게 찾아가기 만들기
+for(; c < wrapInBox.length; c++){
+  // boxLinkArr[b] = wrapInBox.eq(b).find('h1');
+  if( wrapInBox.eq(c).find('h1').length > 0 ){ 
+    boxLinkArr[c] = wrapInBox.eq(c).find('h1').text();
+  }else if( wrapInBox.eq(c).find('h2').length > 0){
+    boxLinkArr[c] = wrapInBox.eq(c).find('h2').text();
+  }// if
+}// for
+
+// console.log(boxArr);
+// console.log(boxLinkArr);
+
+wrap.prepend($('<div>',{class:'base_link'}));
+var baseLink =$('.base_link');
+
+baseLink.prepend('<a href="#'+boxArr[0]+'">'+ boxLinkArr[0] +'</a>');
+
+baseLink.css({width:'100%', height:'auto', background:'#05f', position:'fixed', top:0,left:0, zIndex:1500});
+baseLink.find('a').css({display:'block', width:'100%', padding:'0.5rem 0', fontSize:'1.3rem',color:'#fff', textAlign:'center'});
+
+
 
 })(this.jQuery);
