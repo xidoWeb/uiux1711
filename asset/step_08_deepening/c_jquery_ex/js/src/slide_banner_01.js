@@ -21,6 +21,11 @@
   var bannerMv = 0, eqi = 0;
    lbtn.hide(); // 첫번째 버튼숨김
 
+  oneBtn.on('focus',function() {
+    $(this).addClass('focus');
+    $(this).siblings().removeClass('focus');
+  }); 
+
   oneBtn.on('click',function(e) {
     e.preventDefault();
     var _this     = $(this);
@@ -33,17 +38,14 @@
     if(_this[0] == lbtn[0] &&  oneMargin < 0 ){
        //첫이미지위로 올가는것을 방지
       // (-oneMargin < 0) ? bannerMv = 0  : bannerMv += oneCut; 
-      bannerMv += oneCut;
-      lbtn.addClass('focus');
-      rbtn.removeClass('focus');
+      // bannerMv += oneCut;
       eqi--;
     }else if(_this[0] == rbtn[0]){
       // (-oneMargin > oneCut*4) ? bannerMv = -oneCut*4 : bannerMv -= oneCut; 
-      bannerMv -= oneCut;
-      rbtn.addClass('focus');
-      lbtn.removeClass('focus');
+      // bannerMv -= oneCut;
       eqi++;
     }
+    bannerMv = -oneCut * eqi;
     // console.log(-bannerMv, oneCut*4);
     oneWrap.stop().animate({marginTop:bannerMv},function() {
       // 버튼이 모두 나타나게만들기
@@ -54,8 +56,7 @@
       }else                          { lbtn.show(); rbtn.show();  }
 
       $('.focus').focus();
-      
-      console.log(eqi);
+      // console.log(eqi);
       oneList.eq(eqi).children('a').attr('tabindex', '0');
       oneList.eq(eqi).siblings('li').children('a').attr('tabindex', '-1');
     });
