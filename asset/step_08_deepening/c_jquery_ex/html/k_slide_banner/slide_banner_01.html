@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- k_slide_banner.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <!-- use css -->
+  <link rel="stylesheet" href="../../css/src/slide_banner_01.css">
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>siteName</title>
+</head>
+<body>
+  <div id="wrap">
+    <div class="headBoxWrap">
+      <header id="headBox">
+        <h1>slideBanner</h1>
+      </header>
+    </div>
+    <section id="bannerBox" class="banner">
+      <h2 class="hidden">ad banner</h2>
+      <div class="btn">
+        <button type="button" class="lbtn">
+          <i class="fa fa-arrow-left"></i>
+          <span class="hidden">left button</span>
+        </button>
+        <button type="button" class="rbtn">
+          <i class="fa fa-arrow-right"></i>
+          <span class="hidden">right button</span></button>
+        </div>
+        <ul class="banner_wrap">
+          <li class="adbanner_01"><a href="#">자세히보기</a></li>
+          <li class="adbanner_02"><a href="#">자세히보기</a></li>
+          <li class="adbanner_03"><a href="#">자세히보기</a></li>
+          <li class="adbanner_04"><a href="#">자세히보기</a></li>
+          <li class="adbanner_05"><a href="#">자세히보기</a></li>
+        </ul>
+    </section>
+
+    <article id="contentBox">
+      <h2>광고 슬라이드 배너를 만들기</h2>
+      <ol>
+        <li>좌,우 버튼 생성하여 처리하기</li>
+        <li>indicator 기능을 통해 배너만들기</li>
+        <li>좌,우 버튼과 indicator 같이사용하기(양끝위치에서 스톱)</li>
+        <li>좌,우 버튼과 indicator 같이사용하기(fade효과를 이용-무한)</li>
+        <li>좌,우 버튼과 indicator 같이사용하기(가로스크롤만들기-무한)</li>
+      </ol>
+    </article>
+    <section id="bannerBox_02" class="banner">
+      <h2>indicator활용하여 만들기</h2>
+      <ol class="indicator">
+        <li class="active"><a href="#contentBanner_01"><span class="hidden">content banner 01</span></a></li>
+        <li><a href="#contentBanner_02"><span class="hidden">content banner 02</span></a></li>
+        <li><a href="#contentBanner_03"><span class="hidden">content banner 03</span></a></li>
+        <li><a href="#contentBanner_04"><span class="hidden">content banner 04</span></a></li>
+        <li><a href="#contentBanner_05"><span class="hidden">content banner 05</span></a></li>
+      </ol>
+      <ul class="banner_wrap">
+        <li class="adbanner_01" id="contentBanner_01"><a href="#">자세히보기</a></li>
+        <li class="adbanner_02" id="contentBanner_02"><a href="#">자세히보기</a></li>
+        <li class="adbanner_03" id="contentBanner_03"><a href="#">자세히보기</a></li>
+        <li class="adbanner_04" id="contentBanner_04"><a href="#">자세히보기</a></li>
+        <li class="adbanner_05" id="contentBanner_05"><a href="#">자세히보기</a></li>
+      </ul>
+    </section>
+    <article id="contentMore">
+      <h2>content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloribus aliquam commodi veniam reiciendis magni sunt distinctio quos unde similique beatae fugit necessitatibus eum architecto delectus iste illum pariatur cum eligendi, soluta vero quisquam minima! Assumenda quis ad, est modi neque rem minima alias iusto repellendus, ratione placeat id, facere similique necessitatibus quae reiciendis autem animi in perferendis temporibus quasi. Est nesciunt minima repellat non quia minus autem, quaerat porro, error rem nulla molestiae reiciendis distinctio. Temporibus voluptas provident eos saepe facere deserunt dolorem excepturi atque ducimus. Ratione non cum rerum. Reprehenderit, nihil tempore culpa enim, aut labore totam quae! ipsum dolor sit amet, consectetur adipisicing elit. Veritatis porro nesciunt reiciendis repudiandae ab, inventore officia neque id cum optio? Accusantium fugit dicta deleniti consequatur dolore, quaerat suscipit velit ullam!</p>
+    </article>
+    <footer id="footBox">
+      <h2>footer</h2>
+      <ul>
+        <li><a href="">info_01</a></li>
+        <li><a href="">info_02</a></li>
+        <li><a href="">info_03</a></li>
+        <li><a href="">info_04</a></li>
+      </ul>
+      <address class="add">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tempora?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tempora?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tempora?</p>
+      </address>
+    </footer>
+  </div>
+  
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+  <!-- use script -->
+  <script src="../../js/src/slide_banner_01.js"></script>
+</body>
+</html>

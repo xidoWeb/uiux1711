@@ -7,7 +7,7 @@ $url:'../img/';
    &:hover, 
    &:focus, 
    &.focus{background-image: url($j);}
-   >span{width: 0; height: 0; display: block; 
+   &>span{width: 0; height: 0; display: block; 
          position: absolute; z-index: -1;  }
     }// a
   }// linkBox

@@ -1,0 +1,66 @@
+/* slide_banner_01.css */
+#wrap{width: 100%; min-width: 60rem; margin: auto; background-color: #ffa;}
+.headBoxWrap{width: 100%; background-color: #0af; border-bottom: 2px solid #777;}
+#headBox{width:60rem; margin: auto; height: 100px; background-color:inherit; padding-top: 1rem;}
+h1{width: 300px; height: 50px; background-color: #fff; text-align: center; line-height: 50px; margin: auto; border-radius:3rem}
+
+#bannerBox{width:60rem; height: 600px; margin: auto; box-sizing: border-box; border:2px solid #777;}
+h2{text-align: center; text-decoration:underline; padding-top: 2rem; margin-bottom: 1rem;}
+.banner{position: relative;}
+.btn{width: 100%; position: absolute; z-index: 500; top: 50%; margin-top: -50px;}
+.btn>button{width: 50px; height: 100px; float: left; background-color:rgba(255,50,0,0.5); border-radius:3rem; transition:all 500ms ease-out; border:3px solid #fff; }
+.btn>button.rbtn{float: right;}
+
+.btn>button:hover, 
+.btn>button:focus, 
+.btn>button.focus{background-color: rgba(0,0,0,1); color:#fff;}
+.btn>button>i{font-size: 2rem;}
+
+.banner_wrap{width: 100%; height: 100%; overflow: hidden;}
+.banner_wrap>li{width: 100%; height: 100%; background-color: #acf; box-sizing:border-box; border:1px solid #333; position: relative; z-index: 100; background-size:cover; background-repeat:no-repeat; background-position:center;}
+.banner_wrap>li a{display: block; width: 200px; height:50px; position: absolute; top:70%; margin-top: -25px; left: 50%; margin-left: -100px; border:2px solid #f06; box-shadow:0.2rem 0.2rem 0.2rem #333; border-radius:0.2rem; text-align: center; text-shadow: 2rem; font-weight: bold; color:#171717; overflow: hidden; transition:all 500ms ease;
+  font-size:1.3rem; line-height:50px; background-color:rgba(255,255,255,0.7); }
+
+.banner_wrap>li a:after{content:" "; display: block; width: 100%; height: 100%; 
+                        position: absolute; top:100%; left: 0; z-index: -10;
+                        background-color: #07a; transition:all 500ms ease;}
+.banner_wrap>li a:hover,
+.banner_wrap>li a:focus,
+.banner_wrap>li a.focus{background-color:transparent; color:#fff; text-decoration: none;}
+
+.banner_wrap>li a:hover:after,
+.banner_wrap>li a:focus:after,
+.banner_wrap>li a.focus:after{top: 0;}
+
+.adbanner_01{background-image: url(../../img/car/porsche/porsche_1.jpg);}
+.adbanner_02{background-image: url(../../img/car/porsche/porsche_2.jpg);}
+.adbanner_03{background-image: url(../../img/car/porsche/porsche_3.jpg);}
+.adbanner_04{background-image: url(../../img/car/porsche/porsche_4.jpg);}
+.adbanner_05{background-image: url(../../img/car/porsche/porsche_5.jpg);}
+
+
+.indicator{width: 60rem; height:3rem;box-sizing: border-box; padding: 0.5rem; margin: auto; 
+          background-color: #fff; border-radius:3rem; 
+          position: absolute; z-index: 500; left: 50%; margin-left: -30rem; bottom:1rem;}
+.indicator>li{width: 2rem; height: 2rem; margin: 1px 0.5rem; float: left; background-color: #777; border-radius:1rem; overflow: hidden;}
+.indicator>li.active{width: 15rem;  background-color:#0af;}
+.indicator>li>a{display: block; width: 100%; height: 100%; }
+
+/* ------------------------------------------ */
+#contentBox{width: 60rem; height: auto; box-sizing:border-box; padding:0.5rem; background-color: #77f; margin: auto; color:#fff;}
+#contentBox h2{width: 100%; margin-bottom: 1rem; text-align: center;}
+#contentBox ol{width: 100%; padding-left: 3rem; box-sizing: border-box;}
+#contentBox ol li{margin-bottom: 0.3rem; list-style-type:upper-alpha;}
+       
+#bannerBox_02{width: 100%;height: auto; min-height: 500px; background-color: #ccc;}
+#bannerBox_02>ul{width: 100%; height: 50vw;}
+#contentMore{width: 960px; margin: auto; box-sizing: border-box; padding: 1rem;}
+#footBox{width: 100%; height:auto; padding-bottom: 2rem; background-color: #333; color:#fff;}
+#footBox>h2{color:#ffa;}
+#footBox>ul{width: 60rem; margin: auto; margin-bottom: 0.7rem; 
+  border-bottom: 1px solid  #ccc;}
+#footBox>ul:after{content: " "; display: block; clear: both;}
+#footBox>ul>li{float: left; margin: 0 1rem;}
+.add{width: 60rem; margin: auto;  padding-left: 1rem;}
+#footBox a{color:inherit;}
+#footBox p{color:#ccc;}
