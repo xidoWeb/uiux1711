@@ -4,8 +4,9 @@
 #headBox{width:60rem; margin: auto; height: 100px; background-color:inherit; padding-top: 1rem;}
 h1{width: 300px; height: 50px; background-color: #fff; text-align: center; line-height: 50px; margin: auto; border-radius:3rem}
 
-#bannerBox{width:60rem; height: 600px; margin: auto; box-sizing: border-box; border:2px solid #777;}
-h2{text-align: center; text-decoration:underline; padding-top: 2rem; margin-bottom: 1rem;}
+#bannerBox{width:60rem; height: 600px; margin: auto; box-sizing: border-box; border:2px solid #777;  overflow: hidden;}
+h2{text-align: center; text-decoration:underline; padding-top: 2rem; margin-bottom: 1rem; 
+}
 .banner{position: relative;}
 .btn{width: 100%; position: absolute; z-index: 500; top: 50%; margin-top: -50px;}
 .btn>button{width: 50px; height: 100px; float: left; background-color:rgba(255,50,0,0.5); border-radius:3rem; transition:all 500ms ease-out; border:3px solid #fff; }
@@ -16,8 +17,8 @@ h2{text-align: center; text-decoration:underline; padding-top: 2rem; margin-bott
 .btn>button.focus{background-color: rgba(0,0,0,1); color:#fff;}
 .btn>button>i{font-size: 2rem;}
 
-.banner_wrap{width: 100%; height: 100%; overflow: hidden;}
-.banner_wrap>li{width: 100%; height: 100%; background-color: #acf; box-sizing:border-box; border:1px solid #333; position: relative; z-index: 100; background-size:cover; background-repeat:no-repeat; background-position:center;}
+.banner_wrap{width: 100%; height:500%; overflow: hidden;}
+.banner_wrap>li{width: 100%; height:20%; background-color: #acf; box-sizing:border-box; border:1px solid #333; position: relative; z-index: 100; background-size:cover; background-repeat:no-repeat; background-position:center;}
 .banner_wrap>li a{display: block; width: 200px; height:50px; position: absolute; top:70%; margin-top: -25px; left: 50%; margin-left: -100px; border:2px solid #f06; box-shadow:0.2rem 0.2rem 0.2rem #333; border-radius:0.2rem; text-align: center; text-shadow: 2rem; font-weight: bold; color:#171717; overflow: hidden; transition:all 500ms ease;
   font-size:1.3rem; line-height:50px; background-color:rgba(255,255,255,0.7); }
 
@@ -53,7 +54,7 @@ h2{text-align: center; text-decoration:underline; padding-top: 2rem; margin-bott
 #contentBox ol li{margin-bottom: 0.3rem; list-style-type:upper-alpha;}
        
 #bannerBox_02{width: 100%;height: auto; min-height: 500px; background-color: #ccc;}
-#bannerBox_02>ul{width: 100%; height: 50vw;}
+#bannerBox_02>ul{width: 100%; height: 50vw; overflow: hidden;}
 #contentMore{width: 960px; margin: auto; box-sizing: border-box; padding: 1rem;}
 #footBox{width: 100%; height:auto; padding-bottom: 2rem; background-color: #333; color:#fff;}
 #footBox>h2{color:#ffa;}
