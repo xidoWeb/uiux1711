@@ -100,8 +100,13 @@ twoIndi.css({zIndex:(i+1)*100});
 twoIndiList.on('click',function(e) {
   e.preventDefault();
   var _thisI = $(this).index();
-  twoWrapList.eq(_thisI).prevAll().fadeOut();
-  twoWrapList.eq(_thisI).next().fadeIn();
+  // twoWrapList.eq(_thisI).fadeIn();
+  // twoWrapList.eq(_thisI).prevAll().fadeOut();
+  // twoWrapList.eq(_thisI).nextAll().fadeIn();
+  var eqi= twoWrapList.eq(_thisI);
+  eqi.fadeIn();
+  eqi.prevAll().fadeOut();
+  eqi.nextAll().fadeIn();
 });
 
 
