@@ -1,0 +1,19 @@
+// scss_test_02.scss
+/* scss_test_02.css */
+@import "src/var";
+@import "src/mixin";
+$url:'../../../img/test/';
+
+body{background-color:$primary;} 
+#headBox>h1{  
+  @include linkBox($i:$url+'a.jpb', $j:$url+'b.jpg'); 
+}
+#gnb>ul>li:first-child{width: 100px; height: 100px; 
+  @include linkBox($r:repeat-x, $p:0 0, $i:'../img/c.jpb', $j:'../img/d.jpg');
+} 
+
+@for $i from 1 through 6 {
+  #gnb>ul>li:nth-child(#{$i}){width: 100px; height:50px;  @include linkBox($r:repeat-x, $p:0 0, $i:'../img/c.jpb', $j:'../img/d.jpg');}
+
+  #gnb>ul>li.banner_#{$i}{width: 100px; height:50px;  @include linkBox($r:repeat-x, $p:0 0, $i:'../img/c.jpb', $j:'../img/d.jpg');}
+}

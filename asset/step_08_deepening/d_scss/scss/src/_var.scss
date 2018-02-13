@@ -1,2 +1,16 @@
-$primary : #10f;
-$url:'../../img/headBox/';
+// variable
+//* color
+$primary : #f06;
+$deepPrimary : darken($primary, 30%);
+$point : #fa0;
+$black : #333;
+$gray  : #777;
+$white : #fff;
+
+//* line
+$lightLine : 1px;
+$weightLine : 5px;
+$baseLine : $lightLine solid $primary;
+$boleLine : $weightLine solid $primary;
+
+//* font *

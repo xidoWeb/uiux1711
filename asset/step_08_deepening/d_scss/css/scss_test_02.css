@@ -1,0 +1,112 @@
+/* scss_test_02.css */
+body { background-color: #f06; }
+
+#headBox > h1 a { display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center; background-image: url("../../../img/test/a.jpb"); }
+
+#headBox > h1 a:hover, #headBox > h1 a:focus, #headBox > h1 a.focus { background-image: url("../../../img/test/b.jpg"); }
+
+#headBox > h1 a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li:first-child { width: 100px; height: 100px; }
+
+#gnb > ul > li:first-child a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li:first-child a:hover, #gnb > ul > li:first-child a:focus, #gnb > ul > li:first-child a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li:first-child a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li:nth-child(1) { width: 100px; height: 50px; }
+
+#gnb > ul > li:nth-child(1) a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li:nth-child(1) a:hover, #gnb > ul > li:nth-child(1) a:focus, #gnb > ul > li:nth-child(1) a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li:nth-child(1) a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li.banner_1 { width: 100px; height: 50px; }
+
+#gnb > ul > li.banner_1 a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li.banner_1 a:hover, #gnb > ul > li.banner_1 a:focus, #gnb > ul > li.banner_1 a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li.banner_1 a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li:nth-child(2) { width: 100px; height: 50px; }
+
+#gnb > ul > li:nth-child(2) a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li:nth-child(2) a:hover, #gnb > ul > li:nth-child(2) a:focus, #gnb > ul > li:nth-child(2) a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li:nth-child(2) a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li.banner_2 { width: 100px; height: 50px; }
+
+#gnb > ul > li.banner_2 a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li.banner_2 a:hover, #gnb > ul > li.banner_2 a:focus, #gnb > ul > li.banner_2 a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li.banner_2 a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li:nth-child(3) { width: 100px; height: 50px; }
+
+#gnb > ul > li:nth-child(3) a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li:nth-child(3) a:hover, #gnb > ul > li:nth-child(3) a:focus, #gnb > ul > li:nth-child(3) a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li:nth-child(3) a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li.banner_3 { width: 100px; height: 50px; }
+
+#gnb > ul > li.banner_3 a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li.banner_3 a:hover, #gnb > ul > li.banner_3 a:focus, #gnb > ul > li.banner_3 a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li.banner_3 a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li:nth-child(4) { width: 100px; height: 50px; }
+
+#gnb > ul > li:nth-child(4) a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li:nth-child(4) a:hover, #gnb > ul > li:nth-child(4) a:focus, #gnb > ul > li:nth-child(4) a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li:nth-child(4) a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li.banner_4 { width: 100px; height: 50px; }
+
+#gnb > ul > li.banner_4 a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li.banner_4 a:hover, #gnb > ul > li.banner_4 a:focus, #gnb > ul > li.banner_4 a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li.banner_4 a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li:nth-child(5) { width: 100px; height: 50px; }
+
+#gnb > ul > li:nth-child(5) a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li:nth-child(5) a:hover, #gnb > ul > li:nth-child(5) a:focus, #gnb > ul > li:nth-child(5) a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li:nth-child(5) a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li.banner_5 { width: 100px; height: 50px; }
+
+#gnb > ul > li.banner_5 a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li.banner_5 a:hover, #gnb > ul > li.banner_5 a:focus, #gnb > ul > li.banner_5 a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li.banner_5 a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li:nth-child(6) { width: 100px; height: 50px; }
+
+#gnb > ul > li:nth-child(6) a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li:nth-child(6) a:hover, #gnb > ul > li:nth-child(6) a:focus, #gnb > ul > li:nth-child(6) a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li:nth-child(6) a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
+
+#gnb > ul > li.banner_6 { width: 100px; height: 50px; }
+
+#gnb > ul > li.banner_6 a { display: block; width: 100%; height: 100%; background-repeat: repeat-x; background-position: 0 0; background-image: url("../img/c.jpb"); }
+
+#gnb > ul > li.banner_6 a:hover, #gnb > ul > li.banner_6 a:focus, #gnb > ul > li.banner_6 a.focus { background-image: url("../img/d.jpg"); }
+
+#gnb > ul > li.banner_6 a > span { width: 0; height: 0; display: block; position: absolute; z-index: -1; }
