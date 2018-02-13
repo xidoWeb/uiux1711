@@ -1,6 +1,7 @@
 // slide_banner_01.js
 (function($) {
-  // banner 첫번째 항목에대해...
+  /* banner 1번째 항목 기능 ================================== */
+
   var banner1 = $('#bannerBox');
   var oneWrap = banner1.find('.banner_wrap');
   var oneList = oneWrap.children('li');
@@ -61,6 +62,48 @@
       oneList.eq(eqi).siblings('li').children('a').attr('tabindex', '-1');
     });
   });
+// ----------------------------------------------------------------------------------
+/* banner 2번째 항목 기능 ================================== */
+
+var twoBanner   = $('#bannerBox_02');
+var twoIndi     = twoBanner.children('.indicator');
+var twoIndiList = twoIndi.children('li');
+var twoWrap     = twoBanner.children('.banner_wrap');
+var twoWrapList = twoWrap.children('li');
+/*//2-1
+  twoWrap.wrap($('<div>',{class:'banner_more_wrap'}));
+  // twoWrap.wrap('<div class="banner_more_wrap"></div>');
+  var twoWrapH    = twoWrap.outerHeight();
+  $('.banner_more_wrap').css({overflow:'hidden', height:twoWrapH});
+
+  twoIndiList.on('click',['a'],function(e) {
+    e.preventDefault();
+    var _thisI = $(this).index();
+    twoIndiList.eq(_thisI).addClass('active');
+    twoIndiList.eq(_thisI).siblings().removeClass('active');
+
+    twoWrap.animate({marginTop: -twoWrapH * _thisI});
+  });
+*/
+/* -------------------------------------- */
+// 두번째 배너를 동일한 위치에서 fadeOut기능으로 만들어 보자!
+twoWrapList.css({position:'absolute', top:0, left:0});
+twoWrapList.parent().css({position:'relative'});
+var i = twoWrapList.length;
+var j = 0;
+for(; j < i; j++){
+  twoWrapList.eq(j).css({zIndex:(i-j)*100});
+}
+
+twoIndi.css({zIndex:(i+1)*100});
+
+twoIndiList.on('click',function(e) {
+  e.preventDefault();
+  var _thisI = $(this).index();
+  twoWrapList.eq(_thisI).prevAll().fadeOut();
+  twoWrapList.eq(_thisI).next().fadeIn();
+});
+
 
 
 })(this.jQuery);
