@@ -33,9 +33,11 @@ myTab(0);
 
 var bannerSlideI = function(i) {
   indiLi.removeClass('focus');  indiLi.eq(i).addClass('focus');
+
   bannerLi.eq(i).prevAll().fadeOut();
   bannerLi.eq(i).fadeIn();
   bannerLi.eq(i).nextAll().fadeIn();
+
   myTab(i);
   indiNow.text(i+1);
 };
@@ -48,10 +50,13 @@ var bannerSlideI = function(i) {
 // - 1. 인디케이터 클릭시 fade효과
 // .첫인디케이트, (.focus)
   indiLi.eq(0).addClass('focus');
+
+  var myIndex = 0;
+
   indiLi.on('click', ['a'], function(e) {
     e.preventDefault();
     var _this = $(this);
-    var _thisI = _this.index();
+    myIndex = _this.index();
 /* // 1차로 사용했던 흔적!!!
     indiLi.removeClass('focus');
     indiLi.eq(_thisI).addClass('focus');
@@ -70,9 +75,10 @@ var bannerSlideI = function(i) {
     indiNow.text(_thisI+1);
 */
 
-  bannerSlideI(_thisI);
+  bannerSlideI(myIndex);
+  return myIndex;
   });
-  var myIndex = 0;
+
 // - 2. 좌,우 버튼을 클릭시 배너의 내용이 나타나게 만들기
   btn.find('button').on('click',function(e) {
     e.preventDefault();
@@ -95,6 +101,7 @@ var bannerSlideI = function(i) {
     indiNow.text(myIndex+1);
 */
     bannerSlideI(myIndex);
+    return myIndex;
   });
 
 
