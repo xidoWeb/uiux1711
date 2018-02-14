@@ -22,6 +22,9 @@
   var btn        = bannerBox.find('.btn');
   var lbtn       = btn.find('.lbtn');
   var rbtn       = btn.find('.rbtn');
+// 자동 슬라이드에 대한 변수지정
+var myAutoSlide, startSlide, stopSlide;
+var timed        = 3000;
 
 // -----------------------------------------------------------
 // - tabindex 제거(첫번째 배너의 링크는 tabindex를 0으로 처리하여 사용)
@@ -33,7 +36,6 @@ myTab(0);
 
 var myIndex = 0;
 var bannerSlideI = function(i) {
-
   if(i < 0){ i = bannerLi.length-1}
   if(i >= bannerLi.length){i = 0}
   console.log(i);
@@ -64,8 +66,7 @@ var bannerSlideI = function(i) {
 
   indiLi.on('click', ['a'], function(e) {
     e.preventDefault();
-    var _this = $(this);
-    myIndex = _this.index();
+    myIndex = $(this).index();
 /* // 1차로 사용했던 흔적!!!
     indiLi.removeClass('focus');
     indiLi.eq(_thisI).addClass('focus');
@@ -119,6 +120,32 @@ var bannerSlideI = function(i) {
  clearInterval() : setInterval() 메소드를 삭제하는 기능
  setTimeout() : 일정시간이 흐른뒤에 수행 ( delay()기능과 약~~~~간 비스무리하다!! )
 */
+
+
+var startSlide = function() { 
+  myAutoSlide = setInterval(function() { 
+    // rbtn.unbind('click');
+    rbtn.trigger('click'); 
+  }, timed); 
+};
+
+var stopSlide = function() { clearInterval(myAutoSlide); };
+startSlide();
+
+// bannerBox.on('mouseenter',function() { stopSlide() })
+//          .on('mouseleave',function() { startSlide() });
+bannerBox.on({'mouseenter': stopSlide, 'mouseleave':startSlide});
+
+bannerBox.find('a').on('focus',function() {stopSlide()});
+bannerBox.find('button').on('focus',function() {stopSlide()});
+
+
+bannerBox.find('a').eq(-1).on('blur',function() {startSlide()});
+
+// bannerBox.find('button').on('blur',function() {stopSlide()});
+
+// bannerBox.find('a').off('focus',function() {startSlide()});
+// bannerBox.find('button').off('focus',function() {startSlide()});
 
 
 
