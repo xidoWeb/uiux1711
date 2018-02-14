@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- slide_banner_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <!-- use css -->
+  <link rel="stylesheet" href="../../css/src/slide_banner_02.css">
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>slidebanner</title>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox"><h1>slidebanner만들기</h1></header>
+    <section id="bannerBox">
+      <h2 class="hidden">광고 슬라이드 배너</h2>
+      <!-- div.indicator>ul.hidden_box>li*5>a[#]>span{해당광고배너 내용설명}
+      div.btn>button[type=button]>i.fa+span.hidden{button}
+      div.banner_wrap>ul>li.banner_$$*5>a[# target=_blank]{광고배너_$$} -->
+
+      <div class="indicator">
+        <ul class="hidden_wrap">
+          <li><a href="#"><span>해당광고배너_01 내용설명</span></a></li>
+          <li><a href="#"><span>해당광고배너_02 내용설명</span></a></li>
+          <li><a href="#"><span>해당광고배너_03 내용설명</span></a></li>
+          <li><a href="#"><span>해당광고배너_04 내용설명</span></a></li>
+          <li><a href="#"><span>해당광고배너_05 내용설명</span></a></li>
+        </ul>
+      </div>
+      <div class="btn">
+        <button type="button" class="lbtn">
+          <i class="fa fa-arrow-left"></i><span class="hidden">button</span>
+        </button>
+        <button type="button" class="rbtn">
+          <i class="fa fa-arrow-right"></i><span class="hidden">button</span>
+        </button>
+      </div>
+      <div class="banner_wrap">
+        <ul>
+          <li class="banner_01"><a href="#" target="_blank">광고배너_01</a></li>
+          <li class="banner_02"><a href="#" target="_blank">광고배너_02</a></li>
+          <li class="banner_03"><a href="#" target="_blank">광고배너_03</a></li>
+          <li class="banner_04"><a href="#" target="_blank">광고배너_04</a></li>
+          <li class="banner_05"><a href="#" target="_blank">광고배너_05</a></li>
+        </ul>
+      </div>
+    </section>
+    <article id="contentBox"></article>
+    <footer id="footBox"></footer>
+  </div>
+  
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+  <!-- use script -->
+  <script src="../../js/src/slide_banner_02.js"></script>
+</body>
+</html>
