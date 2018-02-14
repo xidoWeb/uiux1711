@@ -31,15 +31,24 @@ var myTab = function(i) {
 };
 myTab(0);
 
+var myIndex = 0;
 var bannerSlideI = function(i) {
-  indiLi.removeClass('focus');  indiLi.eq(i).addClass('focus');
 
+  if(i < 0){ i = bannerLi.length-1}
+  if(i >= bannerLi.length){i = 0}
+  console.log(i);
+
+  indiLi.removeClass('focus');  
+  indiLi.eq(i).addClass('focus');
   bannerLi.eq(i).prevAll().fadeOut();
   bannerLi.eq(i).fadeIn();
   bannerLi.eq(i).nextAll().fadeIn();
 
   myTab(i);
   indiNow.text(i+1);
+
+  myIndex = i;
+  return myIndex;
 };
 
 
@@ -51,7 +60,7 @@ var bannerSlideI = function(i) {
 // .첫인디케이트, (.focus)
   indiLi.eq(0).addClass('focus');
 
-  var myIndex = 0;
+
 
   indiLi.on('click', ['a'], function(e) {
     e.preventDefault();
@@ -75,8 +84,7 @@ var bannerSlideI = function(i) {
     indiNow.text(_thisI+1);
 */
 
-  bannerSlideI(myIndex);
-  return myIndex;
+    bannerSlideI(myIndex);
   });
 
 // - 2. 좌,우 버튼을 클릭시 배너의 내용이 나타나게 만들기
@@ -85,8 +93,9 @@ var bannerSlideI = function(i) {
     var _this = $(this);
     // if(_this[0] == lbtn[0]){ myIndex-- }else{ myIndex++; }
     (_this[0] == lbtn[0]) ? myIndex-- : myIndex++;
-    if(myIndex < 0){ myIndex = bannerLi.length-1}
-    if(myIndex >= bannerLi.length){myIndex = 0}
+    // if(myIndex < 0){ myIndex = bannerLi.length-1}
+    // if(myIndex >= bannerLi.length){myIndex = 0}
+
     // console.log(myIndex);
 /*// 1차로 사용한 내용
     indiLi.removeClass('focus');
@@ -101,11 +110,15 @@ var bannerSlideI = function(i) {
     indiNow.text(myIndex+1);
 */
     bannerSlideI(myIndex);
-    return myIndex;
   });
 
 
 // 자동 슬라이드 기능처리
+/*
+ setInterval() : 일정시간 마다!!!! 수행
+ clearInterval() : setInterval() 메소드를 삭제하는 기능
+ setTimeout() : 일정시간이 흐른뒤에 수행 ( delay()기능과 약~~~~간 비스무리하다!! )
+*/
 
 
 
