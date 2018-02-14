@@ -29,8 +29,17 @@ var myTab = function(i) {
   bannerLi.find('a').attr('tabindex', '-1');
   bannerLi.eq(i).find('a').attr('tabindex', '0');
 };
+myTab(0);
 
-  myTab(0);
+var bannerSlideI = function(i) {
+  indiLi.removeClass('focus');  indiLi.eq(i).addClass('focus');
+  bannerLi.eq(i).prevAll().fadeOut();
+  bannerLi.eq(i).fadeIn();
+  bannerLi.eq(i).nextAll().fadeIn();
+  myTab(i);
+  indiNow.text(i+1);
+};
+
 
 // indicator 배너갯수파악(배너숫자표기)
   indiNow.text('1');
@@ -39,12 +48,11 @@ var myTab = function(i) {
 // - 1. 인디케이터 클릭시 fade효과
 // .첫인디케이트, (.focus)
   indiLi.eq(0).addClass('focus');
-
   indiLi.on('click', ['a'], function(e) {
     e.preventDefault();
     var _this = $(this);
     var _thisI = _this.index();
-
+/* // 1차로 사용했던 흔적!!!
     indiLi.removeClass('focus');
     indiLi.eq(_thisI).addClass('focus');
 
@@ -60,10 +68,10 @@ var myTab = function(i) {
 
     // 배너위치에 따른 배너숫자 변경
     indiNow.text(_thisI+1);
+*/
+
+  bannerSlideI(_thisI);
   });
-
-
-
   var myIndex = 0;
 // - 2. 좌,우 버튼을 클릭시 배너의 내용이 나타나게 만들기
   btn.find('button').on('click',function(e) {
@@ -71,12 +79,10 @@ var myTab = function(i) {
     var _this = $(this);
     // if(_this[0] == lbtn[0]){ myIndex-- }else{ myIndex++; }
     (_this[0] == lbtn[0]) ? myIndex-- : myIndex++;
-
     if(myIndex < 0){ myIndex = bannerLi.length-1}
     if(myIndex >= bannerLi.length){myIndex = 0}
-
-    console.log(myIndex);
-
+    // console.log(myIndex);
+/*// 1차로 사용한 내용
     indiLi.removeClass('focus');
     indiLi.eq(myIndex).addClass('focus');
 
@@ -87,10 +93,10 @@ var myTab = function(i) {
     myTab(myIndex);
     // 배너위치에 따른 배너숫자 변경
     indiNow.text(myIndex+1);
-
+*/
+    bannerSlideI(myIndex);
   });
-// - indicator 위치까지 변경(.focus)
-// - 처음과, 마지막위치에서 어떻게 할것인가?
+
 
 // 자동 슬라이드 기능처리
 
