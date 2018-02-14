@@ -27,10 +27,10 @@
 // - tabindex 제거(첫번째 배너의 링크는 tabindex를 0으로 처리하여 사용)
 var myTab = function(i) {
   bannerLi.find('a').attr('tabindex', '-1');
-  bannerLi.find('a').eq(i).attr('tabindex', '0');
+  bannerLi.eq(i).find('a').attr('tabindex', '0');
 };
 
-myTab(0);
+  myTab(0);
 
 // indicator 배너갯수파악(배너숫자표기)
   indiNow.text('1');
