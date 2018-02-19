@@ -1,0 +1,4 @@
+/*zoom_01.css*/
+
+.thum{width: 300px; height: 200px; background-image: url(../../img/gallery_img_01/thum/gallery_image_7.jpg); background-repeat: no-repeat; background-size: 100%; background-color: #0af; border:2px solid #09a; margin-bottom: 1rem; float: left;}
+.big{width: 600px; height: 400px; background-image: url(../../img/gallery_img_01/big/gallery_image_7.jpg); background-repeat: no-repeat; background-size:500%; background-color: #0af; border:2px solid #0af; float: left;}
