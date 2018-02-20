@@ -1,0 +1,69 @@
+/* slide_banner_02.html */
+#wrap {width: 100%; min-width: 60rem; height: auto; margin: auto;}
+/* = #headBox ============================*/
+#headBox {width:100%; min-width: 60rem; height: 100px; margin: auto; background-color: #afc;}
+#headBox>h1{width: 100%; height: 100%; box-sizing:border-box; 
+           border-bottom: 2px solid  #f06; text-align: center; padding-top: 1rem; padding-bottom: 0.5em;}
+/* = #bannerBox ============================*/
+#bannerBox {width: 100%; height: 40vw; min-height: 500px; max-height: 850px;background-color: #ccc; position: relative;}
+/* indicator ------------------------------------------------------ */
+/* indicator 기본형 */
+.indicator {width:25rem; height: auto; padding:1rem; border-radius:3rem; 
+            background-color:rgba(255,255,255,0.7); position: absolute; 
+            bottom: 0.5rem; right:1rem; z-index:1000;}
+.indicator ul {width: auto; height: auto; float: left; line-height: 120%;}
+.indicator ul:after {content:" "; display: block; clear: both;}
+.indicator ul>li {width: 1.5rem; height: 1.5rem; border-radius:1rem; background-color: #777; float: left; margin-right: 1.5rem; transition:all 300ms ease;}
+.indicator ul>li.focus{width: 3rem; background-color: #0af;}
+.indicator ul>li a{display: block; width: 100%; height: 100%; border-radius:inherit;}
+.indicator ul>li a:hover,
+.indicator ul>li a:focus{background-color: #0aa;}
+
+.indicator button {height:auto; float: left; color:#777; background-color: transparent; line-height: 100%; }
+.indicator button > i{font-size:1.8rem; color:inherit;}
+.indicator button > i.fa-pause-circle{color:#0af;}
+
+/* indicator page표기형 */
+.indicator > p{position: absolute; top: 0; right:2rem; margin-top: 1rem; font-size: 1.5rem;}
+.indicator .now{color:#f06;}
+.indicator .now:after{content:"/"; color:#0af; margin-left: 0.5rem;}
+.indicator .total{color:#555; margin-left: 0.5rem;}
+
+/* left,right button ------------------------------------------- */
+.btn {width: 100%; height: 0; position: absolute; top: 50%; left: 0; z-index:900;}
+.btn>button {width: 200px; height: 100px; margin-top: -50px; 
+      background-color: transparent; font-size: 3rem; transition:all 500ms ease-in-out;
+      text-shadow: 0 0 0.2rem #fff,0 0 0.2rem #fff,0 0 0.2rem #fff,0 0 0.2rem #fff,0 0 0.2rem #fff;}
+.btn>.lbtn {float: left; border-radius:0 3rem 3rem 0;}        
+.btn>.rbtn {float: right;border-radius:3rem 0 0 3rem;}
+.btn>.lbtn:hover, .btn>.lbtn:focus,
+.btn>.lbtn.focus{background-color: #fff; color:#f06; font-size: 5rem; text-indent:-3rem}
+.btn>.rbtn:hover, .btn>.rbtn:focus,
+.btn>.rbtn.focus{background-color: #fff; color:#f06; font-size: 5rem; text-indent:3rem;}
+
+/* banner_wrap ----------------*/
+.banner_wrap {width: 100%; height: 100%;}
+.banner_wrap>ul{width: 100%; height: 100%; position: relative;}
+.banner_wrap>ul>li{width: 100%; height: 100%;
+  background-repeat:no-repeat; background-position:center; background-size:cover; position: relative;}
+
+.banner_wrap>ul>li>a{width: 300px; height: auto; padding:0.7rem; background-color:rgba(0,100,150,0.7);
+      /*box-shadow:0.2rem 0.2rem 0.1rem rgba(0,100,150,0.7);*/ box-sizing: border-box;
+      border-radius:0.3rem; transition:all 800ms ease;
+      border:0.2rem solid rgba(0,100,150,0);
+      position: absolute; left: 50%; margin-left: -150px; bottom:8rem;
+      text-align: center; font-size: 1.2em; font-weight:bold; color:#fff;}
+
+.banner_wrap>ul>li>a:hover,.banner_wrap>ul>li>a:focus,
+.banner_wrap>ul>li>a.focus{background-color:rgba(255,255,255,0.7); border:0.2rem solid rgba(0,100,150,1); color:rgba(0,100,150,1); text-decoration: none; font-size:1.5rem;}
+
+  .banner_01 {background-image: url("../../img/modal_img_02/big/modal_img (1).jpg");}
+  .banner_02 {background-image: url("../../img/modal_img_02/big/modal_img (2).jpg");}
+  .banner_03 {background-image: url("../../img/modal_img_02/big/modal_img (3).jpg");}
+  .banner_04 {background-image: url("../../img/modal_img_02/big/modal_img (4).jpg");}
+  .banner_05 {background-image: url("../../img/modal_img_02/big/modal_img (5).jpg");}
+ 
+/* = #contentBox ============================*/
+#contentBox {width: 60rem; height: 800px; margin: auto; background-color: #aaa;}
+/* = #footBox ============================*/
+#footBox {width: 100%; height: 50px; background-color: #555;}
