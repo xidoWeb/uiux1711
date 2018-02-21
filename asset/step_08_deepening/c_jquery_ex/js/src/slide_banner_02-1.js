@@ -107,7 +107,7 @@ var bannerSlideI = function(i) {
 
 // - 2. 좌,우 버튼을 클릭시 배너의 내용이 나타나게 만들기
   btn.find('button').on('click',function(e) {
-    e.stopPropagation();
+    // e.stopPropagation();
     e.preventDefault();
     var _this = $(this);
     (_this[0] == lbtn[0]) ? myIndex-- : myIndex++;
