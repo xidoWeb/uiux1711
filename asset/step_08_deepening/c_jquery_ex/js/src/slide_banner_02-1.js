@@ -69,13 +69,12 @@ var bannerSlideI = function(i) {
   if(i < 0){ 
     i = bannerLi.length-1;
     bannerUl.stop().css({left:-i*100+'%'});
-    bannerUl.stop().animate({left:-(i-1)*100+'%'});
-    i--;
+    i--; 
+    bannerUl.stop().animate({left:-i*100+'%'});
     }else if(i >= bannerLi.length-1){
     i = 0;
     bannerUl.stop().animate({left:-(bannerLi.length-1)*100+'%'},function() {
-      bannerUl.stop().css({left:-i*100+'%'});
-      i++;
+      bannerUl.stop().css({left:0});
     });
   }else{
     bannerUl.stop().animate({left:-i*100+'%'});
@@ -120,16 +119,10 @@ var startSlide = function() { myAutoSlide = setInterval(function() { rbtn.trigge
 var stopSlide = function() { clearInterval(myAutoSlide); };
 startSlide();
 
-bannerBox.on({'mouseenter': stopSlide, 'mouseleave':startSlide});
-bannerBox.find('a').on('focus',function() {stopSlide()});
-bannerBox.find('button').on('focus',function() {stopSlide()});
-bannerBox.find('a').eq(-1).on('blur',function() {startSlide()});
-
-// 플레이 버튼활용하기
-playBtn.on('click',['button'], function(e) {
-  e.preventDefault();
-  var _thisI = $(this).find('i');
-  var nowPause = _thisI.hasClass('fa-pause-circle');
+// playBtn 상태를 확인하고, 재생버튼에대한 내용 처리
+var btnStatus = function(has) {
+  var _thisI = playBtn.find('i');
+  var nowPause = has | false;
   console.log(nowPause);
   if(nowPause){
     _thisI.removeClass('fa-pause-circle');
@@ -140,8 +133,20 @@ playBtn.on('click',['button'], function(e) {
     _thisI.removeClass('fa-play-circle');
     startSlide();
   }
+};
+
+// 플레이 버튼활용하기
+// var playBtn = indi.find('button'); //상단에 적용된 상태
+playBtn.on('click',['button'], function(e) {
+  e.preventDefault();
+  var nowPause = playBtn.find('i').hasClass('fa-pause-circle');
+  btnStatus(nowPause);
 });
 
+bannerBox.on({'mouseenter': stopSlide, 'mouseleave':btnStatus});
+bannerBox.find('a').on('focus',function() {stopSlide()});
+bannerBox.find('button').on('focus',function() {stopSlide()});
+bannerBox.find('a').eq(-1).on('blur',function() {startSlide()});
 
 
 
