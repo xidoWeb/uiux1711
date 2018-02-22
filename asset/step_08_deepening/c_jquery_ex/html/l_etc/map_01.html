@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- map_01.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--[if lte IE 9]>
+		<script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../../ie/ie7/IE9.js"></script>
+		<script src="../../ie/css3pie/PIE_IE9.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="../../css/base/reset.css" />
+	<link rel="stylesheet" href="../../css/base/common.css" />
+	<link rel="stylesheet" href="../../fontAwesome/css/font-awesome.min.css" />
+	<!-- css work file link -->
+	<link rel="stylesheet" href="../../css/src/map_01.css">
+
+	<title>my title</title>
+</head>
+<body>
+	<div id="map"></div>
+	
+	<!-- jquery-->
+	<script src="../../js/base/jquery-3.2.1.min.js"></script>
+	<script src="../../js/base/jquery-ui.min.js"></script>
+	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bd34c571c31b6ced4439f620d88477f4"></script> -->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bd34c571c31b6ced4439f620d88477f4&libraries=services,clusterer,drawing"></script>
+	<script>
+		(function($) {
+			var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+			// var container = $('#map'); //지도를 담을 영역의 DOM 레퍼런스
+			var options = { //지도를 생성할 때 필요한 기본 옵션
+				center: new daum.maps.LatLng(37.269001, 127.003362), //지도의 중심좌표.
+				level: 3 //지도의 레벨(확대, 축소 정도)
+			};
+
+			var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
+			var marker = new daum.maps.Marker();
+
+		})(this.jQuery);
+	</script>
+</body>
+</html>
