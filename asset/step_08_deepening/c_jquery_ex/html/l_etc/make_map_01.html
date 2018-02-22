@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- make_map_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <!-- use css -->
+  <link rel="stylesheet" href="../../css/src/make_map_01.css">
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>siteName</title>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>map만들기</h1>
+    </header>
+    <section class="map">      
+      <div id="map_box"></div>
+    </section>
+    <p id="clickLatlng"></p>
+  </div>
+  <!-- 
+    *** 지도 api 사용시 주의사항! ***
+    1. 반드시 서버가 돌아가야한다!(서버구동하는 주소를 동일하게 작업)
+    2. 사용할 지도의 개발자 승인
+    3. 사용할 지도(google, naver, kakao) 라이센스키 발급
+    4. 사용할 웹주소를 등록(http://localhost:8090)
+    5. 사용제한을 확인(1년, 1일3만건)
+    6. 2018년 현재 일부 회사는 jquery를 지원하지 않는다.
+  -->
+
+
+
+
+
+
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+  <script type="text/javascript" 
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9bf261b378374b33138c9b601a901c0">
+  </script>
+  <!-- use script -->
+  <!-- <script src="../../js/src/make_map_01.js"></script> -->
+  <script>
+    var container = document.getElementById('map_box'); 
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+      center: new daum.maps.LatLng(37.267116, 127.002958), //지도의 중심좌표.
+      level: 2
+    };
+    // daum={  maps:{ LatLng : function(a,b){} , Map:function(a,b){} } };
+    var map = new daum.maps.Map(container, options); 
+
+      // 지도를 클릭한 위치에 표출할 마커입니다
+    var marker = new daum.maps.Marker({ 
+    // 지도 중심좌표에 마커를 생성합니다 
+        position: map.getCenter() 
+    }); 
+    // 지도에 마커를 표시합니다
+    marker.setMap(map);
+
+  </script>
+</body>
+</html>

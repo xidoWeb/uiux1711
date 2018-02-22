@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- make_map_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <!-- use css -->
+  <link rel="stylesheet" href="../../css/src/make_map_01.css">
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>siteName</title>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>map만들기</h1>
+    </header>
+    <section class="map">      
+      <div id="map"></div>
+    </section>
+    <p id="clickLatlng"></p>
+  </div>
+  <!-- 
+    *** 지도 api 사용시 주의사항! ***
+    1. 반드시 서버가 돌아가야한다!(서버구동하는 주소를 동일하게 작업)
+    2. 사용할 지도의 개발자 승인
+    3. 사용할 지도(google, naver, kakao) 라이센스키 발급
+    4. 사용할 웹주소를 등록(http://localhost:8090)
+    5. 사용제한을 확인(1년, 1일3만건)
+    6. 2018년 현재 일부 회사는 jquery를 지원하지 않는다.
+  -->
+
+
+
+
+
+
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm1UjV_PDDdsX-36Dm_SUievMJfz3ygYc">
+  </script>
+  <script src="../../js/base/gmaps.js"></script>
+  <!-- use script -->
+  <!-- <script src="../../js/src/make_map_01.js"></script> -->
+  <script>
+    (function($) {
+      var latlng1 = {lat : 37.267319, lng : 127.002958}; 
+      var map = new GMaps({
+              div: '#map',
+              lat: latlng1.lat, 
+              lng: latlng1.lng
+            });
+     map.addMarker({
+        lat: latlng1.lat, 
+        lng: latlng1.lng,
+        title: '그린컴퓨터 아트학원 수원점'        
+      });
+
+    })(this.jQuery);
+  </script>
+</body>
+</html>
