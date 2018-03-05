@@ -2,6 +2,6 @@
 #wrap{width: 960px; height: auto; margin: auto;}
 #headBox{width: 100%; height: 100px; background-color: #ccc;}
 #scrollBox{width: 100%; height:auto; background-color: #caa;}
-#scrollBox>img{width: 100%; height: auto; display: none;}
+#scrollBox>img{width: 100%; height: auto; float: left; display: none;}
 #contentBox{width: 100%; height: 1000px;  background-color: #0cc;}
 #footBox{width: 100%;  height: 120px; background-color: #333;}
