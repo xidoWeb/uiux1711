@@ -6,24 +6,33 @@
   var sLength = scrollView.length;
   for(; i < sLength; i++){ arr[i] = scrollView.eq(i).offset().top; }
   console.log(arr);
+  var body = $("html, body");
+  body.stop().animate({scrollTop:0}, 500, 'swing');
+
 
   var viewEq = 0;
-  var scrollEvent = true;
-  $(window).on('mousewheel DOMMouseScroll',function(e) {
+  var delta = 0;    
+  scrollView.on('mousewheel DOMMouseScroll',function(e) {
     var E = e.originalEvent;
-    var delta = 0;
-    if(scrollEvent){
-      // scrollEvent = false;
-      (E.detail) ? delta = E.detail / 40 : delta = -E.wheelDelta/120; 
-    }
-    viewEq += delta;
+    var _thisI = $(this).index();
+    var _thisTop = $(this).offset().top;
 
-    $(window).scrollTop( arr[viewEq] );
+    console.log(_thisI+'번째 위치');
+    console.log('위치값 현재: '+arr[_thisI], '위치값 다음: '+arr[_thisI+1]);
+    console.log('화면높이'+scrollView.first().height());
+    console.log('화면에서 이동위치'+ _thisTop);
 
-    console.log(delta);
+    if( body.is(':animated') ){ return; } 
+
+    (E.detail) ? delta = E.detail * 40 : delta = -E.wheelDelta; 
+ 
+    (delta > 0) ? viewEq++:  viewEq--;
+    // if(viewEq < 0){viewEq = 0;}else if(viewEq > sLength){viewEq = sLength;}
+    // console.log(viewEq);
+    // body.stop().animate({scrollTop:arr[viewEq]}, 500, 'swing');
   });
 
- 
+ scrollView.on('touchmove',function(e){ console.log(e); });
 
 
 })(this.jQuery);
