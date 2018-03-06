@@ -17,7 +17,7 @@
     var _thisTop = $(this).offset().top;
 
     var viewH = scrollView.first().height();
-    var viewCut = viewH/4;
+    var viewCut = viewH/10;
 
     // console.log(_thisI+'번째 위치');
     // console.log('위치값 현재: '+arr[_thisI], '위치값 다음: '+arr[_thisI+1]);
