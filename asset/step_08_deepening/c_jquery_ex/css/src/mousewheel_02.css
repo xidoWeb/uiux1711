@@ -1,0 +1,6 @@
+/* mousewheel_02.css */
+#wrap{width: 100%; height: 100%;}
+#headBox{width: 100%; height: 50px; background-color: rgba(20,20,20,0.5);
+  position: fixed; top: 0; left: 0; z-index: 10; font-size: 2rem; text-align: center; line-height: 50px; color:#fff;}
+.scroll_view{width: 100%; height: 100%; box-sizing:border-box; border-bottom: 1px solid  #333; background-image:linear-gradient(#fa0,#fc9);}
+#footBox{height: 200px; background-color: #555; background-image:none;}
