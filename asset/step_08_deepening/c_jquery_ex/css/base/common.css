@@ -25,6 +25,29 @@
 }
 
 
+/* loading 화면만들기 */
+body.loading:before{content:"\f042"; font-family:fontawesome; color:#f06;
+  animation:spin 3s infinite ease; 
+  display: block; width: 3rem; height: 3rem;
+  text-align: center; line-height:3rem; font-size: 3rem;
+  position: fixed; top: 50%; margin-top: -1.5rem; left: 50%; margin-left: -1.5rem;
+  z-index:2000;}
+body.loading:after{content:"loading...."; display: block; width: 100%; height: 100%; 
+position: fixed; top:0; left:0; z-index:1900; background-color: #0cc;
+box-sizing:border-box; padding-top: 50%; text-align: center;}
+
+@keyframes spin {
+  0%{transform:rotate(0);}
+  50%{color:#fa0;}
+  100%{transform:rotate(720deg);}
+}
+
+
+
+
+
+
+
 /* accessibility.css */
 a:focus, button:focus,
 input[type="submit"]:focus,

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- loding_test_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if lte IE9]>
+    <script src="../../js/base/html5shiv-printshiv.js"></script>
+    <script src="../../js/base/html5shiv.js"></script>
+  <![endif]-->
+  <!-- fontAwesome and nanumGothicFont -->
+  <link rel="stylesheet" href="../../fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../../font/transfonterNanum/stylesheet.css">
+  <!-- css Reset and globalClass -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+
+  <!-- faviconFile -->
+  <link rel="apple-touch-icon" href="../../favicon.png">
+  <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+  <title>siteName</title>
+</head>
+<body class="loading">
+  <h1>로딩화면만들기</h1>
+  <!-- script -->
+  <script src="../../js/base/jquery-3.2.1.js"></script>
+  <script src="../../js/base/jquery-ui.js"></script>
+  <script src="../../js/base/src/loadingPlugin.js"></script>
+  <!-- use script -->
+  <script>
+    (function($) {
+      $('body.loding').loading();
+      // var timed = 800;
+      // setTimeout(function() {
+      //   $('body.loading').fadeOut(timed/4, function() {
+      //     $(this).removeAttr('style').removeClass('loading');
+      //   });
+      // },timed*3);
+
+    })(this.jQuery);
+  </script>
+</body>
+</html>
