@@ -23,7 +23,7 @@
 			h1{font-size: 2rem; color:#fff; text-transform:uppercase; text-align: center; padding-top: 1rem; padding-bottom: 0.5rem;}
 			#bannerBox{width: 100%; height: 150px; background-color:#f09; background-image:linear-gradient(15deg, #f09 70%, #faf); margin-bottom: 2rem;
 				position: relative; z-index: 500;}
-			#bannerBox>h2{font-size: 3.2rem; color:#fff; text-align: center; text-indent: -30rem; line-height: 250px; }
+			#bannerBox>h2{width: 100%; height: auto; font-size: 3.2rem; color:#fff; text-align: center; text-indent: -30rem; padding-top: 90px;}
 			#contentBox{width: 960px; height: auto; margin: auto; position: relative;}
 			
 			/* 내용 focus처리되었을경우 이미지 이동 ============================== */
@@ -93,7 +93,7 @@
 		<article id="contentBox">
 			<h2 class="hidden">동의 및 체크란</h2>
 			<div class="show_finger"><!-- 모션 제스쳐 내용 --></div>
-			<form action="#">
+			<form action="#" method="post">
 				<fieldset>
 					<legend class="hidden">내용확인</legend>
 					<div>
@@ -154,6 +154,26 @@
 	<script>
 		(function($) {
 			$('body.loading').loading(0);
+			var checkBtn = $('.check').children('button');
+			checkBtn.on('click',function(e) {
+				e.preventDefault();
+				$(this).next().toggle();
+				$(this).parentsUntil().siblings('div').find('.check_content').hide();
+			});
+			// checkbox focus 손가락이동 --------------------------------------
+			var checkbox = $('[type="checkbox"], button.check_btn');
+			var contentBox =$('#contentBox');
+			var contentOffset = contentBox.offset().top;
+			var finger = $('.show_finger');
+
+			checkbox.on('focus',function() {
+				var thisOffset = $(this).offset().top;
+				var nowOffset = thisOffset - contentOffset;
+				finger.css({top:nowOffset}).addClass('move');
+			});
+			checkbox.on('blur',function() {
+				finger.removeClass('move');
+			});
 		})(this.jQuery);
 	</script>
 </body>
