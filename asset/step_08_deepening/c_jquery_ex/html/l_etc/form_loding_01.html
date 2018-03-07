@@ -16,19 +16,6 @@
 	<!-- css work file link -->
 	<!-- <link rel="stylesheet" href="../../css/src/form_check_01.css"> -->
 	<style>
-		/*body{background-color: #0cf;}*/
-		/* loading page -------------------------------------------------------- */
-		body.loading:before{content:" "; display: block; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 1500; background-color:#aaa; background-image:linear-gradient(#ddf,#aaf);}
-		body.loading:after{content:"\f110"; font-family:fontawesome; text-align: center; line-height: 4rem; font-size: 3rem; color:#fff; display: block; position: fixed; width: 4rem; height: 4rem; top: 50%; margin-top: -2rem; left: 50%; margin-left: -2rem; z-index: 2000; background-color: #333; border-radius:2rem;
-			/*background-image: linear-gradient(#777, #555);*/ 
-			animation:loopspin 6s infinite ease-in-out; }
-
-			@keyframes loopspin {
-				0%{transform:rotate(0);}
-				30%{color:#555; background-color: #fff;}
-				70%{color:#555; background-color: #fff;}
-				100%{transform:rotate(720deg);}
-			}
 
 			/* form ------------------------------------------------------- */
 			#wrap{width:100%; min-width: 960px; height: auto; background-color: #fff; margin: auto;}
@@ -103,6 +90,7 @@
 		<section id="bannerBox">
 			<h2>가입동의서 체크</h2>
 		</section>
+		<article id="contentBox">
 			<h2 class="hidden">동의 및 체크란</h2>
 			<div class="show_finger"><!-- 모션 제스쳐 내용 --></div>
 			<form action="#">
@@ -162,17 +150,10 @@
 	<!-- jquery-->
 	<script src="../../js/base/jquery-3.2.1.min.js"></script>
 	<script src="../../js/base/jquery-ui.min.js"></script>
+	<script src="../../js/src/loadingPlugin.js"></script>
 	<script>
 		(function($) {
-			// --------------------------------------
-			// loading(0.8초 로딩) ============================================================
-			var timed = 800;
-			// setTimeout(function() { 
-				$('body.loading').fadeOut(timed/4,function() {
-					$(this).removeClass('loading').removeAttr('style');
-				}); 
-			// },timed*5);
-
+			$('body.loading').loading();
 		})(this.jQuery);
 	</script>
 </body>
