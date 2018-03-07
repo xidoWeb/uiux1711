@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- form_check_01.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--[if lte IE 9]>
+		<script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../../ie/ie7/IE9.js"></script>
+		<script src="../../ie/css3pie/PIE_IE9.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="../../css/base/reset.css" />
+	<link rel="stylesheet" href="../../css/base/common.css" />
+	<link rel="stylesheet" href="../../fontAwesome/css/font-awesome.min.css" />
+	<!-- css work file link -->
+	<!-- <link rel="stylesheet" href="../../css/src/form_check_01.css"> -->
+	<style>
+		/*body{background-color: #0cf;}*/
+		/* loading page -------------------------------------------------------- */
+		body.loading:before{content:" "; display: block; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 1500; background-color:#aaa; background-image:linear-gradient(#ddf,#aaf);}
+		body.loading:after{content:"\f110"; font-family:fontawesome; text-align: center; line-height: 4rem; font-size: 3rem; color:#fff; display: block; position: fixed; width: 4rem; height: 4rem; top: 50%; margin-top: -2rem; left: 50%; margin-left: -2rem; z-index: 2000; background-color: #333; border-radius:2rem;
+			/*background-image: linear-gradient(#777, #555);*/ 
+			animation:loopspin 6s infinite ease-in-out; }
+
+			@keyframes loopspin {
+				0%{transform:rotate(0);}
+				30%{color:#555; background-color: #fff;}
+				70%{color:#555; background-color: #fff;}
+				100%{transform:rotate(720deg);}
+			}
+
+			/* form ------------------------------------------------------- */
+			#wrap{width:100%; min-width: 960px; height: auto; background-color: #fff; margin: auto;}
+			#headBox{width: 960px; height:auto; margin: auto; background-color: #777;}
+			h1{font-size: 2rem; color:#fff; text-transform:uppercase; text-align: center; padding-top: 1rem; padding-bottom: 0.5rem;}
+			#bannerBox{width: 100%; height: 150px; background-color:#f09; background-image:linear-gradient(15deg, #f09 70%, #faf); margin-bottom: 2rem;
+				position: relative; z-index: 500;}
+			#bannerBox>h2{font-size: 3.2rem; color:#fff; text-align: center; text-indent: -30rem; line-height: 250px; }
+			#contentBox{width: 960px; height: auto; margin: auto; position: relative;}
+			
+			/* 내용 focus처리되었을경우 이미지 이동 ============================== */
+			.show_finger{width: 150px; height: 50px; position: absolute; top:-10rem; left: 50%; margin-left: -600px; z-index: 100; background-image: url("../../img/form/finger.svg"); background-repeat: no-repeat; background-position:100% center; background-size:content; transition:all 300ms ease; }
+			.show_finger.move{animation:finger 800ms 2;}
+			@keyframes finger {
+				50%{background-position: 0 center;}
+				100%{background-position: 100% center;}
+			}
+
+			form{box-sizing:border-box; width: 90%; height: auto; margin: auto; padding:1rem;/* border: 1px solid  #aaa;*/}
+			fieldset{width: 100%; height: auto;}
+			fieldset>div{width: 100%; height: auto; padding-bottom: 0.5rem; border-bottom: 2px solid  #777; margin-bottom: 1rem;}
+
+			.check{width: 100%; height:auto; box-sizing:0.5rem;/* background-color: #adf;*/ padding: 0.5rem; margin-bottom: 1rem; position: relative;}
+			h3{font-size: 1.3em; margin-bottom: 0.3rem;}
+			.check>button{position: absolute; top: 0; right: 0.5rem; padding: 0.5rem; border-bottom: 2px solid  #aaa; }
+			.check>.check_content{width: 100%; box-sizing:border-box; padding: 0.5rem; background-color: #f0f0f0; display: none;}
+			.check_btn{font-size: 1.3rem; color:#777; position: relative;}
+			.check_btn{width: 100%; height: 100%; transition:all 300ms ease;}
+			.check_btn:before{content:"\f00c"; font-family:fontawesome; font-size: 1.3rem; color:#aaa; display: inline-block; margin-right: 0.3rem;  transition:all 300ms ease;}
+			.check_btn.check:before{color:#f06;}
+
+			/* input 체크시 label 내용 체크 ============================== */
+			input:checked + .check_btn:before,
+			input.checked + .check_btn:before{color:#f06; font-size: 1.8rem;}
+			.check_btn:after{content:" "; display: block; width:0; height:0; position: absolute; bottom:-0.2rem; left: 50%; border-bottom:2px solid #f05; transition:all 300ms ease;}
+
+			/* input focus처리시 label 내용 확인 ============================== */
+			input:focus + .check_btn:after,
+			input.focus + .check_btn:after{width: 100%; margin-left: -50%;}
+
+			strong.required{color:#f05; margin-left:0.3rem;}
+			strong.select{color:#999; margin-left:0.3rem;}
+
+			.all_check{width: 100%; height: auto;margin-top: 3rem;}
+			.all_check>button{width: 300px; text-align: left;}
+
+			/* input 체크시 label 내용 체크 ============================== */
+			.all_check>button:focus,
+			.all_check>button.focus{background-color: transparent; outline: 0; color:inherit;}
+			.all_check>button.checked:before{color:#f06; font-size: 1.8rem;}
+			.check_btn:focus:after,
+			.check_btn.focus:after{width: 100%; margin-left: -50%;}
+			
+			p.required{color:#f05; font-size: 1.2rem;}
+			p.required:before{content:"*"; color:inherit; font-size:inherit; margin-right: 0.3rem;}
+
+
+			.read_write{width: 60%; margin: auto; border-bottom: 0; margin-top: 1rem;}
+			.read_write>button{height: 4rem; border-radius:0.3rem; transition:all 300ms ease;}
+			button[type="reset"]{width: 20%; float: left; font-size: 1.3em; background-color: #ccc;}
+			button[type="reset"]:focus{background-color: #555; font-size: 1.5em;}
+			button[type="submit"]{width: 50%; float: right; font-size: 1.5rem; background-color: #f07; color:#fff;}
+			button[type="submit"]:focus{font-weight: bold; font-size: 2rem; background-color: #333;}
+	</style>
+	<title>my title</title>
+</head>
+<body class="loading">
+	<div id="wrap">
+		<header id="headBox">
+			<h1>jquery form 만들기</h1>
+		</header>
+		<section id="bannerBox">
+			<h2>가입동의서 체크</h2>
+		</section>
+			<h2 class="hidden">동의 및 체크란</h2>
+			<div class="show_finger"><!-- 모션 제스쳐 내용 --></div>
+			<form action="#">
+				<fieldset>
+					<legend class="hidden">내용확인</legend>
+					<div>
+						<div class="check">
+							<h3>필수항목1</h3>
+							<button type="button">내용 보기</button>
+							<div class="check_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, perspiciatis temporibus. Incidunt magni, quibusdam voluptas? Modi ipsa placeat rem, ducimus unde, ratione ut non cupiditate explicabo ullam nostrum, dolorum quos.</div>
+						</div>
+						<input type="checkbox" name="ck_01" value="check_01" id="check_01" class="hidden" required="required">
+						<label class="check_btn" for="check_01"><span class="ck">동의합니다</span><strong class="required">(필수)</strong></label>
+					</div>
+					<div>
+						<div class="check">
+							<h3>필수항목2</h3>
+							<button type="button">내용 보기</button>
+							<div class="check_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, molestias consectetur accusantium earum aliquid eius incidunt nulla vel quaerat perspiciatis! Labore debitis laboriosam hic consequatur, earum voluptas eos corrupti modi!</div>
+						</div>
+						<input type="checkbox" name="ck_02" value="check_02" id="check_02" class="hidden" required="required">
+						<label class="check_btn" for="check_02"><span class="ck">동의합니다</span><strong class="required">(필수)</strong></label>
+					</div>
+					<div>
+						<div class="check">
+							<h3>필수항목3</h3>
+							<button type="button">내용 보기</button>
+							<div class="check_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reprehenderit aliquam, magni tempore velit fugiat magnam, dolorum ullam, libero dicta aliquid, similique dolore alias expedita pariatur beatae inventore. Tenetur, quibusdam.</div>
+						</div>
+						<input type="checkbox" name="ck_03" value="check_03" id="check_03" class="hidden" required="required">
+						<label class="check_btn" for="check_03"><span class="ck">동의합니다</span><strong class="required">(필수)</strong></label>
+					</div>
+					<div>
+						<div class="check">
+							<h3>선택항목4</h3>
+							<button type="button">내용 보기</button>
+							<div class="check_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo culpa quae consectetur facilis mollitia minus repudiandae a ex modi nam, delectus doloremque sint alias fugiat odit, doloribus iure rem praesentium.</div>
+						</div>
+						<input type="checkbox" name="ck_04" value="check_04" id="check_04" class="hidden">
+						<label class="check_btn" for="check_04"><span class="ck">동의합니다</span><strong class="select">(선택)</strong></label>
+					</div>
+
+					<div class="all_check">
+						<button class="check_btn" type="button">모두 동의합니다.</button>
+					</div>
+					
+					<p class="required">필수항목은 반드시 동의하셔야 합니다.</p>
+					<div class="read_write clearfix">
+						<button type="reset">취소</button>
+						<button type="submit">확인</button>
+					</div>
+				</fieldset>
+			</form>
+		</article>
+	</div>
+	
+	<!-- jquery-->
+	<script src="../../js/base/jquery-3.2.1.min.js"></script>
+	<script src="../../js/base/jquery-ui.min.js"></script>
+	<script>
+		(function($) {
+			// --------------------------------------
+			// loading(0.8초 로딩) ============================================================
+			var timed = 800;
+			// setTimeout(function() { 
+				$('body.loading').fadeOut(timed/4,function() {
+					$(this).removeClass('loading').removeAttr('style');
+				}); 
+			// },timed*5);
+
+		})(this.jQuery);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
