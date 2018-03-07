@@ -26,7 +26,7 @@
 
 
 /* loading 화면만들기 */
-body.loading:before{content:"\f042"; font-family:fontawesome; color:#f06;
+body.loading:before{content:"\f110"; font-family:fontawesome; color:#f06;
   animation:spin 3s infinite ease; 
   display: block; width: 3rem; height: 3rem;
   text-align: center; line-height:3rem; font-size: 3rem;
