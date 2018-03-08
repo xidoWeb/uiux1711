@@ -63,10 +63,10 @@
     resultFn(num,more);
   });
 
-// 옵션 선택
+// 옵션 선택(select태그)
   var optionProduct = $('#optionProduct');
   optionProduct.on('change',function(e) {
-    more = $(this).children('option:selected').data('price');
+    more = $(this).children('option:selected').val();
     if( more==undefined ){ more=0;}
      // console.log(more);
     resultFn(num,more);
