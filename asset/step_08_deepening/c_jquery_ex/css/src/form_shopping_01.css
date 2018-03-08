@@ -1,0 +1,72 @@
+/* form_shopping_01.css */
+#wrap{width: 960px; height: auto; margin: auto; background-color: #fff;}
+#headBox{width: 100%; height: 100px; background-color: #0af;}
+h1{text-indent: 2rem; color:#fff; padding-top: 3rem;}
+#productSelect{width: 100%; height: 500px; border-bottom: 1px solid  #777; margin-bottom: 2rem;
+  box-sizing:border-box; padding: 25px;}
+/* ============================================= */
+ .view_box{width: 350px; height: 100%; float: left; background-color: #ccc; }
+ form{width: 500px; height: 100%; float: right; box-sizing:border-box; padding-top: 0.5rem;}
+ fieldset{width: 100%; height: 100%;}
+ fieldset>dl{width: 100%; height:auto;}
+ fieldset dt{width: 100%; height: auto; font-size: 1.7rem; margin-bottom: 0.5rem; text-transform:capitalize;}
+ fieldset dd{color:#777; text-indent: 0.3rem; margin-bottom: 1rem;}
+ fieldset dd.price{color:#333; font-size: 1.5rem; margin-bottom: 1rem;}
+ fieldset dd.price>strong{font-size: 1rem; color:#777;}
+ fieldset dd.select{width: 50%; height: 2.5rem; box-sizing: border-box; padding: 0.2rem; background-color: #ccc;
+                position: relative;}
+ fieldset dd.select>button{width: 2.5rem; height: 100%; float: left; background-color: #07a; color:#fff;}
+ fieldset dd.select>button:focus{background-color: #f07;}
+ fieldset dd.select>button:last-of-type{float: right;}
+ fieldset dd.select>input{width:calc(100% - 5rem); height: 2.1rem; border-top: 0; border-bottom: 0; float: left;
+  position: absolute; top: 0.2rem; left: 50%; margin-left:calc( (100% - 5rem) / -2); text-align: center; font-size: 1.3rem;}
+ fieldset dd.select>input:focus{outline: 0; background-color: #d07; color:#fff; border-color:#fff;}
+
+ fieldset dd.option{position: relative}
+ fieldset dd.option>select:focus{border-bottom:2px solid #d07;}
+ fieldset dd.option>select{width: 100%; height: 2.5rem; border-bottom:1px solid #999; text-indent: 1rem; }
+ fieldset dd.option:before{content:"\f0ab"; display: block; width: 2rem; height: 2rem; font-family:fontawesome; position: absolute; top: 50%; margin-top: -1rem; right:1rem; z-index: 100; text-align: center; line-height: 2rem;}
+  
+ fieldset dd.send{width: 100%; height: 2rem;} 
+ fieldset dd.send>label{width:50%; height: auto; margin-bottom:0.3rem; margin-right: 3rem; cursor:pointer; letter-spacing:-0.05rem;}
+ /*fieldset dd.send>label:last-of-type{width: 45%; height: auto; margin-bottom:0.3rem; display: inline-block;}*/
+ fieldset dd.send>label:before{content:"\f187"; font-family:fontawesome; font-size: 1.3rem; margin-right: 0.3rem;
+  transition:all 300ms ease;}
+ fieldset dd.send>input:checked+label:before,
+ fieldset dd.send>input.checked+label:before{color:#d07; font-size: 2rem;}
+ fieldset dd.send>input:focus+label,
+ fieldset dd.send>input.focus+label{border-bottom: 2px solid  #d07;}
+
+ fieldset dd.result{font-size: 2rem;}
+ fieldset dd.result>strong{color:#333; margin-right: 0.3rem;}
+ fieldset dd.result>span{color:#d07; margin-left: 0.5rem;}
+
+ .complete{width: 100%; height: 3rem;}
+ .complete>button{width: 40%; height: 100%; background-color: #fff; float: left; font-size: 1.3em; border-radius:0.2rem;  transition:all 200ms ease; box-sizing:border-box;}
+ .complete>button:first-of-type{border:2px solid #07a; color:#555;}
+ .complete>button:last-of-type{margin-left: 2rem; background-color: #d07; color:#fff;}
+ .complete>button:focus{box-shadow:0.2rem 0.2rem 0.2rem rgba(50,50,50,0.6);}
+/* ============================================= */
+    #productNarr{width: 100%; height: auto;}
+    h2{width: 100%; text-align: center; margin-bottom: 1rem; text-transform:uppercase; text-decoration: underline;}
+    h3{width: 100%; height: auto; text-align:left; text-indent: 1.5rem; color:#777; font-size: 1.5rem; padding-top: 1rem; margin-bottom: 0.5rem;}
+    .list{width: 100%; box-sizing:border-box; padding: 1rem;}
+    .list>ul{width: 100%; height: auto;}
+    .list>ul>li{width: 22%; height: 320px; margin:0.5rem 1.5% 3rem; float: left; box-sizing: border-box; border:1px solid #aaa;
+      background-color: #fff; box-shadow:0.1rem 0.1rem 0.1rem rgba(50,50,50,0.5);}
+    .list a{display: block; width: 100%; height: 100%;}
+    .list a:focus *{color:#fff;}
+
+    .imgView{display: block; width: 100%; height: 60%; background-color: #aaa;}
+    .list dl{width: 100%; height: 40%; box-sizing:border-box; padding:0.5rem;}
+    .list dl>dt{width: 100%; height: 30%; font-size: 1.3em; color:#555; font-weight: bold;}
+    .list dl>dd{width: 100%; height: 70%; box-sizing:border-box; font-size: 1rem; color:#777; position: relative;}
+    .list .narr{color:inherit; margin-bottom: 1rem; display: block;}
+    .list .price{font-size: 1.1rem; color:#333; display: block;}
+    .list .more{display: block; width:60%; height: 1.3rem; position: absolute; bottom: 0; right:0; }
+    .list .more>strong{width: 25%; height: 100%; font-size: 0.8em; color:#fff; text-align: center; line-height: 1.3rem; background-color: #f06; font-weight: bold; margin-left: 1rem; border-radius:0.3rem; display: inline-block;}
+
+    .detail{width: 100%; height: auto; margin-top: 2rem;}
+    .detail_view{width: 100%; height: 1500px; background-color: #ccc;}
+
+    #footBox{width: 100%; height: 100px; background-color: #555;}
