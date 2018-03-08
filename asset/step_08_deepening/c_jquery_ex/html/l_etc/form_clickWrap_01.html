@@ -17,18 +17,7 @@
 	<!-- <link rel="stylesheet" href="../../css/src/form_check_01.css"> -->
 	<style>
 		/*body{background-color: #0cf;}*/
-		/* loading page -------------------------------------------------------- */
-		body.loading:before{content:" "; display: block; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 1500; background-color:#aaa; background-image:linear-gradient(#ddf,#aaf);}
-		body.loading:after{content:"\f110"; font-family:fontawesome; text-align: center; line-height: 4rem; font-size: 3rem; color:#fff; display: block; position: fixed; width: 4rem; height: 4rem; top: 50%; margin-top: -2rem; left: 50%; margin-left: -2rem; z-index: 2000; background-color: #333; border-radius:2rem;
-			/*background-image: linear-gradient(#777, #555);*/ 
-			animation:loopspin 6s infinite ease-in-out; }
 
-			@keyframes loopspin {
-				0%{transform:rotate(0);}
-				30%{color:#555; background-color: #fff;}
-				70%{color:#555; background-color: #fff;}
-				100%{transform:rotate(720deg);}
-			}
 
 			/* form ------------------------------------------------------- */
 			#wrap{width:100%; min-width: 960px; height: auto; background-color: #fff; margin: auto;}
@@ -92,6 +81,8 @@
 			button[type="reset"]:focus{background-color: #555; font-size: 1.5em;}
 			button[type="submit"]{width: 50%; float: right; font-size: 1.5rem; background-color: #f07; color:#fff;}
 			button[type="submit"]:focus{font-weight: bold; font-size: 2rem; background-color: #333;}
+
+			.hidden{position:static !important; display: inline-block !important; width: 2rem; height: 2rem;}
 	</style>
 	<title>my title</title>
 </head>
@@ -109,7 +100,6 @@
 			<form action="#">
 				<fieldset>
 					<legend class="hidden">내용확인</legend>
-					<!-- div*4>div.check{lorem}+input[type=checkbox name=ck_$$ value=check_$$ id=ck_$$ class=hidden]+label[for=check_$$]>button[type=button]>span.ck{동의합니다}+strong{(필수)} -->
 					<div>
 						<div class="check">
 							<h3>필수항목1</h3>
@@ -164,151 +154,7 @@
 	<!-- jquery-->
 	<script src="../../js/base/jquery-3.2.1.min.js"></script>
 	<script src="../../js/base/jquery-ui.min.js"></script>
-	<script>
-		(function($) {
-			// --------------------------------------
-			// loading(0.8초 로딩) ============================================================
-			var timed = 800;
-			// setTimeout(function() { 
-				$('body.loading').fadeOut(timed/4,function() {
-					$(this).removeClass('loading').removeAttr('style');
-				}); 
-			// },timed*5);
-
-			// --------------------------------------
-			// 약관 내용보기 ============================================================
-			// 약관 보기 버튼 클릭시 내용처리(보기/사라지기)
-			var viewCheck = $('.check').find('button');
-			viewCheck.on('click',function(e) {
-				e.preventDefault();
-				$(this).next().toggle();
-			});
-
-			// 약관 버튼 blue 처리시 내용숨기기 
-			viewCheck.on('blur',function(e) {
-				e.preventDefault();
-				$(this).next().hide();
-			});
-
-			// 버튼 focus처리시 손가락 이동 ============================================================
-			var contentBox = $('#contentBox');
-			var inputCheck = $('[type="checkbox"], .check_btn');
-			var showFinger = $('.show_finger');
-			var contentOffsest = contentBox.offset().top;
-
-			inputCheck.on('focus',function(e) {
-				e.preventDefault();
-				var thisOffset = $(this).offset().top - contentOffsest;
-				// console.log(thisOffset);
-				showFinger.css({top:thisOffset});
-				showFinger.addClass('move');
-				// setTimeout(function() {
-				// 	showFinger.removeClass('move');
-				// },timed*2);
-			});
-
-			inputCheck.on('blur',function(e) {
-				e.preventDefault();
-				showFinger.removeClass('move');
-			});
-			// 동의 체크 ============================================================
-			// 전체 동의
-			var checkInput = $('[type="checkbox"]');
-			var inputLength = checkInput.length;
-		
-			// 각각 체크 기능
-			var forCheck = function() {
-				var myCk;
-				var i = inputLength-1;
-				for(;i >= 0; i--) {
-					myCk = checkInput.eq(i).hasClass('checked');
-					// 하나라도 존재하지 않는다면 거짓으로 판단하고 빠져나가기
-					if(!myCk){ allCheck.removeClass('checked'); break;}
-				};
-				console.log(myCk);
-				// false 경우에는 전체동의 해제, true일 경우에는 전체동의 체크
-				if(myCk) { allCheck.addClass('checked'); }
-			}
-
-			// --------- 전체 체크 처리함수
-			var allCheckFn = function(type,bool) {
-				$.each(checkInput,function(i,v) {
-					var _this = $(this);
-					if(bool){
-						_this.addClass('checked');
-						_this.attr('checked',true);
-					}else{
-						_this.removeClass('checked');
-						_this.attr('checked',false);
-					}
-				});
-			}; //allCheckFn
-		
-			// ---------- 부분 체크시 처리함수
-			var partCheckFn = function(type, bool) {
-				var _this = type;
-				// console.log(_this);
-					if(bool){
-						_this.addClass('checked');
-						_this.attr('checked',true);
-					}else{
-						_this.removeClass('checked');
-						_this.attr('checked',false);
-					}
-
-					forCheck();
-			}; // patCheckFn
-
-			var allCheck = $('.all_check').find('button');
-			allCheck.on('click',function(e) {
-				e.preventDefault();
-
-				allCheck.toggleClass('checked',function() {
-					( $(this).hasClass('checked') ) ? allCheckFn(checkInput,true): allCheckFn(checkInput,false);
-				});
-			});
-
-			// 부분 동의
-			var labelCheckBtn = $('label.check_btn');
-			// 문제점! 마우스클릭은 이상없으나 키보드 제어에서 문제가 됨.
-			// labelCheckBtn.on('click',function(e) { 
-				// 해당하는 내용의 변화를 감지처리로 수정
-			checkInput.on('change',function(e) {
-				// e.preventDefault();
-				// var thisAttr = $(this).attr('for');
-				// var inputCk  = $('#'+thisAttr);
-				var _this = $(this);
-				var hasCheck = _this.hasClass('checked');
-				// console.log(hasCheck);
-				partCheckFn(_this,!hasCheck);
-
-				// ( hasCheck ) ? partCheckFn(_this,true) : partCheckFn(false);
-				// console.log(inputCk);				
-				// allCheckFn(inputCk,hasCheck);	
-
-			});
-
-			// 부분 선택 전체감시
-				// - 하나씩 선택시 전체를 감지하여 
-				// - 하나라도 풀리면 전체 동의 버튼 체크 해제, 
-				// - 전체선택하면 전체 동의 버튼 체크 확인하기
-				// - 함수기능으로 처리하여, 부분체크시 처리되는 기능에 담기
-				/*
-					function test() {
-						var myCk;
-						for(;inputL > 0; inputL--) {
-							myCk = checkInput.eq(inputL-1).hasClass('checked');
-							console.log(myCk);
-							// 하나라도 존재하지 않는다면 거짓으로 판단하고 빠져나가기
-							if(!myCk){ break; }
-						};
-						// false 경우에는 전체동의 해제, true일 경우에는 전체동의 체크
-						(!myCk) ? allCheckFn(checkInput,false) : allCheckFn(checkInput,true);
-					};
-				*/
-			// --------------------------------------
-		})(this.jQuery);
-	</script>
+	<script src="../../js/src/clickWrap_01.js"></script>
 </body>
 </html>
 
