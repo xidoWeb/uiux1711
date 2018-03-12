@@ -1,0 +1,131 @@
+/* reset.css */
+ /* variable:color, size, font  */
+ /* 
+ * color: *명도대비 기준으로 제작
+       - primary : #d07
+       - main : #faa
+       - point :
+       - font1 : #333
+       - font2 : #777
+       - font3 : #fff
+       - link :  #d07
+       - sub1 :
+       - sub2 :
+       - white : #fdfdfd
+       - gray1 : #333
+       - gray2 : #777
+       - black : #171717
+ 
+ * size:* 접근성 크기의 내용을 기준
+ * 인쇄의 경우는 기준의 폰트크기는 : 9pt, 
+ * 웹의 경우는 12pt를 권장 => 영문, 그래픽이미지일경우
+       - primary : 16px;  == 1rem;
+       - h1(bold) :  32px ==> 2rem;
+       - h2(bold) :  29px ==> 1.8125rem;
+       - h3(bold) :  28px ==> 1.75rem;
+       - h4(bold) :  24px ==> 1.5rem;
+       - h5(bold) :  22px ==> 1.375rem;
+       - h6(bold) :  20px ==> 1.25rem;
+       - big1 : 30pt ==> 2.5rem
+       - big2 : 27pt ==> 2.25rem
+       - narmal : 12pt ==> 1rem  
+ 
+ * font:
+       - english : Roboto, "myriad pro", arial
+       - korean  : "Nanum Gothic Coding", dotum
+       - basic   : monospace, sans-serif
+ 
+ * border:
+       - thin :  border:1px solid #333
+       - normal: border: 2px solid #777
+       - bold :  border: 5px solid #d07
+ 
+ * responsive:
+       - mobileV :
+       - mobileH :
+       - tableV:
+       - tableH:
+       - pc :
+       - pcfull :
+ */
+ 
+ 
+ 
+ /* base */
+ html,body{width: 100%; height: 100%; 
+         margin:0; padding:0; color:#333; font-size:16px; font-size:1rem;      
+ font-family:Roboto,"myriad pro",arial,"Nanum Gothic Coding",dotum,monospace,sans-serif;   
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;}
+ 
+ h1, h2, h3, h4, h5, h6, p, pre, ul, ol, li, dl, dt, dd, div, 
+ table, thead, tbody, tfoot, tr, th, td, 
+ form, fieldset, legend, input, textarea, select,
+ a, img,figcaption, figure{
+   margin:0; padding:0; border:0; outline:0; 
+   color:inherit;  font-size:inherit; font-family:inherit;}
+ 
+ table,tr,td,th,thead,tbody,tfoot{border-collapse:collapse; border-spacing:0; }
+ thead{background-color:#d07; color:#fff; text-indent:0;}
+ tbody>tr:nth-of-type(2n+1){background-color:#faa; text-indent:0.5rem;}
+ tbody>tr:nth-of-type(2n){background-color:#fff; text-indent:0.5rem;}
+ tfoot{background-color: #7cf; font-weight: bold;}
+ th,td{border:1px solid #777; border-left:0; border-right: 0;}
+ /*th:first-of-type, td:first-of-type{border-left:0;} 
+ th:last-of-type,  td:last-of-type{border-right: 0;} */
+ 
+ hr{margin: 0; padding: 0; border-bottom:1px solid #333;}
+ 
+ address, em, wbr, strong, ins, del, abbr{font-style:normal; font-weight:normal;}
+ h1{font-size: 32px; font-size: 2rem;}
+ h2{font-size: 29px; font-size: 1.8125rem;}
+ h3{font-size: 28px; font-size: 1.75rem;}
+ h4{font-size: 24px; font-size: 1.5rem;}
+ h5{font-size: 22px; font-size: 1.375rem;}
+ h6{font-size: 20px; font-size: 1.25rem;}
+ 
+ ul,ol,li{list-style:none; }
+ a{text-decoration:none; color:#777;}
+ a:hover, a:active{text-decoration:underline; color:#D07;}
+ 
+ 
+ code{ padding:6px; border:1px solid #777; background-color: #7af; }
+ kbd {font-size: 1.2em; font-weight: bold; color:#fff; background-color: #333; border-radius:0.3rem;} 
+ /* form ============================================ */
+ input[type="text"],
+ input[type="password"],
+ input[type="search"],
+ input[type="email"],
+ input[type="tel"],
+ input[type="number"],
+ input[type="date"],
+ input[type="month"],
+ input[type="year"],
+ input[type="week"],
+ input[type="url"],
+ textarea{cursor:pointer; box-sizing:border-box; border:1px solid #777; border-radius:0;
+       background-color: #fff; text-indent:5px;} 
+ 
+ input::-webkit-input-placeholder,
+ input::-moz-placeholder,
+ input:-ms-input-placeholder,
+ input:-moz-placeholder,
+ input:placeholder {color:#09a;}
+ 
+ select{-webkit-appearance:listbox;
+        -moz-appearance:listbox;
+         appearance:listbox; border: 0;}
+ 
+ input[type="submit"],
+ input[type="reset"],
+ input[type="image"],
+ input[type="file"],
+ input[type="button"],
+ button, select {cursor:pointer; border-radius:0; 
+   margin: 0; padding: 0; border: 0; outline: 0;}
+ 
+ /*  html5 ============================================  */
+ header, nav, article, section, footer, aside, main, figure, figcaption, picture{
+   display:block; color:inherit;}
+ 
+ 
