@@ -1,8 +1,4 @@
 // layout_01.scss
-// @import "_var/_variable.scss";
-@import "_var/variable";
-@import "src/mainwrap"; 
-// @import "src/headBox"; 
-// @import "src/bannerBox";
-// @import "src/contentBox";
-// @import "src/footBox";
+
+@import "_var/variable"; 
+@import "src/mainwrap";  

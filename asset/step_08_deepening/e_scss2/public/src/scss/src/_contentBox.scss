@@ -1,3 +1,12 @@
 // contentBox.scss
 
-#contentBox{width: 960px; height: auto; min-height: 1500px; margin: auto; margin-top: -200px; background-color:lighten($color2, 30%);}
+%test{width: 150px; height: 20px; background-color: $color1;}
+
+#contentBox{width: 960px; height: auto; min-height: 1500px; margin: auto; margin-top: -200px; background-color:lighten($color2, 30%);
+ p{color:#f70; font-size: 1.1em; margin-bottom: 0.5rem;}
+ .con_01{text-indent:1rem; @extend %test;}
+ .con_02{padding-left: 2rem;}
+ .con_03{font-size: 2rem;}
+ .con_04{color:$color2;}
+ .con_05{@extend .con_01; @extend .con_03; @extend .con_04;}
+} 

@@ -1,3 +1,46 @@
 // bannerBox.scss
 
-#bannerBox{width: 100%; height: 700px; background-color:$color3;}
+$url : "../../img/gallery_img_01/big/";
+
+
+
+#bannerBox{width: 100%; height: 43.75rem; background-color:$color3;
+  >.banner{width: 100%; height: 100%; 
+    >ul{ width:(100% * 5); height: inherit;
+      >li{ width:(100% / 5); height: inherit; float: left;
+        >a{ $h:40px;
+          display: block; width: 9.375rem; height:$h; background-color: $color2; text-align: center;
+          line-height:$h;}
+        >a:hover{color:$color1;}
+        >a:focus{color:$white;}
+      } //li
+    } //ul
+  }//.banner
+} // #bannerBox         
+
+
+@mixin bannerBg($i,$r){
+  background-image: url($url+$i);
+  background-repeat:$r;
+  background-position: 0 0;
+  background-size:100%;
+}
+.banner_img_01{ @include bannerBg("gallery_image_1.jpg", no-repeat); }
+.banner_img_02{ @include bannerBg("gallery_image_2.jpg", no-repeat); }
+.banner_img_03{ @include bannerBg("gallery_image_3.jpg", no-repeat); }
+.banner_img_04{ @include bannerBg("gallery_image_4.jpg", no-repeat); }
+.banner_img_05{ @include bannerBg("gallery_image_5.jpg", no-repeat); }
+
+
+ 
+// .banner_img_01{background-image: url($url+"gallery_image_1.jpg"); 
+//                background-repeat:no-repeat; background-position:center; background-size:cover;}
+// .banner_img_02{background-image: url($url+"gallery_image_2.jpg"); 
+//                background-repeat:no-repeat; background-position:top; background-size:contain;}
+// .banner_img_03{background-image: url($url+"gallery_image_3.jpg"); 
+//                background-repeat:no-repeat; background-position:left; background-size:100%;}
+// .banner_img_04{background-image: url($url+"gallery_image_4.jpg"); 
+//                background-repeat:no-repeat; background-position:bottom; background-size:auto 100%;}
+// .banner_img_05{background-image: url($url+"gallery_image_5.jpg"); 
+//                background-repeat:no-repeat; background-position:100% 50%; background-size:150%;}  
+//      
