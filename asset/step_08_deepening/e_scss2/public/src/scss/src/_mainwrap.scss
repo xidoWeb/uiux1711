@@ -1,0 +1,11 @@
+// mainwrap.scss
+
+#wrap{width: 100%; min-width: 960px; height: auto; background-color:$color1;
+    position: relative;
+
+  @import "src/headBox"; 
+  @import "src/bannerBox";
+  @import "src/contentBox";
+  @import "src/footBox";
+
+} 
