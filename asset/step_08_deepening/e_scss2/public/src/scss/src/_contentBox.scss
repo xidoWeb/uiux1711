@@ -1,12 +1,77 @@
 // contentBox.scss
 
+// $url:'../../img/gallery_img_01/thum/';
+
+@mixin cf(){
+  &:after{content:" "; display:block; width: 0; height: 0; clear:both;}
+} // cf
+@mixin tray($p:1rem, $m:2rem, $bg:false, $cf:false){
+  width: 100%; height: auto; 
+  box-sizing:border-box; 
+  padding:$p; margin-bottom: $m;
+
+  @if $bg!=false {background-color:$bg; }
+  @if $cf!=false {
+    > #{$cf} { @include cf() ;}
+  }
+} // @mixin tray
+
 %test{width: 150px; height: 20px; background-color: $color1;}
 
-#contentBox{width: 960px; height: auto; min-height: 1500px; margin: auto; margin-top: -200px; background-color:lighten($color2, 30%);
- p{color:#f70; font-size: 1.1em; margin-bottom: 0.5rem;}
- .con_01{text-indent:1rem; @extend %test;}
- .con_02{padding-left: 2rem;}
- .con_03{font-size: 2rem;}
- .con_04{color:$color2;}
- .con_05{@extend .con_01; @extend .con_03; @extend .con_04;}
-} 
+#contentBox{
+  width: 960px; height: auto; min-height: 1500px; 
+  margin: auto; margin-top: -200px; 
+  background-color:lighten($color2, 30%);
+
+  >h2{
+    width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden;
+  }
+
+  >.con{
+    @include tray($p:2rem, $bg: $white);
+
+    position: relative; z-index: 100;
+    &:hover{background-color:$white - $color2;}
+
+    >p{color:#f70; font-size: 1.1em; margin-bottom: 0.5rem;}
+     .con_01{text-indent:1rem; @extend %test;}
+     .con_02{padding-left: 2rem;}
+     .con_03{font-size: 2rem;}
+     .con_04{color:$color2;}
+     .con_05{@extend .con_01; @extend .con_03; @extend .con_04;}
+  } // .con
+
+// .list_box --------------------------------------
+$coffee:(americano, latte, mocha, espresso, banila, decafein);
+$myColor:(
+  blue   : #0af,
+  white  : $white,
+  black  : darken($white,100%),
+  red    : #f07,
+  zero   : transparent
+  );
+
+
+
+// li{content:length($coffee);}
+
+  .list_box{@include tray($cf:ul);
+    >ul{width: 100%; height: auto; 
+      >li{width: 250px; height:350px;
+         background-color:darken($white,30%); float: left;
+        margin: 1.5rem; color:map-get($myColor,blue);}
+      >li::selection{color: map-get($myColor,red); background-color:map-get($myColor,black);} 
+
+     @for $i from 1 through length($coffee) {  
+      .coffee_#{nth($coffee,$i)}{background-image:url($url+"gallery_image_"+$i+".jpg");
+        background-size:cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        font-size: 2rem; font-weight: bold; text-align: center; line-height:350px;
+        text-shadow:0 0 1rem  $white, 0 0 1rem  $white, 0 0 1rem  $white ;
+        }  
+      } //@for
+    }// ul 
+  }// .list_box
+} // #contentBox    
+ 

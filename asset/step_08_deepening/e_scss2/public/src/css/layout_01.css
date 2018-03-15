@@ -10,7 +10,7 @@
 
 #headBox > h1 > a:active { color: #99a; }
 
-#bannerBox { width: 100%; height: 700px; height: 43.75rem; background-color: #99a; }
+#bannerBox { width: 100%; height: 700px; height: 43.75rem; background-color: #99a; overflow: hidden; }
 
 #bannerBox > .banner { width: 100%; height: 100%; }
 
@@ -24,28 +24,66 @@
 
 #bannerBox > .banner > ul > li > a:focus { color: #fff; }
 
-.banner_img_01 { background-image: url("../../img/gallery_img_01/big/gallery_image_1.jpg"); background-repeat: no-repeat; background-position: 0 0; background-size: 100%; }
+.banner_img_01 { background-repeat: no-repeat; background-position: 0 0; background-size: 100%; }
 
-.banner_img_02 { background-image: url("../../img/gallery_img_01/big/gallery_image_2.jpg"); background-repeat: no-repeat; background-position: 0 0; background-size: 100%; }
+.banner_img_02 { background-repeat: repeat; background-position: 0 0; background-size: auto 100%; }
 
-.banner_img_03 { background-image: url("../../img/gallery_img_01/big/gallery_image_3.jpg"); background-repeat: no-repeat; background-position: 0 0; background-size: 100%; }
+.banner_img_03 { background-repeat: no-repeat; background-position: center; background-size: 100%; }
 
-.banner_img_04 { background-image: url("../../img/gallery_img_01/big/gallery_image_4.jpg"); background-repeat: no-repeat; background-position: 0 0; background-size: 100%; }
+.banner_img_04 { background-repeat: no-repeat; background-position: right bottom; background-size: 40%; }
 
-.banner_img_05 { background-image: url("../../img/gallery_img_01/big/gallery_image_5.jpg"); background-repeat: no-repeat; background-position: 0 0; background-size: 100%; }
+.banner_img_05 { background-repeat: no-repeat; background-position: 0 0; background-size: cover; }
 
-#contentBox .con_01, #contentBox .con_05 { width: 150px; height: 20px; background-color: #ccc; }
+.banner_img_01 { background-image: url("../../img/gallery_img_01/big/gallery_image_1.jpg"); }
+
+.banner_img_02 { background-image: url("../../img/gallery_img_01/big/gallery_image_2.jpg"); }
+
+.banner_img_03 { background-image: url("../../img/gallery_img_01/big/gallery_image_3.jpg"); }
+
+.banner_img_04 { background-image: url("../../img/gallery_img_01/big/gallery_image_4.jpg"); }
+
+.banner_img_05 { background-image: url("../../img/gallery_img_01/big/gallery_image_5.jpg"); }
+
+#contentBox > .con .con_01, #contentBox > .con .con_05 { width: 150px; height: 20px; background-color: #ccc; }
 
 #contentBox { width: 960px; height: auto; min-height: 1500px; margin: auto; margin-top: -200px; background-color: #99ddff; }
 
-#contentBox p { color: #f70; font-size: 1.1em; margin-bottom: 8px; margin-bottom: 0.5rem; }
+#contentBox > h2 { width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
 
-#contentBox .con_01, #contentBox .con_05 { text-indent: 16px; text-indent: 1rem; }
+#contentBox > .con { width: 100%; height: auto; box-sizing: border-box; padding: 32px; padding: 2rem; margin-bottom: 32px; margin-bottom: 2rem; background-color: #fff; position: relative; z-index: 100; }
 
-#contentBox .con_02 { padding-left: 32px; padding-left: 2rem; }
+#contentBox > .con:hover { background-color: #ff5500; }
 
-#contentBox .con_03, #contentBox .con_05 { font-size: 32px; font-size: 2rem; }
+#contentBox > .con > p { color: #f70; font-size: 1.1em; margin-bottom: 8px; margin-bottom: 0.5rem; }
 
-#contentBox .con_04, #contentBox .con_05 { color: #0af; }
+#contentBox > .con .con_01, #contentBox > .con .con_05 { text-indent: 16px; text-indent: 1rem; }
+
+#contentBox > .con .con_02 { padding-left: 32px; padding-left: 2rem; }
+
+#contentBox > .con .con_03, #contentBox > .con .con_05 { font-size: 32px; font-size: 2rem; }
+
+#contentBox > .con .con_04, #contentBox > .con .con_05 { color: #0af; }
+
+#contentBox .list_box { width: 100%; height: auto; box-sizing: border-box; padding: 16px; padding: 1rem; margin-bottom: 32px; margin-bottom: 2rem; }
+
+#contentBox .list_box > ul:after { content: " "; display: block; width: 0; height: 0; clear: both; }
+
+#contentBox .list_box > ul { width: 100%; height: auto; }
+
+#contentBox .list_box > ul > li { width: 250px; height: 350px; background-color: #b3b3b3; float: left; margin: 24px; margin: 1.5rem; color: #0af; }
+
+#contentBox .list_box > ul > li::selection { color: #f07; background-color: black; }
+
+#contentBox .list_box > ul .coffee_americano { background-image: url("../../img/gallery_img_01/big/gallery_image_1.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; font-size: 32px; font-size: 2rem; font-weight: bold; text-align: center; line-height: 350px; text-shadow: 0 0 16px #fff, 0 0 16px #fff, 0 0 16px #fff; text-shadow: 0 0 1rem #fff, 0 0 1rem #fff, 0 0 1rem #fff; }
+
+#contentBox .list_box > ul .coffee_latte { background-image: url("../../img/gallery_img_01/big/gallery_image_2.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; font-size: 32px; font-size: 2rem; font-weight: bold; text-align: center; line-height: 350px; text-shadow: 0 0 16px #fff, 0 0 16px #fff, 0 0 16px #fff; text-shadow: 0 0 1rem #fff, 0 0 1rem #fff, 0 0 1rem #fff; }
+
+#contentBox .list_box > ul .coffee_mocha { background-image: url("../../img/gallery_img_01/big/gallery_image_3.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; font-size: 32px; font-size: 2rem; font-weight: bold; text-align: center; line-height: 350px; text-shadow: 0 0 16px #fff, 0 0 16px #fff, 0 0 16px #fff; text-shadow: 0 0 1rem #fff, 0 0 1rem #fff, 0 0 1rem #fff; }
+
+#contentBox .list_box > ul .coffee_espresso { background-image: url("../../img/gallery_img_01/big/gallery_image_4.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; font-size: 32px; font-size: 2rem; font-weight: bold; text-align: center; line-height: 350px; text-shadow: 0 0 16px #fff, 0 0 16px #fff, 0 0 16px #fff; text-shadow: 0 0 1rem #fff, 0 0 1rem #fff, 0 0 1rem #fff; }
+
+#contentBox .list_box > ul .coffee_banila { background-image: url("../../img/gallery_img_01/big/gallery_image_5.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; font-size: 32px; font-size: 2rem; font-weight: bold; text-align: center; line-height: 350px; text-shadow: 0 0 16px #fff, 0 0 16px #fff, 0 0 16px #fff; text-shadow: 0 0 1rem #fff, 0 0 1rem #fff, 0 0 1rem #fff; }
+
+#contentBox .list_box > ul .coffee_decafein { background-image: url("../../img/gallery_img_01/big/gallery_image_6.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; font-size: 32px; font-size: 2rem; font-weight: bold; text-align: center; line-height: 350px; text-shadow: 0 0 16px #fff, 0 0 16px #fff, 0 0 16px #fff; text-shadow: 0 0 1rem #fff, 0 0 1rem #fff, 0 0 1rem #fff; }
 
 #footBox { width: 100%; height: 150px; background-color: #737373; }

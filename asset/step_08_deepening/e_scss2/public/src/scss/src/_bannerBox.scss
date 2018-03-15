@@ -4,7 +4,7 @@ $url : "../../img/gallery_img_01/big/";
 
 
 
-#bannerBox{width: 100%; height: 43.75rem; background-color:$color3;
+#bannerBox{width: 100%; height: 43.75rem; background-color:$color3; overflow: hidden;
   >.banner{width: 100%; height: 100%; 
     >ul{ width:(100% * 5); height: inherit;
       >li{ width:(100% / 5); height: inherit; float: left;
@@ -19,18 +19,29 @@ $url : "../../img/gallery_img_01/big/";
 } // #bannerBox         
 
 
-@mixin bannerBg($i,$r){
-  background-image: url($url+$i);
-  background-repeat:$r;
-  background-position: 0 0;
-  background-size:100%;
-}
-.banner_img_01{ @include bannerBg("gallery_image_1.jpg", no-repeat); }
-.banner_img_02{ @include bannerBg("gallery_image_2.jpg", no-repeat); }
-.banner_img_03{ @include bannerBg("gallery_image_3.jpg", no-repeat); }
-.banner_img_04{ @include bannerBg("gallery_image_4.jpg", no-repeat); }
-.banner_img_05{ @include bannerBg("gallery_image_5.jpg", no-repeat); }
+// @mixin bannerBg0($i,$r){
+//   background-image: url($url+$i);
+//   background-repeat:$r;
+//   background-position: 0 0;
+//   background-size:100%;
+// }
 
+@mixin bannerBg($i:false,$r:no-repeat,$p:0 0,$s:cover){
+  @if $i != false {background-image: url($url+$i);  }
+  background-repeat:$r;
+  background-position:$p;
+  background-size:$s;
+}
+
+.banner_img_01{ @include bannerBg($s: 100%); }
+.banner_img_02{ @include bannerBg($r: repeat, $s: auto 100%); }
+.banner_img_03{ @include bannerBg($p: center , $s: 100%); }
+.banner_img_04{ @include bannerBg($p: right bottom ,$s: 40%); }
+.banner_img_05{ @include bannerBg(); }
+
+@for $img from 1 through 5 {
+  .banner_img_0#{$img} { background-image:url($url+"gallery_image_" + $img + ".jpg");}
+}
 
  
 // .banner_img_01{background-image: url($url+"gallery_image_1.jpg"); 
@@ -43,4 +54,4 @@ $url : "../../img/gallery_img_01/big/";
 //                background-repeat:no-repeat; background-position:bottom; background-size:auto 100%;}
 // .banner_img_05{background-image: url($url+"gallery_image_5.jpg"); 
 //                background-repeat:no-repeat; background-position:100% 50%; background-size:150%;}  
-//      
+//         
