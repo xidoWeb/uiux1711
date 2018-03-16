@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body { font-family: 'Noto Sans KR', monospace; 
+line-height:1.7; box-sizing:border-box; padding-top: 3rem;}
+h1{text-transform:uppercase; font-weight: bold; border-bottom: 2px solid #f06;}
+h1, h2, h3,h4,h5,h6 {
+  font-family: 'Noto Sans KR',sans-serif;
+  font-weight: normal;
+  color:#06a;
+  text-align: left;}
+h2,h3{border-bottom:2px solid #faa;}
+h3{text-indent: 1.5rem;}
+h4,h5,h6{font-size: 1.3em;}
+.remark-slide-container{width: 90%; transform:scale(1.07);}
+.remark-slide-scaler{width:inherit !important; height:90% !important;left:10%  !important; transform:scale(1)  !important;
+   border-radius:1.3rem; overflow: hidden;}
+p{text-align: left;}
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+strong{
+  color:#fff;  background-color:#f39;  font-weight: bold;  font-style: 1.1em; padding: 0.2em; border-radius:0.3rem;}
+strong>code{color:inherit; background-color:inherit; box-shadow:none;}
+code{line-height: 2; border-radius:0.5rem; box-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.3); padding:0.2rem; background-color: #ddd;
+  margin-right: 0.3rem; transition:all 300ms ease;}
+table,tr,td{border-collapse: collapse; border-bottom:1px solid #777;}
+table{width: 100%;}
+th{background-color: #0af; color:#fff; border-right:2px solid #fff;}
+td{background-color: #cdf; border-right:2px solid #fff; padding:0 1rem;}
+
+pre:hover > code{background-color:#fdb !important;}

@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+		@import url(https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+      body { font-family: 'Nanum Gothic Coding', monospace; 
+      line-height:1.6;}
+      h1{font-weight: bolder;}
+      h1, h2, h3,h4,h5,h6 {
+        font-family: 'PT Sans','Nanum Gothic Coding';
+        font-weight: bold; color:#09c; text-align: left;
+        margin-top:0.5em; margin-bottom:0.5em;
+        border-bottom:1px solid #09c;}
+
+      h4,h5,h6{font-size: 1.3em; }
+      p{text-align: left; letter-spacing:-0.1em; margin-bottom: 0;}
+      .remark-slide-scaler{width:1024px !important; height:680px !important;}
+      .remark-code, .remark-inline-code { font-family:'PT Sans','Ubuntu Mono', sans-serif;}
+      .remark-inline-code{letter-spacing:0; font-weight: bold;position: relative;}
+       .remark-inline-code:after{content:" "; display: block;
+          position: absolute; left: 0; bottom: 0; 
+          width: 100%; height: 10%;
+          border-bottom:0.25em solid rgba(255,0,250,0.1); box-sizing:border-box;}
+      .remark-slide-content{padding:1em 2em; }
+      .hljs-comment{color:#747 !important;}
+      .remark-slide-number{top:0.5em; right:1em; font-size: 0.7em;}
+      /*.hljs-comment{float: left; margin-left:2em;}*/
+
+      img{width: 100%; margin-top: 1em; transition:all 0.5s; background-color:rgba(255,255,255,0.95);}
+      img:hover{transform:translateY(-2em) scale(1.5);}
+      strong{color:#fff; background-color:rgba(0,170,255,0.9); font-weight: bold; 
+        font-size: 1em; padding: 0.2em; letter-spacing:0.05em; position: relative; z-index: 1;
+        border-radius:0.2em;}
+
+      pre{line-height: 2; background-color:rgba(255,0,100,0.05) !important;
+        transition:all 0.3s ease; cursor:pointer;
+        font-family:'PT Sans', 'Nanum Gothic Coding', sans-serif !important; 
+        font-size: 0.7em; line-height: 1.7; border-radius:0.5em; overflow: hidden;}
+      pre:hover{background-color: #bbdfff !important; font-size:1.01em; font-weight:bold;}
+      pre > code{background-color:inherit !important;}
+      
+      table,tr,td,th{border:0;}
+      table,tr,thead,tbody{width:100%; box-sizing:border-box;}
+      thead>tr{background-color:#dfdfdf;}
+      tbody>tr:nth-of-type(2n-1){background-color:#ded;}
+      tbody>tr:nth-of-type(2n){background-color: #ede; border-bottom: 1px solid  #555;}
+      th, td{padding:0.3em 0.5em; font-size:0.9em; box-sizing:border-box; letter-spacing:-0.05em}
+
+
