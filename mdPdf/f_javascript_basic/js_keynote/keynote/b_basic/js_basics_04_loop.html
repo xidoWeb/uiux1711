@@ -436,22 +436,19 @@ var screen = window.innerWidth;
 var device = [480, 640, 768, 1024, 1280];
 var level = ['mobile_세로형','mobile_가로형','tablet_세로형', 'tablet_가로형','pc_기본','pc_확장'];
 var screen = window.innerWidth;   // 화면 크기값 가져오기
+
 console.log('실제 화면 크기: ', screen);
+
 // 반복문을 통한 크기값 설정
 for(var i = 0; i < device.length; i++){
-// device 항목중 첫번째 항목 이내에 포함되는 경우
-  if( screen <= device[0]){
-  console.log('view는 '+ level[i]+' 입니다');
-  }
-// device항목에 포함되는 경우
-  if( device[i] < screen && screen <= device[i+1]){
-  console.log('view는 '+ level[i+1]+' 입니다');
-  }
+  // device 항목중 첫번째 항목 이내에 포함되는 경우
+  if ( screen <= device[0]){ console.log('view는 '+ level[i]+' 입니다'); }
+  // device항목에 포함되는 경우
+  if ( device[i] < screen &amp;&amp; screen <= device[i+1]){ console.log('view는 '+ level[i+1]+' 입니다'); }
 }// for반복문 종료
+
 // 목록 내에 들어있는 화면크기와 일치 하지 않는 경우
-if(screen > device[device.length - 1]){
-  console.log('현재 화면의 크기는 ' + device[i - 1]+ ' 보다 큰 화면입니다.');
-}
+if (screen > device[device.length - 1]){ console.log('현재 화면의 크기는 ' + device[i - 1]+ ' 보다 큰 화면입니다.'); }
 ```
 ---
 
@@ -463,7 +460,7 @@ for...in 문은 다음과 같습니다:
 
 ```javascript
 for(가변수 in 배열/객체){
-  루프 내에서 실행하는 명령;
+  // 루프 내에서 실행하는 명령;
 }
 ```
 
@@ -565,9 +562,11 @@ for(var i = 0; i < 100; i++){
 console.log('합계: ' + result);
 ```
 ---
-생년월일을 작성하는 코드를 작성해보세요.<br>
-`html`의 `select`코드를 활용하여 작성하는 코드입니다. <br> 
-(최대 150살 까지 선택할 수 있다고 가정하겠습니다.)
+*TEST1*
+
+**생년월일을 작성하는 코드**를 작성해보세요.<br>
+`html`의 `select`코드를 활용하여 작성하는 코드입니다. (최대 150살 까지 선택할 수 있다고 가정하겠습니다.)
+
 
 ```html
 <body>
@@ -589,9 +588,11 @@ console.log('합계: ' + result);
 </body>
 ```
 ---
-두번째는 핸드폰번호를 선택하게 만들어보세요.<br>
-010부터 019까지 선택하게 만들어보세요.<br>
-(015빼고는 모두 존재하는 번호입니다. )
+*TEST2*
+
+두번째는 **핸드폰번호를 선택**하게 만들어보세요.<br>
+010부터 019까지 선택하게 만들어보세요.(015빼고는 모두 존재하는 번호입니다. )
+
 
 ```html
  <body>
@@ -610,15 +611,14 @@ console.log('합계: ' + result);
      </fieldset></form>
  </body>
 ```
----
-세번째는 지역을 선택하게 만들어보세요. <br>
-이때 지역을 선택하는 형태는 두가지가 있을 수 있습니다. <br>
-배열형식과, 객체형식입니다.<br>
-이는 단순하게 지역을 선택하는 형태의 결과물과, <br>
-선택시 해당하는 지역 지역번호를 전달하게 되는 형태입니다.<br>
-두가지 모두 제작해 보세요.
 
 ---
+*TEST3*
+
+세번째는 **지역을 선택**하게 만들어보세요. 이때, 지역을 선택하는 형태는 두가지가 있을 수 있습니다. **배열형식**과, **객체형**식입니다.<br>
+이는 단순하게 지역을 선택하는 형태의 결과물과,선택시 해당하는 지역 지역번호를 전달하게 되는 형태입니다.<br>
+두가지 모두 제작해 보세요.
+
 ```html
 <body>
    <form action="">
@@ -646,10 +646,153 @@ console.log('합계: ' + result);
 var area    = ['서울광역시','경기','인천광역시','대전광역시','광주광역시', '부산광역시','울산광역시','대구광역시','충청북도','충청남도',
               '전라북도','전라남도','경상북도','경상남도','강원도','세종특별자치시','제주특별자치도'];
 
-var areaNum = {'서울광역시' : '02','경기' : '031','인천광역시' : '032','대전광역시' : '042','광주광역시' : '062',
-               '부산광역시' : '051','울산광역시' : '052','대구광역시' : '053','충청북도' : '043','충청남도' : '041',
-              '전라북도' : '063','전라남도' : '061','경상북도' : '054','경상남도' : '055','강원도' : '033',
-              '세종특별자치시' : '044','제주특별자치도' : '064'};
+var areaNum = {'서울광역시' : '02', '경기' : '031', '인천광역시' : '032', '대전광역시' : '042', '광주광역시' : '062',
+                 '부산광역시' : '051', '울산광역시' : '052', '대구광역시' : '053', '충청북도' : '043', '충청남도' : '041',
+                 '전라북도' : '063', '전라남도' : '061', '경상북도' : '054', '경상남도' : '055', '강원도' : '033',
+                 '세종특별자치시' : '044', '제주특별자치도' : '064'};
+```
+
+---
+
+### forEach (javascript 5버전 이후사용 가능)
+
+[forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 문은 배열의 각 요소에 대해 지정된 작업을 수행합니다.
+
+```javascript
+  arr.forEach(callback[, thisArg])
+```
+
+위 내용이 어떠한 의미를 가지고 있는지에대해 알아보도록 하겠습니다.
+
+---
+
+#### callback - 기본요소(매개변수)
+
+```javascript
+[배열요소].forEach(function(값, 순서, 배열요소){
+   // 해당 배열요소를 통한 기능처리
+});
+```
+
+```javascript
+var arr = [2,5,9];
+arr.forEach(function(value, index, ary){
+    console.log(value, index, ary);
+});
+
+```
+
+기본적으로 오름차순으로 처리된 배열에 있는 각 요소에 대해 한 번씩 제공한 `callback`을 실행합니다. <br />
+삭제 또는 비초기화된 인덱스 속성에 대해서는 호출되지 않습니다(즉 듬성듬성한 배열의).
+
+---
+
+```javascript
+var arr = [2, 5, , 9];
+
+function ArrElement(element, index, array) {
+  console.log('a[' + index + '] = ' + element +' - array:'+'['+array+']');
+}
+
+arr.forEach(ArrElement);
+
+// 인덱스 2는 배열의 그 위치에 항목이 없기에
+// 건너뜀을 주의하세요.
+```
+
+---
+
+`forEach()`는 오름차순으로 배열에 있는 각 요소에 대해 한 번씩 제공한 `callback`을 실행합니다. <br />삭제 또는 비초기화된 인덱스 속성에 대해서는 호출되지 않습니다(즉 듬성듬성한 배열의).
+
+`callback`에는 다음 **세 인수**와 함께 호출됩니다:
+
+- **요소 값**
+- **요소 인덱스**
+- **순회(traverse)될 배열**
+
+
+---
+
+```javascript
+arr.forEach(callback[, thisArg])
+```
+
+매개변수에는 다음과 같은 의미를 가지고 있습니다.
+
+- `arr`: 배열형식의 개체
+
+
+- `callback`: 각 요소에 대해 실행할 함수, 인수의 갯수는 최대 3개를 받을 수 있습니다. 
+  - `currentValue`: 배열에서 현재 처리 중인 요소. 
+  - `index`: 배열에서 현재 처리 중인 요소의 인덱스.: 
+  - `array`: `forEach()`가 적용되고 있는 배열.
+- `thisArg`: 선택 사항, **this** 키워드가 *`callback`* 함수에서 참조할 수 있는 개체입니다. *thisArg*가 생략되면 **undefined**가 **this** 값으로 사용됩니다.
+
+우리는 **callback**에 대한 내용만 파악했습니다. **thisArg**부분은 간단하게 보여드리고 넘어가도록 하겠습니다.
+추후 자바스크립트에 대해 깊이 이해하신다면 더 쉽게 다가갈 수 있습니다. 
+
+---
+
+#### thisArg - 선택사항(참조변수)
+
+다음 예는 배열의 각 항목에서 객체의 속성을 갱신합니다:
+
+```javascript
+var arr = [2, 5, , 9];
+
+function ArrElement(element, index, array) {
+  console.log('a[' + index + '] = ' + element +' - array:'+'['+array+']' + ' - ' + this);
+}
+
+arr.forEach(ArrElement, this);
+```
+
+---
+
+달라진것은 **this** 뿐입니다.
+this가 무엇일까요? 
+간단하게 정의하자면 this는 두가지의 의미를 가지고 있습니다. 
+
+1. window
+2. object
+
+위 내용에서는 어떤 의미를 가질까요?
+이를 통해 다음과 같은 식을 만들 수 도 있습니다. 
+
+
+
+---
+
+```javascript
+function Counter() {
+  this.sum = 0;
+  this.count = 0;
+}
+Counter.prototype.add = function(array) {
+  array.forEach(function(entry) {
+    this.sum += entry;
+    ++this.count;
+  }, this);
+  // ^---- 주의
+};
+
+var obj = new Counter();
+```
+
+위 식은 배열형식을 별도로 첨부후 해당 첨부된 내용의 갯수를 파악하고 각각의 값을 더한 값을 도출하는 식입니다. 
+아직은 어렵고 힘든 부분들이 많으므로, '저런식의 내용도 존재하는 구나' 라고만 파악하세요.
+
+---
+
+차후 `prototype`, `this`,`closure`에 대한 부분을 이해하시고 돌아와서 확인해 본다면
+이해할 수 있는 부분입니다.
+
+위의 식을 통해 다음과 같이 체크해 보겠습니다. 
+
+```javascript
+obj.add([2, 5, 9]);    // 첫 배열혁식의 내용삽입 
+obj.count    // 삽입된 배열형식의 총 갯수 : 3
+obj.sum     // 삽입된 배열형식의 총 덧셈 : 16
 ```
 
 

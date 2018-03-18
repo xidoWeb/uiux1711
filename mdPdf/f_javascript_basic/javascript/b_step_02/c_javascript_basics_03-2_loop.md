@@ -1,4 +1,4 @@
-# javascript 기초_3-2
+# javascript 기초_3-2 - 문법(반복문)
 
 지난시간에는 제어명령어중 분기와 관련된 `if`와 `switch`에 대해 알아보았습니다.
 
@@ -480,6 +480,110 @@ for (var k in book){
 
 
 
+
+
+------
+
+### break/continue(루프 도중 Skip / 중단하기)
+
+일반적으로 반복문의 명령인  `for`, `for~in`, `while`, `do~while`등은 
+미리 정해진 종료 조건을 만족하는 타이밍에 루프를 종료합니다.
+
+하지만, 특정 조건을 만족하는 경우에 루프를 강제적으로 중단하고 싶은 경우도 있습니다.
+그러한 경우에 이용할 수 있는 것이 `break`([switch 참조](c_javascript_basics_03_1.md))입니다.
+
+```javascript
+for(var i = 1; i< 10; i++){
+    if(i > 5){
+      break;
+    }
+    console.log(i);
+}
+```
+
+위 내용에서는 1부터 10까지 출력되게 만든 내용이지만, 실제로는 4까지만 출력되게 만들어버리는 구문입니다. 
+`break`는 실제로 반복진행중인 내용을 강제로 정지시키는 기능을 처리할 수 있습니다.
+
+그렇다면 일부를 건너띄고 나타나게 할 수 있는 방법은 무엇일까요?
+`break`대신 `continue`를 사용하면 가능합니다. 
+
+```javascript
+for(var i = 1; i< 10; i++){
+    if(i === 5){
+      continue;
+    }
+    console.log(i);
+}
+```
+
+위 내용으로 내용중 숫자 5는 건너띄고 결과물이 나타나는 것을 알 수 있습니다. 
+
+```javascript
+var result = 0;
+for (var i = 0; i<= 100; i++){
+  result += i;
+  if(result > 1000){break;}
+}
+console.log('합계 값이 1000을 넘는 것은' + i);
+```
+
+```javascript
+var result = 0;
+for(var i = 0; i<100; i++){
+  if( i % 2 == 0 ){continue;}
+  result += i;
+}
+console.log('합계: ' + result);
+```
+
+두가지 예제를 만들어보세요.
+
+생년월일을 작성하는 코드를 작성해보세요.
+`html`의 `select`코드를 활용하여 작성하는 코드입니다. (최대 150살 까지 선택할 수 있다고 가정하겠습니다.)
+
+두번째는 핸드폰번호를 선택하게 만들어보세요.
+010부터 019까지 선택하게 만들어보세요.(015빼고는 모두 존재하는 번호입니다. )
+
+
+
+------
+
+
+
+##### 중첩된 루프를 한번에 빠져나오기(레이블 구문)
+
+중첩된 루프안에서 `break/continue` 명령을 사용한 경우
+`default`로 가장 안쪽의 루프를 빠져 나오게 됩니다.
+
+```javascript
+for(var i = 1; i< 10; i++){
+  for(var j = 1; j<10; j++){
+    var k = i * j;
+    if(k > 30){break;}
+    console.log(k);
+  }
+}
+```
+
+여기서 변수 `k`가 30이 넘는 경우에 `break` 명령을 실행하고, 있습니다.
+이로인해 안쪽 루프(내부에 존재하는 for문)을 빠져 나오고 있으므로, 결과적으로 
+**곱셈값이 30이하인 값만을 표시하는 구구단**이 생성되게 됩니다.
+
+이것을 곱셈값이 30을 넘으면 구구단 출력 자체를 정지시키도록 만들고 싶다면, 아래의 내용을 참고하시면 됩니다.
+
+```javascript
+kuku:
+for(var i=1; i<10; i++){
+  for(var j = 1; j<10; j++){
+    var k = i * j;
+    if(k>30){break kuku;}
+    console.log(k + '&nbsp');
+  }
+}
+```
+
+
+
 ---
 
 ### forEach (javascript 5버전 이후사용 가능)
@@ -616,107 +720,5 @@ var obj = new Counter();
 obj.add([2, 5, 9]);		 // 첫 배열혁식의 내용삽입 
 obj.count		 // 삽입된 배열형식의 총 갯수 : 3
 obj.sum 		// 삽입된 배열형식의 총 덧셈 : 16
-```
-
-
-
----
-
-### break/continue(루프 도중 Skip / 중단하기)
-
-일반적으로 반복문의 명령인  `for`, `for~in`, `while`, `do~while`등은 
-미리 정해진 종료 조건을 만족하는 타이밍에 루프를 종료합니다.
-
-하지만, 특정 조건을 만족하는 경우에 루프를 강제적으로 중단하고 싶은 경우도 있습니다.
-그러한 경우에 이용할 수 있는 것이 `break`([switch 참조](c_javascript_basics_03_1.md))입니다.
-
-```javascript
-for(var i = 1; i< 10; i++){
-    if(i > 5){
-      break;
-    }
-    console.log(i);
-}
-```
-
-위 내용에서는 1부터 10까지 출력되게 만든 내용이지만, 실제로는 4까지만 출력되게 만들어버리는 구문입니다. 
-`break`는 실제로 반복진행중인 내용을 강제로 정지시키는 기능을 처리할 수 있습니다.
-
-그렇다면 일부를 건너띄고 나타나게 할 수 있는 방법은 무엇일까요?
-`break`대신 `continue`를 사용하면 가능합니다. 
-
-```javascript
-for(var i = 1; i< 10; i++){
-    if(i === 5){
-      continue;
-    }
-    console.log(i);
-}
-```
-
-위 내용으로 내용중 숫자 5는 건너띄고 결과물이 나타나는 것을 알 수 있습니다. 
-
-```javascript
-var result = 0;
-for (var i = 0; i<= 100; i++){
-  result += i;
-  if(result > 1000){break;}
-}
-console.log('합계 값이 1000을 넘는 것은' + i);
-```
-
-```javascript
-var result = 0;
-for(var i = 0; i<100; i++){
-  if( i % 2 == 0 ){continue;}
-  result += i;
-}
-console.log('합계: ' + result);
-```
-
-두가지 예제를 만들어보세요.
-
-생년월일을 작성하는 코드를 작성해보세요.
-`html`의 `select`코드를 활용하여 작성하는 코드입니다. (최대 150살 까지 선택할 수 있다고 가정하겠습니다.)
-
-두번째는 핸드폰번호를 선택하게 만들어보세요.
-010부터 019까지 선택하게 만들어보세요.(015빼고는 모두 존재하는 번호입니다. )
-
-
-
----
-
-
-
-##### 중첩된 루프를 한번에 빠져나오기(레이블 구문)
-
-중첩된 루프안에서 `break/continue` 명령을 사용한 경우
-`default`로 가장 안쪽의 루프를 빠져 나오게 됩니다.
-
-```javascript
-for(var i = 1; i< 10; i++){
-  for(var j = 1; j<10; j++){
-    var k = i * j;
-    if(k > 30){break;}
-    console.log(k);
-  }
-}
-```
-
-여기서 변수 `k`가 30이 넘는 경우에 `break` 명령을 실행하고, 있습니다.
-이로인해 안쪽 루프(내부에 존재하는 for문)을 빠져 나오고 있으므로, 결과적으로 
-**곱셈값이 30이하인 값만을 표시하는 구구단**이 생성되게 됩니다.
-
-이것을 곱셈값이 30을 넘으면 구구단 출력 자체를 정지시키도록 만들고 싶다면, 아래의 내용을 참고하시면 됩니다.
-
-```javascript
-kuku:
-for(var i=1; i<10; i++){
-  for(var j = 1; j<10; j++){
-    var k = i * j;
-    if(k>30){break kuku;}
-    console.log(k + '&nbsp');
-  }
-}
 ```
 
