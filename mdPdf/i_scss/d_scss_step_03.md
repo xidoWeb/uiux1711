@@ -225,7 +225,7 @@ $buttonConfig: 'save' 50px 'hover', 'cancel' 150px 'active', 'help' 100px 'img';
 
 ### @function
 
-@mixin과 혼돈이 있을것으로 판단하여 현시점에서는 빼도록 하겠습니다. 
+@mixin과 혼돈이 있을것으로 판단하여 다음 수업자료에 첨부하겠습니다. 
 
 ---
 
