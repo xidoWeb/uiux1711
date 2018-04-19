@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
   <title>siteName</title>
 </head>
-<body>
+<body><!-- 
   <div id="wrap">
     <div class="headBoxWrap">
       <header id="headBox">
@@ -95,11 +95,22 @@
       </address>
     </footer>
   </div>
-  
+   -->
   <!-- script -->
   <script src="../../js/base/jquery-3.2.1.js"></script>
   <script src="../../js/base/jquery-ui.js"></script>
   <!-- use script -->
-  <script src="../../js/src/slide_banner_01.js"></script>
+  <!-- <script src="../../js/src/slide_banner_01.js"></script> -->
+  <!-- // 별도의 팝업창만들기 - 메인페이지에  -->
+  <!-- <script src="../../js/src/popup.js"></script> -->
+  <script>
+    (function($) {
+      var w = $(window).innerWidth();
+      var h = $(window).innerHeight();
+
+      document.write('w: ', w + '<br />');
+      document.write('h: ', h);
+    })(jQuery)
+  </script>
 </body>
 </html>

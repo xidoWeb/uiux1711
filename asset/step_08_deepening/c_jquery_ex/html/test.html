@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="first"> 
+    <li class="foo">list item 1</li>
+    <li>list item 2</li> 
+    <li class="bar">list item 3</li> 
+  </ul> 
+
+   <ul class="second"> 
+    <li class="foo">list item 1</li> 
+    <li>list item 2</li> 
+    <li class="bar">list item 3</li> 
+  </ul>
+
+<script src="../js/base/jquery-3.2.1.min.js"></script>
+<script>
+  (function($) {
+    // $('ul.first')
+    //  .find('.foo') 
+    //  .css('background-color', 'red')  
+    //  .end().find('.bar') 
+    //  .css('background-color', 'green') 
+    //  .end();
+
+var first = $('ul.first');
+
+   first.find('.foo').css('background-color', 'red').end().find('.bar').css('background-color', 'green');
+
+  })(jQuery);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">{{msg}}<br />{{more}}</div>
+  <h1 id="app2"><a v-bind:href="mes">제목란에 내용을 작성해 보자</a></h1>
+
+  <script src="./vue.js"></script>
+  <script>
+    var app = new Vue(
+    {
+    // object형식으로작성
+      el: '#app', //element, 선택자
+      data:{ 
+        msg:'처음 테스트하는 vue',
+        more:' 간단하게 추가기능 작성' 
+      }
+    },
+
+    {
+      el:'#app2',
+      data:{
+        mes:'http://naver.com'
+      }
+    }
+    );
+  </script>
+</body>
+</html>

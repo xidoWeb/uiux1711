@@ -104,7 +104,7 @@ var obj = {
 			return this;
         }
 }
-console.log( obj() );
+console.log( obj.func() );
 ```
 
 위 내용은 객체 `obj`의 메소드 `func`의  `this`에 대한 의미를 구하기위하여 
@@ -154,12 +154,12 @@ function Func(){
 }
 var o1 = Func();
 if(funcThis === window){
-    console.log('window');
+    console.log('o1 = window');
 }
  
 var o2 = new Func();
 if(funcThis === o2){
-    console.log('o2');
+    console.log('o2 = o2');
 }
 ```
 
@@ -193,7 +193,7 @@ var cCircle = new Circle(20, 5, 69);
 ---
 
 ```javascript
-var person = {}
+var person = {};
   person.name = 'xido';
   person.introduce = function(){
       return 'My name is '+this.name;
@@ -213,6 +213,10 @@ var person = {
 document.write(person.introduce());
 ```
 
+---
+
+
+
 ```javascript
 function Person(){}
 var p = new Person();
@@ -222,6 +226,10 @@ p.introduce = function(){
 }
 document.write(p.introduce());
 ```
+
+---
+
+
 
 ```javascript
 function Person(){}
@@ -271,11 +279,10 @@ function Student(name, kor, math, eng, sci) {
   }; 
   this.getAverage = function() { 
     return this.getSum() / 4; }; 
-  this.toString = function() { 
-    return 
-      this.name + ' ---------- ' + 
-      this.getSum() + ' ---------- ' + 
-      this.getAverage(); 
+  this.string = function() { 
+    return this.name + ' ---------- ' + 
+           this.getSum() + ' ---------- ' + 
+           this.getAverage(); 
   }; 
 } 
 var students = []; 
@@ -293,8 +300,42 @@ students.push(new Student('student6', 44, 44, 44, 44));
 var output = 'name ---------- sum ---------- avg\n'; 
 
 for (var i in students) { 
-  output += students[i].toString() + '\n'; 
+  output += students[i].string() + '\n'; 
 } 
 alert(output);
 ```
+
+---
+
+`this`:  window,  new 연산자에의해 지칭된 객체(변수)가 된다.
+
+`new 연산자` :  함수를 통해 변수에 객체화 처리되는 형식, this와 함께 사용하면 좋다!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
